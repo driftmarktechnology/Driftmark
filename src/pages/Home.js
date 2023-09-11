@@ -3,6 +3,7 @@ import React from "react";
 function Home() {
   return (
     <div className="home-page">
+      <div class="elfsight-app-8ad0234d-a9c2-4a8e-ba72-1b9f88770736"></div>
       <section id="hero" class="d-flex align-items-center">
         <div class="container">
           <div class="row">

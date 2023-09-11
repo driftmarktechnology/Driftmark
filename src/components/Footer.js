@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,9 +16,9 @@ function Footer() {
                 New York, NY 535022
                 <br />
                 United States <br />
-                <strong>Phone:</strong> +1 5589 55488 55
+                <strong>Phone:</strong> +91 6381 475 573
                 <br />
-                <strong>Email:</strong> info@example.com
+                <strong>Email:</strong> contact@driftmarktechnology.com
                 <br />
               </p>
             </div>
@@ -33,12 +34,6 @@ function Footer() {
                 </li>
                 <li>
                   <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Terms of service</a>
-                </li>
-                <li>
-                  <a href="#">Privacy policy</a>
                 </li>
               </ul>
             </div>
@@ -71,18 +66,30 @@ function Footer() {
                 derita valies
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter">
+                <Link to="https://twitter.com/DriftmarkTech" class="twitter" target="_blank">
+                <i class="bx bxl-twitter"></i>
+                </Link>
+                <Link to="https://www.instagram.com/driftmarktechnology/" class="instagram" target="_blank">
+                <i class="bx bxl-instagram"></i>
+                </Link>
+                <Link to="#" class="google-plus" target="_blank">
+                <i class="bx bxl-skype"></i>
+                </Link>
+                <Link to="https://www.linkedin.com/company/driftmark-technology/" class="linkedin" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+                </Link>
+                {/* <a href="https://twitter.com/DriftmarkTech" class="twitter">
                   <i class="bx bxl-twitter"></i>
                 </a>
-                <a href="#" class="instagram">
+                <a href="https://www.instagram.com/driftmarktechnology/" class="instagram">
                   <i class="bx bxl-instagram"></i>
                 </a>
                 <a href="#" class="google-plus">
                   <i class="bx bxl-skype"></i>
                 </a>
-                <a href="#" class="linkedin">
+                <a href="https://www.linkedin.com/company/driftmark-technology/" class="linkedin">
                   <i class="bx bxl-linkedin"></i>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

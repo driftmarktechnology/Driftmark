@@ -12,11 +12,11 @@ function Footer() {
             <div class="col-lg-3 col-md-6 footer-contact">
               <h3>Driftmark</h3>
               <p>
-                A108 Adam Street <br />
-                New York, NY 535022
+                Kadirimangalam <br />
+                Tirupathur, Tamil Nadu 635653
                 <br />
-                United States <br />
-                <strong>Phone:</strong> +91 6381 475 573
+                India <br />
+                <strong>Phone:</strong> +91 6381475573
                 <br />
                 <strong>Email:</strong> contact@driftmarktechnology.com
                 <br />
@@ -62,21 +62,33 @@ function Footer() {
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Our Social Networks</h4>
               <p>
-                Cras fermentum odio eu feugiat lide par naso tierra videa magna
-                derita valies
+                Follow us, like our content, and join our community on these
+                platforms:
               </p>
               <div class="social-links mt-3">
-                <Link to="https://twitter.com/DriftmarkTech" class="twitter" target="_blank">
-                <i class="bx bxl-twitter"></i>
+                <Link
+                  to="https://twitter.com/DriftmarkTech"
+                  class="twitter"
+                  target="_blank"
+                >
+                  <i class="bx bxl-twitter"></i>
                 </Link>
-                <Link to="https://www.instagram.com/driftmarktechnology/" class="instagram" target="_blank">
-                <i class="bx bxl-instagram"></i>
+                <Link
+                  to="https://www.instagram.com/driftmarktechnology/"
+                  class="instagram"
+                  target="_blank"
+                >
+                  <i class="bx bxl-instagram"></i>
                 </Link>
                 <Link to="#" class="google-plus" target="_blank">
-                <i class="bx bxl-skype"></i>
+                  <i class="bx bxl-skype"></i>
                 </Link>
-                <Link to="https://www.linkedin.com/company/driftmark-technology/" class="linkedin" target="_blank">
-                <i class="bx bxl-linkedin"></i>
+                <Link
+                  to="https://www.linkedin.com/company/driftmark-technology/"
+                  class="linkedin"
+                  target="_blank"
+                >
+                  <i class="bx bxl-linkedin"></i>
                 </Link>
                 {/* <a href="https://twitter.com/DriftmarkTech" class="twitter">
                   <i class="bx bxl-twitter"></i>
@@ -106,9 +118,9 @@ function Footer() {
             <span> All rights reserved.</span>
           </p>
           <p class="copyright">
-            <a href="legal/privacy-policy">Privacy Policy </a>
+            <a href="/privacy-policy">Privacy Policy </a>
             <span> | </span>
-            <a href="legal/terms-of-use">Terms of Use </a>
+            <a href="/terms">Terms of Use </a>
             <span> | </span>
             <a href="sitemap">Site Map</a>
           </p>

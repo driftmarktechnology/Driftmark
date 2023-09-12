@@ -5,105 +5,133 @@ function About() {
     <section id="contact" class="contact">
       <div class="container">
         <div class="section-title">
-          <span>Contact</span>
-          <h2>Contact</h2>
-          <p>
-            Your trusted Solutions Partner for the digital transformation of you
-            and your company.
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Kadirimangalam, Tirupathur, Tamil Nadu 635653</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>contact@driftmarktechnology.com </p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 6381 475 573</p>
-              </div>
-
-              <iframe
-                src="https://maps.google.com/maps?q=driftmark%20tech&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen
-                id="location"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form
-              action="forms/contact.php"
-              method="post"
-              role="form"
-              class="php-email-form"
-            >
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    id="name"
-                    required
-                  />
-                </div>
-                <div class="form-group col-md-6 mt-3 mt-md-0">
-                  <label for="name">Your Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Subject</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="subject"
-                  id="subject"
-                  required
+          <section>
+            <h3>Who We Are</h3>
+            <h6>
+              Prioritizing Delivery and Satisfaction, Without Any Compromises.
+            </h6>
+            <br />
+            <div class="row">
+              <div class="col-lg-6">
+                <img
+                  src="assets/img/WhoWeAre2.jpg"
+                  class="img-fluid animated"
+                  alt=""
                 />
               </div>
-              <div class="form-group mt-3">
-                <label for="name">Message</label>
-                <textarea
-                  class="form-control"
-                  name="message"
-                  rows="10"
-                  required
-                ></textarea>
+              <div class="col-lg-6">
+                <p>
+                  Introducing Driftmark Technologies, a premier bespoke software
+                  development firm in India. Our expertise lies in crafting
+                  cost-effective, innovative web and mobile applications, as
+                  well as data analytics and cloud solutions. These tools not
+                  only refine the business processes but also pave the way for
+                  new revenue opportunities, be it for budding startups or
+                  well-established enterprises. Since our inception in 2023,
+                  we've successfully garnered the trust of over 10 clients in a
+                  remarkably short time.
+                </p>
+                <br />
+                <p>
+                  Our tailored solutions have become pivotal in the success
+                  stories of our clients. Leveraging our deep technological
+                  knowledge and vast industry experience, we've consistently
+                  partnered with our clients to produce sophisticated solutions,
+                  ensuring timely delivery within budget constraints.
+                </p>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
+            </div>
+          </section>
+          <section>
+            <h3>What We Offer</h3>
+            <div class="row">
+              <div class="col-lg-6">
+                <p>
+                  We specialize in crafting cost-effective custom software
+                  tailored for businesses, regardless of size. With a keen
+                  emphasis on contemporary design standards and the latest
+                  advancements in cloud, mobile, and desktop platforms, we
+                  develop bespoke solutions. These tools foster better team
+                  collaboration, enhance customer engagement, streamline
+                  operations, and ultimately drive down expenses.
+                </p>
+                <br />
+                <p>
+                  At Dritmark, our clients benefit from a rich reservoir of
+                  technical and business acumen. Whether it's web or mobile
+                  platforms, we have the prowess to devise multifaceted
+                  solutions suited to diverse business requirements.
+                </p>
               </div>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
+              <div class="col-lg-6">
+                <img
+                  src="assets/img/WhatWeOffer.jpeg"
+                  class="img-fluid animated"
+                  alt=""
+                />
               </div>
-            </form>
-          </div>
+            </div>
+          </section>
+          <section>
+            <h3>Our Mission</h3>
+            <div class="row">
+              <div class="col-lg-6">
+                <img
+                  src="assets/img/mission.jpeg"
+                  class="img-fluid animated"
+                  alt=""
+                />
+              </div>
+              <div class="col-lg-6">
+                <p>
+                  Evolving beyond the confines of mere mobile and web
+                  development, we've set clear objectives. Our primary aim is to
+                  empower you to expand your business, navigating any
+                  technological hurdles along the way.
+                </p>
+                <br />
+                <p>
+                  Our commitment lies in offering unparalleled value to our
+                  clientele, achieved through persistent R&D efforts and forging
+                  meaningful industry collaborations. While pursuing our vision,
+                  we emphasize a fulfilling and collaborative workspace for
+                  every team member. In collaboration with all our partners,
+                  both within and outside the organization, we strive to
+                  introduce innovative, top-notch, and cost-efficient solutions
+                  and services.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Our Vision</h3>
+            <div class="row">
+              <div class="col-lg-6">
+                <p>
+                  The digital age is teeming with untapped potential and fresh
+                  inspirations. Milestones that once took half a decade to
+                  realize can now be achieved in merely two years with the right
+                  digital strategies.
+                </p>
+                <br />
+                <p>
+                  This profound insight drives us. Through our endeavors, we not
+                  only demonstrate the advantages of an uplifting digital
+                  journey but also pave the way for our clientele to experience
+                  swifter, more straightforward, and enhanced business
+                  operations. In doing so, we foster the inception of innovative
+                  and transformative initiatives.
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  src="assets/img/vision.jpeg"
+                  class="img-fluid animated"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </section>

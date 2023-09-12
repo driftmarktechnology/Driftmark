@@ -1,11 +1,12 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Privacy() {
   return (
     <>
       <section>
         <div class="container">
-          <div class="section-title">
+          <div>
             <span>Privacy</span>
             <h2>Privacy</h2>
             <div>
@@ -14,7 +15,7 @@ function Privacy() {
                 Driftmark Technology, seated in Kadirimangalam, Tirupathur,
                 Tamil Nadu 635653,India (hereinafter referred to as: “Driftmark
                 Technology”, “we”, “us”, “our”) refers to the legal entity
-                governing the websites www.driftmarktechnology.com Personal
+                governing the websites <span><Link to="/" target="_blank">www.driftmarktechnology.com</Link></span> Personal
                 data – means data referring to private persons who can be
                 identified at some point.
               </p>
@@ -23,7 +24,17 @@ function Privacy() {
                 This website is the property of Driftmark Technology web design
                 and development agency, seated in Kadirimangalam, Tirupathur,
                 Tamil Nadu 635653, India Driftmark Technology is a privately held
-                company: E-mail: contact@driftmarktechnology.com
+                company: E-mail:{" "}
+                <a
+                  href="mailto:contact@driftmarktechnology.com"
+                  onClick={(e) => {
+                    window.location.href =
+                      "mailto:contact@driftmarktechnology.com";
+                    e.preventDefault();
+                  }}
+                >
+                  contact@driftmarktechnology.com
+                </a>{" "}
               </p>
               <h3>3. Relevant legislation</h3>
               <p>
@@ -31,16 +42,17 @@ function Privacy() {
                 international legislation as regards data protection and privacy
                 of its users
               </p>
-              4. Who collects and processes information On the basis of GDPR,
+              <h3>4. Who collects and processes information</h3> 
+              <p>On the basis of GDPR,
               every website user can make a choice: to accept or decline the
               collection of their personal data by the website. Driftmark
               Technology collects and processes only the necessary data about
               users who have voluntarily accepted and given consent to such data
               processing, with a clearly stated purpose, in accordance with the
-              procedures governed by legislation. 
-              5. Data collection: 
-              5.1.
-              Contact or order forms When you contact us via the contact form,
+              procedures governed by legislation.</p> 
+              <h3>5. Data collection:</h3> 
+              <h5>5.1. Contact or order forms</h5>
+              <p>When you contact us via the contact form,
               order form or email, your personal data will be collected only
               upon your written consent, by ticking the box which states that
               you have read and accepted or declined our Privacy Policy and our
@@ -55,8 +67,9 @@ function Privacy() {
               will not store or use them after we no longer need them. Upon your
               written request, we will send you the information about the data
               we have collected and stored about you until that moment,
-              incorporated in an electronic form. 
-              5.2. Website hosting servers. This company and its
+              incorporated in an electronic form.</p> 
+              <h5>5.2. Website hosting servers.</h5>
+              <p>This company and its
               data center/server are protected by the following: Fire protection
               Early warning system directly connected with a local fire brigade
               Special door lockdown systems 24/7 assistance of qualified
@@ -86,23 +99,38 @@ function Privacy() {
               visits, that is the number of users who visit our website, and to
               understand their needs better so as to improve user experience
               (UX). For more information about these rules, please visit
-              our Cookie Policy webpage. 
-              6. What we know about you We gather
+              our Cookie Policy webpage.</p> 
+              <h3>6. What we know about you</h3> 
+              <p>We gather
               only data for which you have given us your consent. For example,
               we do not know your email address unless you send it to us via
               email or contact forms. This data is used only within our company
               and we do not sell it nor distribute it to third parties. If you
               have already given us your email but do not wish to receive any
               emails or newsletters in the future, you can contact us
-              via beconnected@driftmarktechnology.com email and ask for your
-              personal data removal. 
-              7. How long we keep your data We keep your
+              via{" "}
+                <a
+                  href="mailto:contact@driftmarktechnology.com"
+                  onClick={(e) => {
+                    window.location.href =
+                      "mailto:contact@driftmarktechnology.com";
+                    e.preventDefault();
+                  }}
+                >
+                  contact@driftmarktechnology.com
+                </a>{" "}email and ask for your
+              personal data removal.</p> 
+              <h3>7. How long we keep your data</h3>
+              <p>
+              We keep your
               information no longer than it is necessary for us to provide you
               with the service and accomplish the purposes set out in this
               Policy. If the conditions for keeping your data are no longer
               applicable, we will completely remove and delete them from our
-              databases. 
-              8. Third party data processing We collaborate with
+              databases.
+              </p>
+              <h3>8. Third party data processing</h3>
+              <p>We collaborate with
               third party data processors who process data on our behalf. These
               third parties are carefully selected and act in accordance with
               the laws referred to in Section 3. Google (Privacy policy)
@@ -112,9 +140,9 @@ function Privacy() {
               data processors and report such events to all relevant persons
               within our company and to the authorities within 72 hours of the
               breach if it is obvious to us that personal data stored in an
-              identifiable manner has been stolen. 
-              10. Amendments to this
-              privacy policy Driftmark Technology can amend this Privacy Policy as
+              identifiable manner has been stolen.</p> 
+              <h3>10. Amendments to this</h3>
+              <p>Privacy policy Driftmark Technology can amend this Privacy Policy as
               needed. This Policy was drawn up and updated on August 28, 2018.
               Driftmark Technology keeps the right to change this Privacy Policy when
               necessary, in order to align and act in accordance with amendments
@@ -123,7 +151,7 @@ function Privacy() {
               website users thereof. Instead, we recommend you to visit this
               page occasionally to stay informed about the changes to this
               Policy. If you think that Driftmark Technology does not abide by this
-              Privacy Policy, please contact us via our Contact page.
+              Privacy Policy, please contact us via our Contact page.</p>
             </div>
           </div>
         </div>

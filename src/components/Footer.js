@@ -90,18 +90,6 @@ function Footer() {
                 >
                   <i class="bx bxl-linkedin"></i>
                 </Link>
-                {/* <a href="https://twitter.com/DriftmarkTech" class="twitter">
-                  <i class="bx bxl-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/driftmarktechnology/" class="instagram">
-                  <i class="bx bxl-instagram"></i>
-                </a>
-                <a href="#" class="google-plus">
-                  <i class="bx bxl-skype"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/driftmark-technology/" class="linkedin">
-                  <i class="bx bxl-linkedin"></i>
-                </a> */}
               </div>
             </div>
           </div>

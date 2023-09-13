@@ -82,7 +82,7 @@ function Home() {
           <div class="container">
             <div class="row">
               <div class="col-lg-6">
-                <img src="assets/img/about.png" class="img-fluid" alt="" />
+                <img src="assets/img/about_new.jpeg" class="img-fluid" alt="" />
               </div>
               <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <h3>About Driftmark Technology</h3>

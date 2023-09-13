@@ -120,9 +120,9 @@
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #16df7e;
+  border: 1px solid #39c1eb;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #16df7e;
+  background-color: #39c1eb;
 }

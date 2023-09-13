@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   const location = useLocation();
@@ -12,53 +13,53 @@ function Header() {
     <header id="header" className="fixed-top">
       <div className="container d-flex align-items-center justify-content-between">
         <h1 className="logo">
-          <a href="/"><img src="assets/img/Logo_crop.png" alt="Driftmark Technology Logo" class="fas fa-2x"/></a>
+          <Link to="/"><img src="assets/img/Logo_crop.png" alt="Driftmark Technology Logo" class="fas fa-2x"/></Link>
         </h1>
-        {/* <a href="/" className="logo">
+        {/* <a to="/" className="logo">
           <img src="assets/img/logo.png" alt="" className="img-fluid" />
         </a> */}
 
         <nav id="navbar" className="navbar">
           <ul>
             <li>
-              <a
+              <Link
                 className={`nav-link scrollto ${isActive("/about")}`}
-                href="/about"
+                to="/about"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className={`nav-link scrollto ${isActive("/services")}`}
-                href="/services"
+                to="/services"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className={`nav-link scrollto ${isActive("/team")}`}
-                href="/team"
+                to="/team"
               >
                 Team
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className={`nav-link scrollto ${isActive("/career")}`}
-                href="/career"
+                to="/career"
               >
                 Career
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className={`nav-link scrollto ${isActive("/contact")}`}
-                href="/contact"
+                to="/contact"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <i className="bi bi-list mobile-nav-toggle"></i>

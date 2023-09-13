@@ -6,11 +6,11 @@ function Footer() {
 
   return (
     <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 footer-contact">
-            <div><img src="assets/img/Footer_image2.png" alt="" class="img-fluid" style={{width:"90%"}}/></div>
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 footer-contact">
+            <div><img src="assets/img/Footer_image2.png" alt="" className="img-fluid" style={{width:"90%"}}/></div>
               <p>
                 Kadirimangalam <br />
                 Tirupathur, Tamil Nadu 635653
@@ -23,78 +23,78 @@ function Footer() {
               </p>
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-3 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <Link to="#">Home</Link>
                 </li>
                 <li>
-                  <a href="#">About us</a>
+                  <Link to="#">About us</Link>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <Link to="#">Services</Link>
                 </li>
                 <li>
-                  <a href="#">Career</a>
+                  <Link to="#">Career</Link>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <Link to="#"></Link>
                 </li>
               </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-3 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
                 <li>
-                  <a href="#">Web Design</a>
+                  <Link to="#">Web Design</Link>
                 </li>
                 <li>
-                  <a href="#">Web Development</a>
+                  <Link to="#">Web Development</Link>
                 </li>
                 <li>
-                  <a href="#">Product Management</a>
+                  <Link to="#">Product Management</Link>
                 </li>
                 <li>
-                  <a href="#">Marketing</a>
+                  <Link to="#">Marketing</Link>
                 </li>
                 <li>
-                  <a href="#">Graphic Design</a>
+                  <Link to="#">Graphic Design</Link>
                 </li>
               </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-3 col-md-6 footer-links">
               <h4>Our Social Networks</h4>
               <p>
                 Follow us, like our content, and join our community on these
                 platforms:
               </p>
-              <div class="social-links mt-3">
+              <div className="social-links mt-3">
                 <Link
                   to="https://twitter.com/DriftmarkTech"
-                  class="twitter"
+                 className="twitter"
                   target="_blank"
                 >
-                  <i class="bx bxl-twitter"></i>
+                  <i className="bx bxl-twitter"></i>
                 </Link>
                 <Link
                   to="https://www.instagram.com/driftmarktechnology/"
-                  class="instagram"
+                 className="instagram"
                   target="_blank"
                 >
-                  <i class="bx bxl-instagram"></i>
+                  <i className="bx bxl-instagram"></i>
                 </Link>
-                <Link to="#" class="google-plus" target="_blank">
-                  <i class="bx bxl-skype"></i>
+                <Link to="#" className="google-plus" target="_blank">
+                  <i className="bx bxl-skype"></i>
                 </Link>
                 <Link
                   to="https://www.linkedin.com/company/driftmark-technology/"
-                  class="linkedin"
+                 className="linkedin"
                   target="_blank"
                 >
-                  <i class="bx bxl-linkedin"></i>
+                  <i className="bx bxl-linkedin"></i>
                 </Link>
               </div>
             </div>
@@ -102,21 +102,21 @@ function Footer() {
         </div>
       </div>
 
-      <div class="container footer-bottom clearfix">
-        <div class="container copyright-section pt-2 d-flex justify-content-between flex-wrap">
-          <p class="copyright">
+      <div className="container footer-bottom clearfix">
+        <div className="container copyright-section pt-2 d-flex justify-content-between flex-wrap">
+          <p className="copyright">
             © Copyright {currentYear}
             <strong>
               <span> Driftmark</span>
             </strong>
             <span> All rights reserved.</span>
           </p>
-          <p class="copyright">
-            <a href="/privacy-policy">Privacy Policy </a>
+          <p className="copyright">
+            <Link to="/privacy-policy">Privacy Policy </Link>
             <span> | </span>
-            <a href="/terms">Terms of Use </a>
+            <Link to="/terms">Terms of Use </Link>
             <span> | </span>
-            <a href="sitemap">Site Map</a>
+            <Link to="sitemap">Site Map</Link>
           </p>
         </div>
       </div>

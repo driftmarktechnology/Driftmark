@@ -39,7 +39,7 @@ function Footer() {
                   <Link to="#">Career</Link>
                 </li>
                 <li>
-                  <Link to="#"></Link>
+                  <Link to="#">Contact</Link>
                 </li>
               </ul>
             </div>

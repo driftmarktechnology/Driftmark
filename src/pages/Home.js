@@ -1,27 +1,28 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Home() {
   return (
     <div className="home-page">
-      <section id="hero" class="d-flex align-items-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+      <section id="hero" className="d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
               <h1>Shift your business into the digital realm</h1>
               <h6>
                 We help businesses adapt for the digital age, ensuring safe tech
                 use and easy customer access to online services.
               </h6>
-              <div class="d-flex">
-                <a href="#about" class="btn-get-started scrollto">
+              <div className="d-flex">
+                <Link to="#about" className="btn-get-started scrollto">
                   Get Started
-                </a>
+                </Link>
               </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <div className="col-lg-6 order-1 order-lg-2 hero-img">
               <img
                 src="assets/img/hero-img.png"
-                class="img-fluid animated"
+                className="img-fluid animated"
                 alt=""
               />
             </div>
@@ -30,46 +31,46 @@ function Home() {
       </section>
 
       <main id="main">
-        <section id="featured-services" class="featured-services">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="icon-box">
-                  <div class="icon">
-                    <i class="bi bi-laptop"></i>
+        <section id="featured-services" className="featured-services">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-4 col-md-6">
+                <div className="icon-box">
+                  <div className="icon">
+                    <i className="bi bi-laptop"></i>
                   </div>
-                  <h4 class="title">
-                    <a href="">Managed Products</a>
+                  <h4 className="title">
+                    <Link to="">Managed Products</Link>
                   </h4>
-                  <p class="description">
+                  <p className="description">
                     Web and mobile apps, MVPs. Small, medium and large projects.
                     Fixed scope or agile development.
                   </p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-                <div class="icon-box">
-                  <div class="icon">
-                    <i class="bi bi-card-checklist"></i>
+              <div className="col-lg-4 col-md-6 mt-4 mt-md-0">
+                <div className="icon-box">
+                  <div className="icon">
+                    <i className="bi bi-card-checklist"></i>
                   </div>
-                  <h4 class="title">
-                    <a href="">Dedicated Teams</a>
+                  <h4 className="title">
+                    <Link to="">Dedicated Teams</Link>
                   </h4>
-                  <p class="description">
+                  <p className="description">
                     Long-term development. Direct collaboration or managed teams
                     of different sizes and expertise.
                   </p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                <div class="icon-box">
-                  <div class="icon">
-                    <i class="bi bi-clipboard-data"></i>
+              <div className="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                <div className="icon-box">
+                  <div className="icon">
+                    <i className="bi bi-clipboard-data"></i>
                   </div>
-                  <h4 class="title">
-                    <a href="">On-Demand Services</a>
+                  <h4 className="title">
+                    <Link to="">On-Demand Services</Link>
                   </h4>
-                  <p class="description">
+                  <p className="description">
                     Hourly and monthly based professional support for your
                     business. Everything you need to grow fast.
                   </p>
@@ -78,15 +79,15 @@ function Home() {
             </div>
           </div>
         </section>
-        <section id="about" class="about">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <img src="assets/img/about_new.jpeg" class="img-fluid" alt="" />
+        <section id="about" className="about">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <img src="assets/img/about_new.jpeg" className="img-fluid" alt="" />
               </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <div className="col-lg-6 pt-4 pt-lg-0 content">
                 <h3>About Driftmark Technology</h3>
-                <p class="fst-italic">
+                <p className="fst-italic">
                   Our team of full-stack developers and agile professionals
                   specialize in rapidly delivering web, mobile, and software
                   applications. We are not just grounded in current technologies
@@ -100,9 +101,9 @@ function Home() {
           </div>
         </section>
 
-        <section id="testimonials" class="testimonials section-bg">
-          <div class="container">
-            <div class="section-title">
+        <section id="testimonials" className="testimonials section-bg">
+          <div className="container">
+            <div className="section-title">
               <span>Testimonials</span>
               <h2>Testimonials</h2>
               <p>
@@ -112,24 +113,24 @@ function Home() {
             </div>
 
             <div
-              class="testimonials-slider swiper"
+              className="testimonials-slider swiper"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">
+                  <div className="testimonial-item">
                     <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                       Proin iaculis purus consequat sem cure digni ssim donec
                       porttitora entum suscipit rhoncus. Accusantium quam,
                       ultricies eget id, aliquam eget nibh et. Maecen aliquam,
                       risus at semper.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                     <img
                       src="assets/img/testimonials/testimonials-1.jpg"
-                      class="testimonial-img"
+                      className="testimonial-img"
                       alt=""
                     />
                     <h3>Saul Goodman</h3>
@@ -137,19 +138,19 @@ function Home() {
                   </div>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
+                <div className="swiper-slide">
+                  <div className="testimonial-item">
                     <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                       Export tempor illum tamen malis malis eram quae irure esse
                       labore quem cillum quid cillum eram malis quorum velit
                       fore eram velit sunt aliqua noster fugiat irure amet legam
                       anim culpa.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                     <img
                       src="assets/img/testimonials/testimonials-2.jpg"
-                      class="testimonial-img"
+                      className="testimonial-img"
                       alt=""
                     />
                     <h3>Sara Wilsson</h3>
@@ -157,18 +158,18 @@ function Home() {
                   </div>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
+                <div className="swiper-slide">
+                  <div className="testimonial-item">
                     <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                       Enim nisi quem export duis labore cillum quae magna enim
                       sint quorum nulla quem veniam duis minim tempor labore
                       quem eram duis noster aute amet eram fore quis sint minim.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                     <img
                       src="assets/img/testimonials/testimonials-3.jpg"
-                      class="testimonial-img"
+                      className="testimonial-img"
                       alt=""
                     />
                     <h3>Jena Karlis</h3>
@@ -176,19 +177,19 @@ function Home() {
                   </div>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
+                <div className="swiper-slide">
+                  <div className="testimonial-item">
                     <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                       Fugiat enim eram quae cillum dolore dolor amet nulla culpa
                       multos export minim fugiat minim velit minim dolor enim
                       duis veniam ipsum anim magna sunt elit fore quem dolore
                       labore illum veniam.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                     <img
                       src="assets/img/testimonials/testimonials-4.jpg"
-                      class="testimonial-img"
+                      className="testimonial-img"
                       alt=""
                     />
                     <h3>Matt Brandon</h3>
@@ -196,19 +197,19 @@ function Home() {
                   </div>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
+                <div className="swiper-slide">
+                  <div className="testimonial-item">
                     <p>
-                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                       Quis quorum aliqua sint quem legam fore sunt eram irure
                       aliqua veniam tempor noster veniam enim culpa labore duis
                       sunt culpa nulla illum cillum fugiat legam esse veniam
                       culpa fore nisi cillum quid.
-                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
                     <img
                       src="assets/img/testimonials/testimonials-5.jpg"
-                      class="testimonial-img"
+                      className="testimonial-img"
                       alt=""
                     />
                     <h3>John Larson</h3>
@@ -216,22 +217,22 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div className="swiper-pagination"></div>
             </div>
           </div>
         </section>
 
-        <section id="cta" class="cta">
-          <div class="container">
-            <div class="text-center">
+        <section id="cta" className="cta">
+          <div className="container">
+            <div className="text-center">
               <h3>Have a Project in Mind?</h3>
               <p>
                 Share your project concept with us, and we'll collaboratively
                 craft the ideal solution for your enterprise
               </p>
-              <a class="cta-btn" href="/contact">
+              <Link className="cta-btn" to="/contact">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </section>

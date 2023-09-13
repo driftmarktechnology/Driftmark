@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import { Hourglass } from "react-loader-spinner";
 
 const Home = lazy(() => import("../pages/Home"));
 const Contact = lazy(() => import("../pages/Contact"));
@@ -14,7 +15,27 @@ const Sitemap = lazy(() => import("../Sitemap"));
 function AppRoutes() {
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div
+            style={{
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+            }}
+          >
+            <Hourglass
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="hourglass-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              colors={["#306cce", "#72a1ed"]}
+            />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />

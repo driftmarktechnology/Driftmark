@@ -5,11 +5,15 @@ function About() {
     <section id="contact" class="contact">
       <div class="container">
         <div class="section-title">
+          <span>About</span>
+          <h2>About</h2>
+          <p>We bridge the gap between your great idea and your resources</p>
+        </div>
+
+        <div class="section-title">
           <section>
             <h3>Who We Are</h3>
-            <h6>
-              Prioritizing Delivery and Satisfaction, Without Any Compromises.
-            </h6>
+
             <div class="row">
               <div class="col-lg-6">
                 <img
@@ -20,8 +24,8 @@ function About() {
               </div>
               <div class="col-lg-6">
                 <p>
-                <br/>
-                <br/>
+                  <br />
+                  <br />
                   Introducing Driftmark Technologies, a premier bespoke software
                   development firm in India. Our expertise lies in crafting
                   cost-effective, innovative web and mobile applications, as

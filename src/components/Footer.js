@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,14 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 footer-contact">
-            <div><img src="assets/img/Footer_image2.png" alt="" className="img-fluid" style={{width:"90%"}}/></div>
+              <div>
+                <img
+                  src="assets/img/Footer_image2.png"
+                  alt=""
+                  className="img-fluid"
+                  style={{ width: "90%" }}
+                />
+              </div>
               <p>
                 Kadirimangalam <br />
                 Tirupathur, Tamil Nadu 635653
@@ -74,14 +81,14 @@ function Footer() {
               <div className="social-links mt-3">
                 <Link
                   to="https://twitter.com/DriftmarkTech"
-                 className="twitter"
+                  className="twitter"
                   target="_blank"
                 >
                   <i className="bx bxl-twitter"></i>
                 </Link>
                 <Link
                   to="https://www.instagram.com/driftmarktechnology/"
-                 className="instagram"
+                  className="instagram"
                   target="_blank"
                 >
                   <i className="bx bxl-instagram"></i>
@@ -91,7 +98,7 @@ function Footer() {
                 </Link>
                 <Link
                   to="https://www.linkedin.com/company/driftmark-technology/"
-                 className="linkedin"
+                  className="linkedin"
                   target="_blank"
                 >
                   <i className="bx bxl-linkedin"></i>

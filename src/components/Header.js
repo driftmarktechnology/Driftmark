@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header() {
   const location = useLocation();
@@ -13,11 +13,14 @@ function Header() {
     <header id="header" className="fixed-top">
       <div className="container d-flex align-items-center justify-content-between">
         <h1 className="logo">
-          <Link to="/"><img src="assets/img/Logo_crop.png" alt="Driftmark Technology Logo" class="fas fa-2x"/></Link>
+          <Link to="/">
+            <img
+              src="assets/img/Logo_crop.png"
+              alt="Driftmark Technology Logo"
+              class="fas fa-2x"
+            />
+          </Link>
         </h1>
-        {/* <a to="/" className="logo">
-          <img src="assets/img/logo.png" alt="" className="img-fluid" />
-        </a> */}
 
         <nav id="navbar" className="navbar">
           <ul>

@@ -3,11 +3,13 @@ import React from "react";
 function Terms() {
   return (
     <>
-      <section>
+      <section id="terms" class="team section-bg mt-5">
+        <div class="section-title">
+          <span>Terms</span>
+          <h2>Terms</h2>
+        </div>
         <div class="container">
           <div>
-            <span>Terms</span>
-            <h2>Terms</h2>
             <div>
               <h3>1. Introduction</h3>
               <p>

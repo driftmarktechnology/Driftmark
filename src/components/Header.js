@@ -12,11 +12,11 @@ function Header() {
     <header id="header" className="fixed-top">
       <div className="container d-flex align-items-center justify-content-between">
         <h1 className="logo">
-          <a href="/">Driftmark</a>
+          <a href="/"><img src="assets/img/Logo_crop.png" alt="Driftmark Technology Logo" class="fas fa-2x"/></a>
         </h1>
-        <a href="/" className="logo">
+        {/* <a href="/" className="logo">
           <img src="assets/img/logo.png" alt="" className="img-fluid" />
-        </a>
+        </a> */}
 
         <nav id="navbar" className="navbar">
           <ul>
@@ -47,7 +47,7 @@ function Header() {
             <li>
               <a
                 className={`nav-link scrollto ${isActive("/career")}`}
-                href="/contact"
+                href="/career"
               >
                 Career
               </a>

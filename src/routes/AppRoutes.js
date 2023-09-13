@@ -7,6 +7,7 @@ const Team = lazy(() => import("../pages/Team"));
 const Services = lazy(() => import("../pages/Services"));
 const About = lazy(() => import("../pages/About"));
 const Privacy = lazy(() => import("../pages/Privacy"));
+const Career = lazy(() => import("../pages/Career"));
 const Terms = lazy(() => import("../pages/Terms"));
 const Sitemap = lazy(() => import("../Sitemap"));
 
@@ -22,6 +23,7 @@ function AppRoutes() {
           <Route path="/team" element={<Team />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/career" element={<Career />} />
           <Route path="/sitemap" element={<Sitemap />} />
         </Routes>
       </Suspense>

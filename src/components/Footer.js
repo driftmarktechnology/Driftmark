@@ -10,7 +10,7 @@ function Footer() {
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6 footer-contact">
-              <h3>Driftmark</h3>
+            <div><img src="assets/img/Footer_image2.png" alt="" class="img-fluid" style={{width:"90%"}}/></div>
               <p>
                 Kadirimangalam <br />
                 Tirupathur, Tamil Nadu 635653

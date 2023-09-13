@@ -10,7 +10,6 @@ function About() {
             <h6>
               Prioritizing Delivery and Satisfaction, Without Any Compromises.
             </h6>
-            <br />
             <div class="row">
               <div class="col-lg-6">
                 <img
@@ -21,6 +20,8 @@ function About() {
               </div>
               <div class="col-lg-6">
                 <p>
+                <br/>
+                <br/>
                   Introducing Driftmark Technologies, a premier bespoke software
                   development firm in India. Our expertise lies in crafting
                   cost-effective, innovative web and mobile applications, as

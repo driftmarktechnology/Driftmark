@@ -11,6 +11,11 @@ const Privacy = lazy(() => import("../pages/Privacy"));
 const Career = lazy(() => import("../pages/Career"));
 const Terms = lazy(() => import("../pages/Terms"));
 const Sitemap = lazy(() => import("../Sitemap"));
+const WebDesign = lazy(() => import("../pages/WebDesign"));
+const WebDevelopment = lazy(() => import("../pages/WebDevelopment"));
+const ProductManagement = lazy(() => import("../pages/ProductManagement"));
+const Marketing = lazy(() => import("../pages/Marketing"));
+const GraphicDesign = lazy(() => import("../pages/GraphicDesign"));
 
 function AppRoutes() {
   return (
@@ -46,6 +51,11 @@ function AppRoutes() {
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/career" element={<Career />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/web-design" element={<WebDesign />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/product-management" element={<ProductManagement />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/graphic-design" element={<GraphicDesign />} />
         </Routes>
       </Suspense>
     </div>

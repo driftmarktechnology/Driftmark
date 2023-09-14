@@ -55,19 +55,19 @@ function Footer() {
               <h4>Our Services</h4>
               <ul>
                 <li>
-                  <Link to="#">Web Design</Link>
+                  <Link to="/web-design">Web Design</Link>
                 </li>
                 <li>
-                  <Link to="#">Web Development</Link>
+                  <Link to="/web-development">Web Development</Link>
                 </li>
                 <li>
-                  <Link to="#">Product Management</Link>
+                  <Link to="/product-management">Product Management</Link>
                 </li>
                 <li>
-                  <Link to="#">Marketing</Link>
+                  <Link to="marketing">Marketing</Link>
                 </li>
                 <li>
-                  <Link to="#">Graphic Design</Link>
+                  <Link to="graphic-design">Graphic Design</Link>
                 </li>
               </ul>
             </div>

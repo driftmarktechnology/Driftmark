@@ -115,6 +115,15 @@ function Services() {
             </div>
           </div>
         </div>
+        <article class="services-cta section section-bg">
+          <div class="section-header text-center">
+            <h2 class="section-title">Let us help you launch your project</h2>
+          </div>
+          <figure class="img-holder text-center">
+            <img src="assets/img/rocket-pulse.svg" />
+            <figcaption>LAUNCH A PROJECT</figcaption>
+          </figure>
+        </article>
       </div>
     </section>
   );

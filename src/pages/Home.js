@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Accordion from "../components/Accordion";
 
 function Home() {
   return (
@@ -23,9 +24,9 @@ function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-6 order-1 order-lg-2 hero-img">
+            <div className="col-lg-6 order-1 order-lg-2 hero-img text-end">
               <img
-                src="assets/img/hero-img.png"
+                src="assets/img/banner.gif"
                 className="img-fluid animated"
                 alt=""
               />
@@ -162,19 +163,42 @@ function Home() {
             </Carousel>
           </div>
         </section>
-
-        <section id="cta" className="cta">
-          <div className="container">
-            <div className="text-center">
-              <h3>Have a Project in Mind?</h3>
-              <p>
-                Share your project concept with us, and we'll collaboratively
-                craft the ideal solution for your enterprise
-              </p>
-              <Link className="cta-btn" to="/contact">
-                Contact Us
-              </Link>
+        <section class="cta section section-bg gradient--dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <header class="section-header section-header__light">
+                  <h2>Let us bring your product to life</h2>
+                  <p class="text">
+                    We work with all types of budgets. We love to work on
+                    interesting projects and delivering high quality products
+                    for both startups and enterprise clients. Let’s talk and see
+                    what amazing products we can build together!
+                  </p>
+                  <div class="btn-holder">
+                    <span>LAUNCH A PROJECT</span>
+                  </div>
+                </header>
+              </div>
+              <div className="col-lg-6">
+                <figure class="img-holder text-end">
+                  <img
+                    className="img-fluid"
+                    src="assets/img/rocket-launch.svg"
+                  />
+                </figure>
+              </div>
             </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="container">
+            <div className="section-title">
+              <span>FAQ</span>
+              <h2>FAQ</h2>
+            </div>
+            <Accordion />
           </div>
         </section>
       </main>

@@ -1354,3 +1354,36 @@ section {
     text-align-last: center;
   }
 }
+
+.services-cta .img-holder a:before {
+  position: absolute;
+  width: 145px;
+  height: 152px;
+  border-radius: 100%;
+  border: 5px solid #06c;
+  top: 12px;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0.9;
+  left: 0;
+  -webkit-animation: pulse-ring-rocket-in 1.5s
+    cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: pulse-ring-rocket-in 1.5s cubic-bezier(0.215, 0.61, 0.355, 1)
+    infinite;
+}
+
+.services-cta .img-holder a:after {
+  position: absolute;
+  width: 145px;
+  height: 152px;
+  border-radius: 100%;
+  border: 5px solid #06c;
+  top: 12px;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  left: 0;
+  -webkit-animation: pulse-ring-rocket-out 1.5s
+    cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: pulse-ring-rocket-out 1.5s cubic-bezier(0.215, 0.61, 0.355, 1)
+    infinite;
+}

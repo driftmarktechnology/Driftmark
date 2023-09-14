@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "../components/Accordion";
+import { Link } from "react-router-dom";
 
 function Team() {
   return (
@@ -25,8 +25,67 @@ function Team() {
             with prospective talents eager to be a part of our journey.
           </p>
           <div className="mt-5">
-            <h2>Current Openings</h2>
-            <Accordion />
+            <section class="section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <header class="section-header">
+                      <h2>We need a normal superhero, obviously.</h2>
+                      <p class="text">
+                        You're polite and down to earth.
+                        <br />
+                        You love stability in life.
+                        <br />
+                        You're OK with processes and organization.
+                        <br />
+                        <strong>
+                          Tech stack: HTML, CSS,React, Javascript, Node, PHP,
+                          Wordpress, Java
+                        </strong>
+                        <br />
+                        <br />
+                      </p>
+                      <Link to="#about" className="btn-get-started scrollto">
+                        Apply Now
+                      </Link>
+                    </header>
+                  </div>
+                  <div class="col-lg-6">
+                    <img src="assets/img/superhero.png" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section section-bg">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <header class="section-header">
+                      <h2 class="section-title">
+                        We know many companies have been asking you to do this
+                      </h2>
+                      <h3>But come work with us.</h3>
+                      <p class="text">
+                        Everything is completely negotiable - benefits, remote
+                        work, salary, Slack memes... 🐈
+                      </p>
+                      <p class="text">
+                        Oh, and feel free to apply even if you don't work with
+                        our tech stack. We often have inquiries for projects we
+                        need an additional pair of hands (and programming
+                        languages) for.
+                      </p>
+                      <p class="text">
+                        Send your resume and a little bit about yourself to{" "}
+                        <a href="mailto:hr@driftmarktechnology.com">
+                          hr@driftmarktechnology.com
+                        </a>
+                      </p>
+                    </header>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

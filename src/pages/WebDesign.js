@@ -16,7 +16,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/web-design-goal.png"
+                  src="assets/img/web-design/web-design-goal.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -58,7 +58,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/web-design-sitemap.png"
+                  src="assets/img/web-design/web-design-sitemap.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -70,7 +70,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/web-design-digital-design.png"
+                  src="assets/img/web-design/web-design-digital-design.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -114,7 +114,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/web-design-developing-goals.png"
+                  src="assets/img/web-design/web-design-goal.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -126,7 +126,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/web-design-testing-support.png"
+                  src="assets/img/web-design/web-design-testing-support.png"
                   class="img-fluid animated"
                   alt=""
                 />

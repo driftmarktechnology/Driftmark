@@ -61,13 +61,13 @@ function Footer() {
                   <Link to="/web-development">Web Development</Link>
                 </li>
                 <li>
-                  <Link to="/product-management">Product Management</Link>
+                  <Link to="/testing-&-qa">Testing & QA</Link>
                 </li>
                 <li>
-                  <Link to="marketing">Marketing</Link>
+                  <Link to="/marketing">Marketing</Link>
                 </li>
                 <li>
-                  <Link to="graphic-design">Graphic Design</Link>
+                  <Link to="/graphic-design">Graphic Design</Link>
                 </li>
               </ul>
             </div>

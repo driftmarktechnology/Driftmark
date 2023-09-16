@@ -34,19 +34,22 @@ function Footer() {
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <Link to="#">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="#">About us</Link>
+                  <Link to="about">About</Link>
                 </li>
                 <li>
-                  <Link to="#">Services</Link>
+                  <Link to="/services">Services</Link>
                 </li>
                 <li>
-                  <Link to="#">Career</Link>
+                  <Link to="/career">Career</Link>
                 </li>
                 <li>
-                  <Link to="#">Contact</Link>
+                  <Link to="/contact">Contact</Link>
+                </li>
+                <li>
+                  <Link to="/blogs">Blogs</Link>
                 </li>
               </ul>
             </div>

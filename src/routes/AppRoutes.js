@@ -16,6 +16,8 @@ const WebDevelopment = lazy(() => import("../pages/WebDevelopment"));
 const TestingAndQA = lazy(() => import("../pages/TestingAndQA"));
 const Marketing = lazy(() => import("../pages/Marketing"));
 const GraphicDesign = lazy(() => import("../pages/GraphicDesign"));
+const Blogs = lazy(() => import("../pages/Blogs"));
+const Technologies = lazy(() => import("../pages/Technologies"));
 
 function AppRoutes() {
   return (
@@ -56,6 +58,8 @@ function AppRoutes() {
           <Route path="/testing-&-qa" element={<TestingAndQA />} />
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/graphic-design" element={<GraphicDesign />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/technologies" element={<Technologies />} />
         </Routes>
       </Suspense>
     </div>

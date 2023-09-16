@@ -81,3 +81,7 @@ code {
   font-weight: 600;
   color: black;
 }
+
+.nav-link.active {
+  color: #007bff !important;
+}

@@ -27,10 +27,7 @@ function App() {
             content="Driftmark - Pioneering the Future of Software. Learn about our journey, mission, and vision."
           />
           <meta property="og:image" content="http://driftmarktechnology.com/" />
-          <meta
-            property="og:url"
-            content="http://driftmarktechnology.com//about"
-          />
+          <meta property="og:url" content="http://driftmarktechnology.com/" />
           <meta property="og:type" content="website" />
 
           <meta

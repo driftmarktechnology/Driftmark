@@ -51,14 +51,19 @@ function Team() {
                     </header>
                   </div>
                   <div class="col-lg-6">
-                    <img src="assets/img/superhero.png" />
+                    <img
+                      className="img-fluid text-center"
+                      width={400}
+                      height={400}
+                      src="/assets/img/superhero.jpg"
+                    />
                   </div>
                 </div>
               </div>
             </section>
             <section class="section section-bg">
               <div class="container">
-                <div class="row">
+                <div class="row ">
                   <div class="col-12">
                     <header class="section-header">
                       <h2 class="section-title">

@@ -11,9 +11,14 @@ function Technologies() {
           </div>
           <div className="row">
             <div class="col-lg-6">
-              <img className="img-fluid" src="/assets/img/technologies.png" />
+              <img
+                className="img-fluid"
+                src="/assets/img/technologies.png"
+                width={400}
+                height={400}
+              />
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center mb-5 mt-5">
               <p class="text-dark-text text-paragraph m-0 px-2 sm:px-2 md:px-6 lg:px-20 xl:px-20 2xl:px-20">
                 Strengthen your projects-choose from the carefully selected
                 resources that best match your IT &amp; Engineering needs,

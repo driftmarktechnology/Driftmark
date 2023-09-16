@@ -112,7 +112,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="container footer-bottom clearfix">
+      <div className="footer-bottom clearfix">
         <div className="container copyright-section pt-2 d-flex justify-content-between flex-wrap">
           <p className="copyright">
             © Copyright {currentYear}

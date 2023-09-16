@@ -64,7 +64,7 @@ function Footer() {
                   <Link to="/web-development">Web Development</Link>
                 </li>
                 <li>
-                  <Link to="/testing-&-qa">Testing & QA</Link>
+                  <Link to="/testing-qa">Testing & QA</Link>
                 </li>
                 <li>
                   <Link to="/marketing">Marketing</Link>

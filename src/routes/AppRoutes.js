@@ -55,7 +55,7 @@ function AppRoutes() {
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/web-design" element={<WebDesign />} />
           <Route path="/web-development" element={<WebDevelopment />} />
-          <Route path="/testing-&-qa" element={<TestingAndQA />} />
+          <Route path="/testing-qa" element={<TestingAndQA />} />
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/graphic-design" element={<GraphicDesign />} />
           <Route path="/blogs" element={<Blogs />} />

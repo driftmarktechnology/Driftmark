@@ -11,6 +11,47 @@ const Accordion = () => {
             className="accordion-button"
             type="button"
             data-bs-toggle="collapse"
+            data-bs-target="#collapseFour"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            A high-quality website is crucial for a company. Why?
+          </button>
+        </h2>
+        <div
+          id="collapseFour"
+          className="accordion-collapse collapse show"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div className="accordion-body">
+            <p style={{ textAlign: "left" }}>
+              <p>
+                Individuals turn to the internet to research companies,
+                products, and services. Gone are the days when we depended on
+                directories or phone books. When people need information, their
+                first instinct is to browse online. When they hunt for something
+                you provide or specifically for your brand, it's essential not
+                only to be visible but also to make a striking impression. Your
+                physical storefront and showroom are impressive, aren't they?
+                Why do they stand out? Because you're aware that customers view
+                them and shape perceptions about Driftmark based on them (along
+                with aspects like customer service, quality, pricing, etc.).
+                Consider your website as Driftmark's digital facade and display
+                area. Viewers are evaluating it and building an impression about
+                the enterprise based on its appearance and functionality. Hence,
+                it's vital to ensure it's top-notch!
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="accordion-item">
+        <h2 className="accordion-header" id="headingOne">
+          <button
+            className="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
             aria-expanded="true"
             aria-controls="collapseOne"
@@ -46,7 +87,7 @@ const Accordion = () => {
             className="accordion-button"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
+            data-bs-target="#collapseTwo"
             aria-expanded="true"
             aria-controls="collapseOne"
           >
@@ -54,7 +95,7 @@ const Accordion = () => {
           </button>
         </h2>
         <div
-          id="collapseOne"
+          id="collapseTwo"
           className="accordion-collapse collapse show"
           aria-labelledby="headingOne"
           data-bs-parent="#accordionExample"
@@ -78,7 +119,7 @@ const Accordion = () => {
             className="accordion-button"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
+            data-bs-target="#collapseThree"
             aria-expanded="true"
             aria-controls="collapseOne"
           >
@@ -87,7 +128,7 @@ const Accordion = () => {
           </button>
         </h2>
         <div
-          id="collapseOne"
+          id="collapseThree"
           className="accordion-collapse collapse show"
           aria-labelledby="headingOne"
           data-bs-parent="#accordionExample"

@@ -115,49 +115,47 @@ function Home() {
             <div className="section-title">
               <span>Testimonials</span>
               <h2>Testimonials</h2>
-              <p>
-                Sit sint consectetur velit quisquam cupiditate impedit suscipit
-                alias
-              </p>
             </div>
 
-            <Carousel autoPlay={true} interval={1} showStatus={false}>
+            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}>
               <div>
                 <div className="testimonial-item">
                   <p>
                     <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.
+                    Driftmark and I have a deep-rooted professional bond, and
+                    I'm delighted to express that together we've savored the
+                    taste of success. The team of specialists at Driftmark has
+                    consistently pursued excellence, regardless of the
+                    challenges they faced. Their innovative mindset and
+                    unwavering dedication ensure a stable and efficient
+                    workflow. At first, I felt their pricing was on the higher
+                    side, but seeing the exceptional quality they delivered, I
+                    found the value justified the cost.
                     <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
-                    className="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Saul Goodman1</h3>
-                  <h4>Ceo &amp; Founder</h4>
+
+                  <h3>Kit</h3>
+                  <h4>Web Designer</h4>
                 </div>
               </div>
               <div>
                 <div className="testimonial-item">
                   <p>
                     <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.
+                    Driftmark and I have a deep-rooted professional bond, and
+                    I'm delighted to express that together we've savored the
+                    taste of success. The team of specialists at Driftmark has
+                    consistently pursued excellence, regardless of the
+                    challenges they faced. Their innovative mindset and
+                    unwavering dedication ensure a stable and efficient
+                    workflow. At first, I felt their pricing was on the higher
+                    side, but seeing the exceptional quality they delivered, I
+                    found the value justified the cost.
                     <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
-                    className="testimonial-img"
-                    alt=""
-                  />
+
                   <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <h4>Devops</h4>
                 </div>
               </div>
             </Carousel>

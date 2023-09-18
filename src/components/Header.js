@@ -22,7 +22,7 @@ function Header() {
           <h1 className="logo">
             <Link to="/">
               <img
-                src="assets/img/Logo_crop.png"
+                src="assets/img/logo_crop.png"
                 alt="Driftmark Technology Logo"
                 className="fas fa-2x"
               />

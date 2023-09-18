@@ -40,7 +40,7 @@ function Team() {
                 <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
                   <div class="member">
                     <img
-                      src="/assets/img/director.jpg"
+                      src="/assets/img/team/director.jpg"
                       width={"100%"}
                       alt=""
                       style={{ objectFit: "cover" }}
@@ -70,7 +70,7 @@ function Team() {
                 </div>
                 <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
                   <div class="member">
-                    <img src="/assets/img/naveen.jpg" alt="" />
+                    <img src="/assets/img/team/naveen.jpg" alt="" />
                     <h4>Murugesan Naveen</h4>
                     <span>Director</span>
                     <p>

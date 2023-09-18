@@ -16,7 +16,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/marketing/marketing-social-media.jpg"
+                  src="assets/img/marketing/marketing-social-media.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -64,7 +64,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/testing/testing-3.jpg"
+                  src="assets/img/marketing/marketing-seo.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -100,7 +100,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/marketing/marketing-content-writing.jpg"
+                  src="assets/img/marketing/marketing-content-writing.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -112,7 +112,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/marketing/marketing-email.jpg"
+                  src="assets/img/marketing/marketing-email.png"
                   class="img-fluid animated"
                   alt=""
                 />

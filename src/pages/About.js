@@ -17,7 +17,7 @@ function About() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/WhoWeAre2.jpg"
+                  src="assets/img/about/who-we-are2.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -70,7 +70,7 @@ function About() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/WhatWeOffer.jpeg"
+                  src="assets/img/about/what-we-offer.jpeg"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -82,7 +82,7 @@ function About() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/mission.jpeg"
+                  src="assets/img/about/mission.jpeg"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -130,7 +130,7 @@ function About() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/vision.jpeg"
+                  src="assets/img/about/vision.jpeg"
                   class="img-fluid animated"
                   alt=""
                 />

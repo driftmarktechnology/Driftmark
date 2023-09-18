@@ -12,7 +12,7 @@ function Footer() {
             <div className="col-lg-3 col-md-6 footer-contact mb-5">
               <div>
                 <img
-                  src="assets/img/footer_image2.png"
+                  src="assets/img/footer-image.png"
                   alt=""
                   className="img-fluid"
                   style={{ width: "90%" }}

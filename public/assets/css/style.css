@@ -894,7 +894,7 @@ section {
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 0 15px 0 15px;
+  margin: 5px;
   padding: 20px 20px 60px 20px;
   background: white;
   position: relative;

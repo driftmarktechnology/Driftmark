@@ -1,13 +1,14 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Terms() {
   return (
     <>
       <section id="terms" class="team section-bg mt-5">
-        <div class="section-title">
-          <span>Terms</span>
-          <h2>Terms</h2>
-        </div>
+      <Sectionheader
+            title={"Terms of Use"}
+          />
         <div class="container">
           <div>
             <div>

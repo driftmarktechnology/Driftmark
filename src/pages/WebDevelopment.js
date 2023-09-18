@@ -1,14 +1,15 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Services() {
   return (
     <section id="services" class="services section-bg">
       <div class="container">
-        <div class="section-title">
-          <span>Web Developement</span>
-          <h2>Web Developement</h2>
-          <p>Empowering Your Digital Success</p>
-        </div>
+      <Sectionheader
+            title={"Web Development"}
+            subtitle={"Empowering Your Digital Success"}
+          />
         <div class="section-title">
           <section>
             <h3>Identifying needs</h3>

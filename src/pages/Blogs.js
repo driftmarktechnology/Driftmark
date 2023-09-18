@@ -1,15 +1,16 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Blogs() {
   return (
     <>
       <section id="contact" class="contact">
         <div class="container">
-          <div class="section-title">
-            <span>Blogs</span>
-            <h2>Blogs</h2>
-            <p>STARTUP DEVELOPMENT USING LEAN STARTUP METHODOLOGY</p>
-          </div>
+        <Sectionheader
+            title={"Blogs"}
+            subtitle={"Startup Development Using Lean Startup Methodology"}
+          />
           <div class="section-title">
             <section>
               <div class="row">

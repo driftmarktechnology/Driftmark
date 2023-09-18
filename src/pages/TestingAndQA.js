@@ -1,17 +1,15 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Services() {
   return (
     <section id="services" class="services section-bg">
       <div class="container">
-        <div class="section-title">
-          <span>Testing & QA</span>
-          <h2>Testing & QA</h2>
-          <p>
-            Precision in Quality Assurance: Crafting Bespoke Solutions for Your
-            Success
-          </p>
-        </div>
+      <Sectionheader
+            title={"Testing & QA"}
+            subtitle={"Precision in Quality Assurance: Crafting Bespoke Solutions for Your Success"}
+          />
         <div class="section-title">
           <section>
             <h3>Automation Testing</h3>

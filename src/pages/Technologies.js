@@ -1,4 +1,5 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
 
 function Technologies() {
   return (
@@ -6,8 +7,10 @@ function Technologies() {
       <section id="technologies-section" className="contact">
         <div className="container">
           <div className="section-title">
-            <span>Technologies</span>
-            <h2>Technologies we work with</h2>
+          <Sectionheader
+            title={"Technologies"}
+            subtitle={"Technologies we work with"}
+          />
           </div>
           <div className="row">
             <div class="col-lg-6">

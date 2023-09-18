@@ -1,5 +1,7 @@
 import React from "react";
 import Confetti from "react-confetti";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Team() {
   let width = window.innerWidth;
@@ -10,10 +12,11 @@ function Team() {
       <Confetti width={width} height={height} />
       <section id="team" class="team section-bg">
         <div class="container">
-          <div class="section-title">
-            <span>Team</span>
-            <h2>Team</h2>
-            <h1>Transforming Business Concepts into Reality.</h1>
+        <Sectionheader
+            title={"Team"}
+            subtitle={"Transforming Business Concepts into Reality"}
+          />
+          <div>
             <p>
               At Driftmark, we've honed our expertise in transforming innovative
               concepts into impactful products for our partners. Many of the

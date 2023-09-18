@@ -1,18 +1,15 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Contact() {
   return (
     <section id="contact" class="contact">
       <div class="container">
-        <div class="section-title">
-          <span>Contact</span>
-          <h2>Contact</h2>
-          <p>
-            Your trusted Solutions Partner for the digital transformation of you
-            and your company.
-          </p>
-        </div>
-
+      <Sectionheader
+            title={"Contact"}
+            subtitle={"Your trusted Solutions Partner for the digital transformation of you and your company."}
+          />
         <div class="row">
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">

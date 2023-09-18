@@ -1,15 +1,15 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Services() {
   return (
     <section id="services" class="services section-bg">
       <div class="container">
-        <div class="section-title">
-          <span>Services</span>
-          <h2>Services</h2>
-          <p>We bridge the gap between your great idea and your resources</p>
-        </div>
-
+      <Sectionheader
+            title={"Services"}
+            subtitle={"Turning Ideas into Digital Reality"}
+          />
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">

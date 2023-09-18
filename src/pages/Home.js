@@ -11,14 +11,14 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-              <h1 className="mb-4">
+              <h1 className="mb-4 ms-1 mt-lg-5">
                 Shift your business into the digital realm
               </h1>
-              <h6 className="mb-4">
+              <h6 className="mb-4 ms-1">
                 We help businesses adapt for the digital age, ensuring safe tech
                 use and easy customer access to online services.
               </h6>
-              <div className="d-flex">
+              <div className="d-flex ms-1">
                 <Link to="#about" className="btn-get-started scrollto">
                   Get Started
                 </Link>
@@ -27,7 +27,7 @@ function Home() {
             <div className="col-lg-6 order-1 order-lg-2 hero-img text-end">
               <img
                 src="assets/img/banner.gif"
-                className="img-fluid animated"
+                className="img-fluid animated text-end"
                 alt=""
               />
             </div>
@@ -40,7 +40,7 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-6">
-                <div className="icon-box">
+                <div className="icon-box ms-1">
                   <div className="icon">
                     <i className="bi bi-laptop"></i>
                   </div>
@@ -94,7 +94,7 @@ function Home() {
                   alt=""
                 />
               </div>
-              <div className="col-lg-6 pt-4 pt-lg-0 content">
+              <div className="col-lg-6 pe-2 pt-4 pt-lg-0 content">
                 <h3>About Driftmark Technology</h3>
                 <p className="fst-italic">
                   Our team of full-stack developers and agile professionals
@@ -139,7 +139,7 @@ function Home() {
                 </div>
               </div>
               <div>
-                <div className="testimonial-item">
+                <div className="testimonial-item mx-0">
                   <p>
                     <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                     Driftmark and I have a deep-rooted professional bond, and
@@ -164,7 +164,7 @@ function Home() {
         <section class="cta section section-bg gradient--dark">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-6 text-start">
                 <header class="section-header section-header__light">
                   <h2>Let us bring your product to life</h2>
                   <p class="text">
@@ -183,6 +183,7 @@ function Home() {
                   <img
                     className="img-fluid"
                     src="assets/img/rocket-launch.svg"
+                    alt=""
                   />
                 </figure>
               </div>

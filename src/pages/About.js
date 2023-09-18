@@ -1,15 +1,15 @@
 import React from "react";
+import Sectionheader from "../components/Sectionheader"
+
 
 function About() {
   return (
     <section id="contact" class="contact">
       <div class="container">
-        <div class="section-title">
-          <span>About</span>
-          <h2>About</h2>
-          <p>We bridge the gap between your great idea and your resources</p>
-        </div>
-
+      <Sectionheader
+            title={"About"}
+            subtitle={"We bridge the gap between your great idea and your resources"}
+          />
         <div class="section-title">
           <section>
             <h3>Who We Are</h3>

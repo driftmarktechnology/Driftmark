@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Sectionheader from "../components/Sectionheader"
+
 
 function Privacy() {
   return (
     <>
       <section className="mt-5">
-        <div class="section-title">
-          <span>Privacy</span>
-          <h2>Privacy</h2>
-        </div>
         <div class="container">
+        <Sectionheader
+            title={"Privacy Policy"}
+          />
           <div>
-            <div>
               <h3>1. Definitions</h3>
               <p>
                 Driftmark Technology, seated in Kadirimangalam, Tirupathur,
@@ -173,7 +173,6 @@ function Privacy() {
               </p>
             </div>
           </div>
-        </div>
       </section>
     </>
   );

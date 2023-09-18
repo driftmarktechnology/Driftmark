@@ -39,7 +39,13 @@ function Team() {
               <div class="row">
                 <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
                   <div class="member">
-                    <img src="/assets/img/suji.jpg" alt="" height="313" />
+                    <img
+                      src="/assets/img/director.jpg"
+                      width={"100%"}
+                      alt=""
+                      style={{ objectFit: "cover" }}
+                      height="313"
+                    />
                     <h4>Kesavan Sujitha</h4>
                     <span>Director</span>
                     <p>

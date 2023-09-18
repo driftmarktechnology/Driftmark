@@ -55,7 +55,7 @@ function Team() {
                       className="img-fluid text-center"
                       width={400}
                       height={400}
-                      src="/assets/img/superhero.jpg"
+                      src="/assets/img/superhero.png"
                     />
                   </div>
                 </div>

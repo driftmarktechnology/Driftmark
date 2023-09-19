@@ -19,6 +19,7 @@ function Technologies() {
                 src="/assets/img/technologies.png"
                 width={400}
                 height={400}
+                alt=""
               />
             </div>
             <div class="col-lg-6 d-flex justify-content-center align-items-center mb-5 mt-5">
@@ -35,7 +36,12 @@ function Technologies() {
             <h1 class="text-center text-heading text-brandblue-dark px-20 mb-20 hide-desktop-items-block">
               How we work
             </h1>
-            <svg
+            <img
+              className="img-fluid"
+              src="assets/img/how-we-work.png"
+              alt=""
+            />
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               class="hide-desktop-items"
               width=""
@@ -1322,7 +1328,7 @@ function Technologies() {
                   ></path>
                 </g>
               </g>
-            </svg>
+            </svg> */}
           </div>
         </div>
       </section>

@@ -10,7 +10,7 @@ function Sitemap() {
           <h2>Sitemap</h2>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-md-6 footer-links">
+          <div className="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li>
@@ -23,14 +23,18 @@ function Sitemap() {
                 <Link to="#">Services</Link>
               </li>
               <li>
+                <Link to="#">Team</Link>
+              </li>
+              <li>
                 <Link to="#">Career</Link>
               </li>
               <li>
                 <Link to="#">Contact</Link>
               </li>
+              
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 footer-links">
+          <div className="col-lg-4 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
               <li>
@@ -47,6 +51,23 @@ function Sitemap() {
               </li>
               <li>
                 <Link to="#">Graphic Design</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-4 col-md-6 footer-links">
+            <h4>Learn More About</h4>
+            <ul>
+              <li>
+                <Link to="#">Blogs</Link>
+              </li>
+              <li>
+                <Link to="#">Technologies</Link>
+              </li>
+              <li>
+                <Link to="#">Privacy</Link>
+              </li>
+              <li>
+                <Link to="#">Terms of Use</Link>
               </li>
             </ul>
           </div>

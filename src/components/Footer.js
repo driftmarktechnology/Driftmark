@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer id="footer">
-      <div className="footer-top">
+      <div className="footer-top py-4">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 footer-contact mb-5">
@@ -112,7 +112,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom clearfix">
+      <div className="footer-bottom py-4 clearfix">
         <div className="container copyright-section pt-2 d-flex justify-content-between flex-wrap">
           <p className="copyright">
             © Copyright {currentYear}
@@ -122,9 +122,9 @@ function Footer() {
             <span> All rights reserved.</span>
           </p>
           <p className="copyright">
-            <Link to="/privacy-policy">Privacy Policy </Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
             <span> | </span>
-            <Link to="/terms">Terms of Use </Link>
+            <Link to="/terms">Terms of Use</Link>
             <span> | </span>
             <Link to="sitemap">Site Map</Link>
           </p>

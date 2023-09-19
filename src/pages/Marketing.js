@@ -53,7 +53,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/marketing/marketing-ecommerce.jpg"
+                  src="assets/img/marketing/marketing-ecommerce.png"
                   class="img-fluid animated"
                   alt=""
                 />

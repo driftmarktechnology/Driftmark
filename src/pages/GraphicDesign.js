@@ -60,7 +60,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/graphic-design/graphic-2.jpg"
+                  src="assets/img/graphic-design/graphic-2.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -72,7 +72,7 @@ function Services() {
             <div class="row">
               <div class="col-lg-6">
                 <img
-                  src="assets/img/graphic-design/graphic-3.jpg"
+                  src="assets/img/graphic-design/graphic-3.png"
                   class="img-fluid animated"
                   alt=""
                 />
@@ -120,7 +120,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/graphic-design/graphic-4.jpg"
+                  src="assets/img/graphic-design/graphic-4.png"
                   class="img-fluid animated"
                   alt=""
                 />

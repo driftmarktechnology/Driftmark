@@ -120,7 +120,7 @@ function Services() {
               </div>
               <div class="col-lg-6">
                 <img
-                  src="assets/img/web-design/web-design-goal.png"
+                  src="assets/img/web-design/web-design-developing-goals.png"
                   class="img-fluid animated"
                   alt=""
                 />

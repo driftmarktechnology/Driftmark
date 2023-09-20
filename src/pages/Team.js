@@ -1,11 +1,37 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Confetti from "react-confetti";
 import Sectionheader from "../components/Sectionheader"
+import { v4 as uuidv4 } from 'uuid';
+import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
 
 
 function Team() {
   let width = window.innerWidth;
   let height = window.innerHeight;
+
+
+  function getUniqueUserId() {
+    let userId = localStorage.getItem("userId");
+    if (!userId) {
+      userId = generateUUID();
+      localStorage.setItem("userId", userId);
+    }
+    return userId;
+  }
+
+  function generateUUID() {
+    return uuidv4();
+  }
+  
+  
+
+  useEffect(() => {
+    const uniqueUserId = getUniqueUserId();
+
+    identifyUser(uniqueUserId);
+    trackEvent("Team Page Visited");
+  }, []);
+
 
   return (
     <>

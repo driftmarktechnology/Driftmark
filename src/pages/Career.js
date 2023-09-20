@@ -1,9 +1,33 @@
-import React from "react";
+import React , {useEffect}from "react";
 import { Link } from "react-router-dom";
 import Sectionheader from "../components/Sectionheader"
-
+import { v4 as uuidv4 } from 'uuid';
+import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
 
 function Team() {
+
+  function getUniqueUserId() {
+    let userId = localStorage.getItem("userId");
+    if (!userId) {
+      userId = generateUUID();
+      localStorage.setItem("userId", userId);
+    }
+    return userId;
+  }
+
+  function generateUUID() {
+    return uuidv4();
+  }
+  
+  
+
+  useEffect(() => {
+    const uniqueUserId = getUniqueUserId();
+
+    identifyUser(uniqueUserId);
+    trackEvent("Career Page Visited");
+  }, []);
+
   return (
     <section id="team" class="team section-bg">
       <div class="container">

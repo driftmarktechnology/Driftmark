@@ -1,10 +1,38 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Accordion from "../components/Accordion";
+import { v4 as uuidv4 } from 'uuid';
+import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
 
 function Home() {
+
+
+  function getUniqueUserId() {
+    let userId = localStorage.getItem("userId");
+    if (!userId) {
+      userId = generateUUID();
+      localStorage.setItem("userId", userId);
+    }
+    return userId;
+  }
+
+  function generateUUID() {
+    return uuidv4();
+  }
+  
+  
+
+  useEffect(() => {
+    const uniqueUserId = getUniqueUserId();
+
+    identifyUser(uniqueUserId);
+    trackEvent("Team Page Visited");
+  }, []);
+
+
+
   return (
     <div className="home-page">
       <section id="hero" className="d-flex align-items-center">

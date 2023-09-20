@@ -6,17 +6,15 @@ function Blogs() {
     <>
       <section id="contact" class="contact">
         <div class="container">
-          <Sectionheader
-            title={"Blogs"}
-          />
+          <Sectionheader title={"Blogs"} />
           <div class="section-title">
             <section>
               <div class="row">
-              <p>Startup Development Using Lean Startup Methodology</p>
-              <br/>
-              <br/>
+                <p>Startup Development Using Lean Startup Methodology</p>
+                <br />
+                <br />
                 <div class="col-lg-6">
-                  <br/>
+                  <br />
                   <img
                     src="/assets/img/blogs.jpeg"
                     class="img-fluid animated"
@@ -92,7 +90,8 @@ function Blogs() {
                     and app functionalities. Once these tasks are outlined, we
                     present them to our client who then ranks them based on
                     their priorities.
-                  </p><br/>
+                  </p>
+                  <br />
                   <p>
                     This not only determines the app's development sequence but
                     also takes the budget into consideration. The Backlog, after
@@ -108,7 +107,8 @@ function Blogs() {
                     about a month for the refinement of the MVP, which includes
                     identifying and rectifying glitches and prepping the app for
                     its launch.
-                  </p><br/>
+                  </p>
+                  <br />
                   <p>
                     Following its debut, we gather user feedback to discern its
                     strengths and areas for improvement. What makes our approach
@@ -128,8 +128,8 @@ function Blogs() {
                   </p>
                 </div>
                 <div class="col-lg-6">
-                <br/>
-                <br/>
+                  <br />
+                  <br />
                   <img
                     src="/assets/img/release2.png"
                     class="img-fluid animated"
@@ -138,6 +138,21 @@ function Blogs() {
                     height="90%"
                   />
                 </div>
+              </div>
+            </section>
+          </div>
+          <div class="section-title">
+            <section>
+              <div class="how-we-work container mx-auto md:lg:mt-40 lg:mt-40 xl:mt-40 2xl:mt-40 mt-20">
+                <p class="text-center text-heading text-brandblue-dark px-20 mb-20 hide-desktop-items-block">
+                  How we work:
+                </p>
+                <br/>
+                <img
+                  className="img-fluid"
+                  src="assets/img/how-we-work.png"
+                  alt=""
+                />
               </div>
             </section>
           </div>

@@ -1015,6 +1015,7 @@ section {
   color: #aaaaaa;
 }
 
+
 .team .member .social {
   margin-top: 15px;
 }
@@ -1031,6 +1032,16 @@ section {
 .team .member .social i {
   font-size: 18px;
   margin: 0 2px;
+}
+
+.team .member .read-more{
+  color: #aaaaaa;
+}
+
+.team .member .read-more:hover{
+  color: #39c1eb;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 /*--------------------------------------------------------------

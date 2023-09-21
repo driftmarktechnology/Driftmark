@@ -1,12 +1,11 @@
-import React, {useEffect} from "react";
-import Sectionheader from "../components/Sectionheader"
-import { v4 as uuidv4 } from 'uuid';
-import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
-
+import React, { useEffect } from "react";
+import Sectionheader from "../components/Sectionheader";
+import { v4 as uuidv4 } from "uuid";
+import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faUsers, faGraduationCap, faClock, faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Services() {
-
-
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
     if (!userId) {
@@ -19,8 +18,6 @@ function Services() {
   function generateUUID() {
     return uuidv4();
   }
-  
-  
 
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
@@ -29,14 +26,13 @@ function Services() {
     trackEvent("Services Page Visited");
   }, []);
 
-
   return (
     <section id="services" class="services section-bg">
       <div class="container">
-      <Sectionheader
-            title={"Services"}
-            subtitle={"Turning Ideas into Digital Reality"}
-          />
+        <Sectionheader
+          title={"Services"}
+          subtitle={"Turning Ideas into Digital Reality"}
+        />
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
@@ -142,15 +138,71 @@ function Services() {
             </div>
           </div>
         </div>
-        <article class="services-cta section section-bg">
-          <div class="section-header text-center">
-            <h2 class="section-title">Let us help you launch your project</h2>
+        <section className="services-choose">
+          <div class="container">
+            <Sectionheader
+              title={"Why Driftmark"}
+              subtitle={
+                "We leverage our software experts to build powerful digital solutions that bring about meaningful change through strategic vision"
+              }
+            />
+            <div class="section-title">
+              <div class="row">
+                <div class="col-md-2 d-flex align-items-stretch">
+                  <div class="services-choose-sub mb-3 pb-3">
+                    <h3 className="services-choose-icon">
+                      <FontAwesomeIcon icon={faGlobe} />
+                    </h3>
+                    <h6>Comprehensive approach</h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-stretch">
+                  <div class="services-choose-sub mb-3 pb-3">
+                    <h3 className="services-choose-icon">
+                      <FontAwesomeIcon icon={faUsers} />
+                    </h3>
+                    <h6>Client Priority</h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-stretch">
+                  <div class="services-choose-sub mb-3 pb-3">
+                    <h3 className="services-choose-icon">
+                      <FontAwesomeIcon icon={faGraduationCap} />
+                    </h3>
+                    <h6>Field Mastery</h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-stretch">
+                  <div class="services-choose-sub mb-3 pb-3">
+                    <h3 className="services-choose-icon">
+                      <FontAwesomeIcon icon={faClock} />
+                    </h3>
+                    <h6>Time Optimization</h6>
+                  </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-stretch">
+                  <div class="services-choose-sub mb-3 pb-3">
+                    <h3 className="services-choose-icon">
+                      <FontAwesomeIcon icon={faStar} />
+                    </h3>
+                    <h6>An exceptional team</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <figure class="img-holder text-center">
-            <img src="assets/img/rocket-pulse.svg" />
-            <figcaption>LAUNCH A PROJECT</figcaption>
-          </figure>
-        </article>
+        </section>
+        <section>
+          <article class="services-cta section section-bg">
+            <div class="section-header text-center">
+              <h2 class="section-title">Let us help you launch your project</h2>
+            </div>
+            <figure class="img-holder text-center">
+              <img src="assets/img/rocket-pulse.svg" alt="" />
+              <figcaption>LAUNCH A PROJECT</figcaption>
+            </figure>
+          </article>
+        </section>
       </div>
     </section>
   );

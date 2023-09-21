@@ -682,6 +682,28 @@ section {
   color: #39c1eb;
 }
 
+.services .services-choose .row{
+  display: flex;
+  justify-content: center;
+}
+
+.services .services-choose-sub{
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+  background: #fff;
+  width: 100%;
+}
+
+.services .services-choose-icon{
+  color: #39c1eb;
+}
+
+.services .services-choose-sub:hover{
+  color: #39c1eb;
+}
+
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

@@ -1,14 +1,34 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Accordion from "../components/Accordion";
-import { v4 as uuidv4 } from 'uuid';
-import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
+import { v4 as uuidv4 } from "uuid";
+import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
+import Sectionheader from "../components/Sectionheader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCogs,
+  faUsers,
+  faFileAlt,
+  faShoppingCart,
+  faUserTie,
+  faMobile,
+  faCloud,
+  faChartBar,
+  faShieldAlt,
+  faMoneyBill,
+  faCubes,
+  faClinicMedical,
+  faGraduationCap,
+  faGamepad,
+  faBrain,
+  faLink,
+  faMicrochip,
+  faServer,faCloudDownloadAlt, faHdd 
+} from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
-
-
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
     if (!userId) {
@@ -21,8 +41,6 @@ function Home() {
   function generateUUID() {
     return uuidv4();
   }
-  
-  
 
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
@@ -30,8 +48,6 @@ function Home() {
     identifyUser(uniqueUserId);
     trackEvent("Team Page Visited");
   }, []);
-
-
 
   return (
     <div className="home-page">
@@ -133,6 +149,184 @@ function Home() {
                   keenly focused on the predictive side of analytics, offering
                   unprecedented insights to our clients.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="solution">
+          <div class="container">
+            <Sectionheader title={"Solutions"} />
+            <div class="section-title">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faCogs} />
+                    </h1>
+                    <h6>Enterprise Resource Planning (ERP)</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faUsers} />
+                    </h1>
+                    <h6>Customer Relationship Management (CRM)</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faFileAlt} />
+                    </h1>
+                    <h6>Content Management System (CMS)</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faShoppingCart} />
+                    </h1>
+                    <h6>E-commerce Platforms</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faUserTie} />
+                    </h1>
+                    <h6>Human Resources Management System (HRMS)</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faMobile} />
+                    </h1>
+                    <h6>Mobile Applications</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faCloud} />
+                    </h1>
+                    <h6>Cloud Solutions</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faChartBar} />
+                    </h1>
+                    <h6>Business Intelligence (BI) & Analytics</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faShieldAlt} />
+                    </h1>
+                    <h6>Cybersecurity Solutions</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faMoneyBill} />
+                    </h1>
+                    <h6>Financial Software</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faCubes} />
+                    </h1>
+                    <h6>Supply Chain Management Software</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faClinicMedical} />
+                    </h1>
+                    <h6>Healthcare Solutions</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faGraduationCap} />
+                    </h1>
+                    <h6>Education & E-Learning Platforms</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faGamepad} />
+                    </h1>
+                    <h6>Gaming Software</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faBrain} />
+                    </h1>
+                    <h6>Artificial Intelligence & Machine Learning</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faLink} />
+                    </h1>
+                    <h6>Blockchain Solutions</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faMicrochip} />
+                    </h1>
+                    <h6>IoT Solutions</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faServer} />
+                    </h1>
+                    <h6>Software as a Service (SaaS)</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faCloudDownloadAlt} />
+                    </h1>
+                    <h6>Platform as a Service (PaaS)</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div class="solution-input mb-3 pb-3">
+                    <h1 className="solution-icon">
+                      <FontAwesomeIcon icon={faHdd} />
+                    </h1>
+                    <h6>Infrastructure as a Service (IaaS)</h6>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

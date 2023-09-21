@@ -76,7 +76,7 @@ function Team() {
                       height="313"
                     />
                     <h4>Kesavan Sujitha</h4>
-                    <span>Director</span>
+                    <h6>Director</h6>
                     <p>
                       Voluptas necessitatibus occaecati quia. Earum totam
                       consequuntur qui porro et laborum toro des clara
@@ -101,7 +101,7 @@ function Team() {
                   <div class="member">
                     <img src="/assets/img/team/naveen.jpg" alt="" />
                     <h4>Murugesan Naveen</h4>
-                    <span>Director</span>
+                    <h6>Director</h6>
                     <p>
                       Magni qui quod omnis unde et eos fuga et exercitationem.
                       Odio veritatis perspiciatis quaerat qui aut aut aut

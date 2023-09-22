@@ -135,8 +135,43 @@ function Team() {
                     ></button>
                   </div>
                   <div className="modal-body">
-                    {/* You can put a form or any content here */}
-                    <p>Application content here...</p>
+                    <form>
+                      <div className="mb-3">
+                        <label htmlFor="position" className="form-label">
+                          Position You Apply For
+                        </label>
+                        <select
+                          className="form-select"
+                          id="position"
+                          name="position"
+                          required
+                        >
+                          <option value="">Select a Position</option>
+                          <option value="Front-end Developer">
+                            Front-end Developer
+                          </option>
+                          <option value="Back-end Developer">
+                            Back-end Developer
+                          </option>
+                          <option value="UI/UX Designer">Web Designer</option>
+                          <option value="Graphic Designer">Graphic Designer</option>
+                          <option value="Accountant">Accountant</option>
+                        </select>
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="resume" className="form-label">
+                          Resume File Upload
+                        </label>
+                        <input
+                          type="file"
+                          className="form-control"
+                          id="resume"
+                          name="resume"
+                          accept=".pdf, .doc, .docx"
+                          required
+                        />
+                      </div>
+                    </form>
                   </div>
                   <div className="modal-footer">
                     <button

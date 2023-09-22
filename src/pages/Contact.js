@@ -1,9 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
 
 function Contact() {
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const initialValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    subject: Yup.string().required("Subject is required"),
+    message: Yup.string().required("Message is required"),
+  });
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        const response = await axios.post("/your-api-endpoint", values);
+        setSubmissionStatus({
+          type: "success",
+          message: "Message sent successfully!",
+          data: response.data,
+        });
+        resetForm();
+      } catch (error) {
+        setSubmissionStatus({
+          type: "error",
+          message: "Failed to send message. Please try again later.",
+        });
+      }
+    },
+  });
+
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
     if (!userId) {
@@ -75,7 +114,111 @@ function Contact() {
             </div>
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form
+              onSubmit={formik.handleSubmit}
+              className="php-email-form"
+            >
+              <div className="row">
+                <div className="form-group col-md-6">
+                  <label htmlFor="name">Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className={`form-control ${
+                      formik.touched.name && formik.errors.name
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                    id="name"
+                    required
+                    {...formik.getFieldProps("name")}
+                  />
+                  {formik.touched.name && formik.errors.name ? (
+                    <div className="invalid-feedback">
+                      {formik.errors.name}
+                    </div>
+                  ) : null}
+                </div>
+                <div className="form-group col-md-6 mt-3 mt-md-0">
+                  <label htmlFor="email">Your Email</label>
+                  <input
+                    type="email"
+                    className={`form-control ${
+                      formik.touched.email && formik.errors.email
+                        ? "is-invalid"
+                        : ""
+                    }`}
+                    name="email"
+                    id="email"
+                    required
+                    {...formik.getFieldProps("email")}
+                  />
+                  {formik.touched.email && formik.errors.email ? (
+                    <div className="invalid-feedback">
+                      {formik.errors.email}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+              <div className="form-group mt-3">
+                <label htmlFor="subject">Subject</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    formik.touched.subject && formik.errors.subject
+                      ? "is-invalid"
+                      : ""
+                  }`}
+                  name="subject"
+                  id="subject"
+                  required
+                  {...formik.getFieldProps("subject")}
+                />
+                {formik.touched.subject && formik.errors.subject ? (
+                  <div className="invalid-feedback">
+                    {formik.errors.subject}
+                  </div>
+                ) : null}
+              </div>
+              <div className="form-group mt-3">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  className={`form-control ${
+                    formik.touched.message && formik.errors.message
+                      ? "is-invalid"
+                      : ""
+                  }`}
+                  name="message"
+                  rows="10"
+                  required
+                  {...formik.getFieldProps("message")}
+                ></textarea>
+                {formik.touched.message && formik.errors.message ? (
+                  <div className="invalid-feedback">
+                    {formik.errors.message}
+                  </div>
+                ) : null}
+              </div>
+              <div className="my-3">
+                {submissionStatus && submissionStatus.type === "error" && (
+                  <div className="alert alert-danger">
+                    {submissionStatus.message}
+                  </div>
+                )}
+                {submissionStatus && submissionStatus.type === "success" && (
+                  <div className="alert alert-success">
+                    {submissionStatus.message}
+                  </div>
+                )}
+              </div>
+              <div className="text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+          {/* <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
@@ -129,7 +272,7 @@ function Contact() {
                 <button type="submit">Send Message</button>
               </div>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

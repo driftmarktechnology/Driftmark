@@ -76,10 +76,10 @@ function Team() {
                     <h6>Director</h6>
                     <p>
                       Kesavan Sujitha is the Director of our company, bringing
-                      extensive expertise and leadership to our team.
+                      extensive expertise and leadership to our team. 
                       {!isExpandedSujitha && (
                         <>
-                          With a background in software development...{" "}
+                         ...{" "}
                           <p
                             onClick={() => setIsExpandedSujitha(true)}
                             class="read-more"
@@ -123,7 +123,7 @@ function Team() {
                       pivotal role in our success.
                       {!isExpandedNaveen && (
                         <>
-                          With a wealth of experience...{" "}
+                          ...{" "}
                           <p
                             onClick={() => setIsExpandedNaveen(true)}
                             class="read-more"
@@ -164,7 +164,7 @@ function Team() {
                       a positive and inclusive workplace environment.
                       {!isExpandedKowsalya && (
                         <>
-                          With a passion for people and strong communication...{" "}
+                          ...{" "}
                           <p
                             onClick={() => setIsExpandedKowsalya(true)}
                             class="read-more"
@@ -205,7 +205,7 @@ function Team() {
                       precision.
                       {!isExpandedSuriya && (
                         <>
-                          With a passion for crafting user-friendly...{" "}
+                          ...{" "}
                           <p
                             onClick={() => setIsExpandedSuriya(true)}
                             class="read-more"

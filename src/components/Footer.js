@@ -23,9 +23,24 @@ function Footer() {
                 Tirupathur, Tamil Nadu 635653
                 <br />
                 India <br />
-                <strong>Phone:</strong> +91 6381475573
+                <strong>Phone:</strong>{" "}
+                <span>
+                  <a href="tel:+91 6381 475 573">+91 6381 475 573</a>
+                </span>
                 <br />
-                <strong>Email:</strong> contact@driftmarktechnology.com
+                <strong>Email:</strong>{" "}
+                <span>
+                  <a
+                    href="mailto:contact@driftmarktechnology.com"
+                    onClick={(e) => {
+                      window.location.href =
+                        "mailto:contact@driftmarktechnology.com";
+                      e.preventDefault();
+                    }}
+                  >
+                    contact@driftmarktechnology.com
+                  </a>
+                </span>{" "}
                 <br />
               </p>
             </div>
@@ -50,6 +65,12 @@ function Footer() {
                 </li>
                 <li>
                   <Link to="/blogs">Blogs</Link>
+                </li>
+                <li>
+                  <Link to="/technologies">Technologies</Link>
+                </li>
+                <li>
+                  <Link to="/team">Team</Link>
                 </li>
               </ul>
             </div>

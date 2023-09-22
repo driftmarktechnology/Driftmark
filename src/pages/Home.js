@@ -25,7 +25,9 @@ import {
   faBrain,
   faLink,
   faMicrochip,
-  faServer,faCloudDownloadAlt, faHdd 
+  faServer,
+  faCloudDownloadAlt,
+  faHdd,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
@@ -63,7 +65,7 @@ function Home() {
                 use and easy customer access to online services.
               </h6>
               <div className="d-flex ms-1">
-                <Link to="#about" className="btn-get-started scrollto">
+                <Link to="/contact" className="btn-get-started scrollto">
                   Get Started
                 </Link>
               </div>
@@ -395,9 +397,14 @@ function Home() {
                     for both startups and enterprise clients. Let’s talk and see
                     what amazing products we can build together!
                   </p>
-                  <div class="btn-holder">
-                    <span>LAUNCH A PROJECT</span>
+                  <div className="d-flex ms-1">
+                    <Link to="/contact" className="btn-launch-proj scrollto">
+                    LAUNCH A PROJECT
+                    </Link>
                   </div>
+                  {/* <div class="btn-holder">
+                    <span>LAUNCH A PROJECT</span>
+                  </div> */}
                 </header>
               </div>
               <div className="col-lg-6">

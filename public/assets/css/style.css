@@ -703,6 +703,24 @@ section {
   color: #39c1eb;
 }
 
+.services .services-btn-launch-proj{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #39c1eb;
+}
+
+.services .services-btn-launch-proj:hover{
+  background: #206bfb;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -961,7 +979,25 @@ section {
   color: #fff;
 }
 
-.cta .cta-btn {
+.cta .btn-launch-proj{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #39c1eb;
+  background: #fff;
+}
+
+.cta .btn-launch-proj:hover {
+  color: #206bfb;
+  box-shadow: 0 8px 28px rgba(251, 251, 252, 0.45);
+}
+
+/* .cta .cta-btn {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -979,7 +1015,7 @@ section {
 .cta .cta-btn:hover {
   background: #206bfb;
   border-color: #206bfb;
-}
+} */
 
 /*--------------------------------------------------------------
 # Team
@@ -1035,14 +1071,38 @@ section {
 }
 
 .team .member .read-more{
-  color: #aaaaaa;
+  color: #39c1eb;
 }
 
 .team .member .read-more:hover{
-  color: #39c1eb;
+  color: #206bfb;
   cursor: pointer;
   transition: color 0.3s;
 }
+
+
+/*--------------------------------------------------------------
+# Career
+--------------------------------------------------------------*/
+.career .btn-apply-now{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 10px 30px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #39c1eb;
+}
+
+.career .btn-apply-now:hover{
+  background: #206bfb;
+  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
+}
+
+
 
 /*--------------------------------------------------------------
 # Solution

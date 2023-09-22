@@ -1,10 +1,9 @@
-import React , {useEffect} from "react";
-import Sectionheader from "../components/Sectionheader"
-import { v4 as uuidv4 } from 'uuid';
-import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
+import React, { useEffect } from "react";
+import Sectionheader from "../components/Sectionheader";
+import { v4 as uuidv4 } from "uuid";
+import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
 
 function Contact() {
-
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
     if (!userId) {
@@ -17,8 +16,6 @@ function Contact() {
   function generateUUID() {
     return uuidv4();
   }
-  
-  
 
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
@@ -30,10 +27,12 @@ function Contact() {
   return (
     <section id="contact" class="contact">
       <div class="container">
-      <Sectionheader
-            title={"Contact"}
-            subtitle={"Your trusted Solutions Partner for the digital transformation of you and your company."}
-          />
+        <Sectionheader
+          title={"Contact"}
+          subtitle={
+            "Your trusted Solutions Partner for the digital transformation of you and your company."
+          }
+        />
         <div class="row">
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
@@ -46,16 +45,28 @@ function Contact() {
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>contact@driftmarktechnology.com </p>
+                <p>
+                  <a
+                    href="mailto:contact@driftmarktechnology.com"
+                    onClick={(e) => {
+                      window.location.href =
+                        "mailto:contact@driftmarktechnology.com";
+                      e.preventDefault();
+                    }}
+                  >
+                    contact@driftmarktechnology.com
+                  </a>
+                </p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+91 6381 475 573</p>
+                <p><a href="tel:+91 6381 475 573">+91 6381 475 573</a></p>
               </div>
 
               <iframe
+                title="office-location"
                 src="https://maps.google.com/maps?q=driftmark%20tech&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
                 frameborder="0"
                 scrolling="no"

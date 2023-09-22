@@ -1,9 +1,16 @@
 import React, { useEffect } from "react";
 import Sectionheader from "../components/Sectionheader";
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faUsers, faGraduationCap, faClock, faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGlobe,
+  faUsers,
+  faGraduationCap,
+  faClock,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Services() {
   function getUniqueUserId() {
@@ -199,7 +206,12 @@ function Services() {
             </div>
             <figure class="img-holder text-center">
               <img src="assets/img/rocket-pulse.svg" alt="" />
-              <figcaption>LAUNCH A PROJECT</figcaption>
+              <figcaption>
+              <br/>
+                <Link to="/contact" className="services-btn-launch-proj scrollto">
+                  LAUNCH A PROJECT
+                </Link>
+              </figcaption>
             </figure>
           </article>
         </section>

@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
 
 function Team() {
   function getUniqueUserId() {
@@ -17,7 +20,7 @@ function Team() {
   function generateUUID() {
     return uuidv4();
   }
-
+  
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
 
@@ -25,13 +28,53 @@ function Team() {
     trackEvent("Career Page Visited");
   }, []);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const validationSchema = Yup.object().shape({
+    position: Yup.string().required("Position is required"),
+    resume: Yup.mixed()
+      .required("Resume is required")
+      .test(
+        "fileType",
+        "Invalid file type. Only PDF and DOC files are allowed",
+        (value) => {
+          if (!value) return true; // Allow empty value
+          return [
+            "application/pdf",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          ].includes(value.type);
+        }
+      ),
+  });
+
+  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+    // Create a FormData object to send the file
+    const formData = new FormData();
+    formData.append("position", values.position);
+    formData.append("resume", values.resume);
+
+    axios
+      .post("/api/submit", formData) // Replace with your API endpoint
+      .then((response) => {
+        // Handle successful submission
+        console.log("Form submitted successfully:", response.data);
+        resetForm();
+      })
+      .catch((error) => {
+        // Handle submission error
+        console.error("Error submitting form:", error);
+      })
+      .finally(() => {
+        setSubmitting(false);
+        setIsModalOpen(false);
+      });
+  };
+
   return (
-    <section id="team" class="team career section-bg">
-      <div class="container">
-        <Sectionheader
-          title={"Career"}
-          subtitle={
-            <p>
+    <section id="team" className="team career section-bg">
+      <div className="container">
+        <Sectionheader title={"Career"} subtitle={<p>
               Driftmark Technologies, an offshore tech enterprise, prides itself
               on crafting robust, enduring software and web solutions. Our
               biggest asset? Our personnel. We believe in the principle that
@@ -47,37 +90,15 @@ function Team() {
               career path? Consider Driftmark Technologies. We're always open to
               discussions with prospective talents eager to be a part of our
               journey.
-            </p>
-          }
-        />
-        {/* <div class="section-title">
-          <span>Career</span>
-          <h2>Career</h2>
-          <p>
-            Driftmark Technologies, an offshore tech enterprise, prides itself
-            on crafting robust, enduring software and web solutions. Our biggest
-            asset? Our personnel. We believe in the principle that quality
-            output requires quality input, and thus, we've sourced the best
-            talent available. Recognizing the importance of cutting-edge
-            solutions and impeccable customer relations, our team is a blend of
-            dedication, expertise, and passion. Not only are our tech mavens
-            well-versed with the latest global innovations, but they're also
-            driven by a customer-first ethos, always willing to exceed
-            expectations. To maintain our competitive edge, we prioritize
-            ongoing professional development and regular performance assessments
-            for our team. Thinking of a fulfilling and dynamic career path?
-            Consider Driftmark Technologies. We're always open to discussions
-            with prospective talents eager to be a part of our journey.
-          </p>
-          </div> */}
+            </p>} />
         <div className="mt-5">
-          <section class="section">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <header class="section-header">
+          <section className="section">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6">
+                  <header className="section-header">
                     <h2>We need a normal superhero, obviously.</h2>
-                    <p class="text">
+                    <p className="text">
                       You're polite and down to earth.
                       <br />
                       You love stability in life.
@@ -95,12 +116,13 @@ function Team() {
                       className="btn-apply-now scrollto"
                       data-bs-toggle="modal"
                       data-bs-target="#applyModal"
+                      onClick={() => setIsModalOpen(true)}
                     >
                       Apply now
                     </Link>
                   </header>
                 </div>
-                <div class="col-lg-6">
+                <div className="col-lg-6">
                   <img
                     className="img-fluid text-center"
                     width={400}
@@ -114,12 +136,13 @@ function Team() {
           </section>
 
           <section className="apply-now-popup">
-            <div
-              className="modal fade"
+          <div
+              className={`modal fade ${isModalOpen ? "show" : ""}`}
               id="applyModal"
-              tabindex="-1"
+              tabIndex="-1"
               aria-labelledby="applyModalLabel"
-              aria-hidden="true"
+              aria-hidden={!isModalOpen}
+              style={{ display: isModalOpen ? "block" : "none" }}
             >
               <div className="modal-dialog">
                 <div className="modal-content">
@@ -135,85 +158,115 @@ function Team() {
                     ></button>
                   </div>
                   <div className="modal-body">
-                    <form>
-                      <div className="mb-3">
-                        <label htmlFor="position" className="form-label">
-                          Position You Apply For
-                        </label>
-                        <select
-                          className="form-select"
-                          id="position"
-                          name="position"
-                          required
-                        >
-                          <option value="">Select a Position</option>
-                          <option value="Front-end Developer">
-                            Front-end Developer
-                          </option>
-                          <option value="Back-end Developer">
-                            Back-end Developer
-                          </option>
-                          <option value="UI/UX Designer">Web Designer</option>
-                          <option value="Graphic Designer">Graphic Designer</option>
-                          <option value="Accountant">Accountant</option>
-                        </select>
-                      </div>
-                      <div className="mb-3">
-                        <label htmlFor="resume" className="form-label">
-                          Resume File Upload
-                        </label>
-                        <input
-                          type="file"
-                          className="form-control"
-                          id="resume"
-                          name="resume"
-                          accept=".pdf, .doc, .docx"
-                          required
-                        />
-                      </div>
-                    </form>
-                  </div>
-                  <div className="modal-footer">
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-bs-dismiss="modal"
+                    <Formik
+                      initialValues={{ position: "", resume: null }}
+                      validationSchema={validationSchema}
+                      onSubmit={handleSubmit}
                     >
-                      Close
-                    </button>
-                    <button
-                      type="button"
-                      className="btn btn-primary"
-                      data-bs-dismiss="modal"
-                    >
-                      Submit
-                    </button>
+                      {(
+                        { isSubmitting, errors, touched } // Add errors and touched here
+                      ) => (
+                        <Form>
+                          <div className="mb-3">
+                            <label htmlFor="position" className="form-label">
+                              Position You Apply For
+                            </label>
+                            <Field
+                              as="select"
+                              id="position"
+                              name="position"
+                              className={`form-select ${
+                                errors.position && touched.position
+                                  ? "is-invalid"
+                                  : ""
+                              }`}
+                            >
+                              <option value="">Select a Position</option>
+                              <option value="Front-end Developer">
+                                Front-end Developer
+                              </option>
+                              <option value="Back-end Developer">
+                                Back-end Developer
+                              </option>
+                              <option value="UI/UX Designer">
+                                Web Designer
+                              </option>
+                              <option value="Graphic Designer">
+                                Graphic Designer
+                              </option>
+                              <option value="Accountant">Accountant</option>
+                            </Field>
+                            <ErrorMessage
+                              name="position"
+                              component="div"
+                              className="invalid-feedback"
+                            />
+                          </div>
+                          <div className="mb-3">
+                            <label htmlFor="resume" className="form-label">
+                              Resume File Upload
+                            </label>
+                            <Field
+                              type="file"
+                              id="resume"
+                              name="resume"
+                              className={`form-control ${
+                                errors.resume && touched.resume
+                                  ? "is-invalid"
+                                  : ""
+                              }`}
+                            />
+                            <ErrorMessage
+                              name="resume"
+                              component="div"
+                              className="invalid-feedback"
+                            />
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button
+                              type="button"
+                              className="btn btn-primary"
+                              data-bs-dismiss="modal"
+                            >
+                              Submit
+                            </button>
+                          </div>
+                        </Form>
+                      )}
+                    </Formik>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="section section-bg">
-            <div class="container">
-              <div class="row ">
-                <div class="col-12">
-                  <header class="section-header">
-                    <h2 class="section-title">
+          <section className="section section-bg">
+            <div className="container">
+              <div className="row ">
+                <div className="col-12">
+                  <header className="section-header">
+                    <h2 className="section-title">
                       We know many companies have been asking you to do this
                     </h2>
                     <h3>But come work with us.</h3>
-                    <p class="text">
+                    <p className="text">
                       Everything is completely negotiable - benefits, remote
                       work, salary, Slack memes... 🐈
                     </p>
-                    <p class="text">
+                    <p className="text">
                       Oh, and feel free to apply even if you don't work with our
                       tech stack. We often have inquiries for projects we need
                       an additional pair of hands (and programming languages)
                       for.
                     </p>
-                    <p class="text">
+                    <p className="text">
                       Send your resume and a little bit about yourself to{" "}
                       <a href="mailto:hr@driftmarktechnology.com">
                         hr@driftmarktechnology.com

@@ -141,7 +141,7 @@ function Home() {
                 />
               </div>
               <div className="col-lg-6 pe-2 pt-4 pt-lg-0 content">
-                <h3>About Driftmark Technology</h3>
+                <h3 className="typed">About Driftmark Technology</h3>
                 <p className="fst-italic">
                   Our team of full-stack developers and agile professionals
                   specialize in rapidly delivering web, mobile, and software
@@ -341,7 +341,7 @@ function Home() {
               <h2>Testimonials</h2>
             </div>
 
-            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}>
+            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showIndicators={false}>
               <div>
                 <div className="testimonial-item">
                   <p>
@@ -390,7 +390,7 @@ function Home() {
             <div class="row">
               <div class="col-lg-6 text-start">
                 <header class="section-header section-header__light">
-                  <h2>Let us bring your product to life</h2>
+                  <h2 className="text-white">Let us bring your product to life</h2>
                   <p class="text">
                     We work with all types of budgets. We love to work on
                     interesting projects and delivering high quality products

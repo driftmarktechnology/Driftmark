@@ -10,7 +10,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Overlock', cursive;
   color: #444444;
 }
 
@@ -24,14 +25,14 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-}
+} */
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -131,7 +132,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-size: 16px;
   font-weight: 700;
   color: #6a7489;
@@ -374,7 +375,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -476,7 +477,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 60px 0 30px 0;
   overflow: hidden;
 }
 
@@ -486,7 +487,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 0 15px 0;
   position: relative;
 }
 
@@ -626,7 +627,7 @@ section {
 .counts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-size: 14px;
   font-weight: 600;
 }
@@ -704,7 +705,7 @@ section {
 }
 
 .services .services-btn-launch-proj{
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -980,7 +981,7 @@ section {
 }
 
 .cta .btn-launch-proj{
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1085,7 +1086,7 @@ section {
 # Career
 --------------------------------------------------------------*/
 .career .btn-apply-now{
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1364,7 +1365,7 @@ section {
   font-weight: 700;
   color: #5f687b;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   padding-bottom: 0;
   margin-bottom: 0;
 }

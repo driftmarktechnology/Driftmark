@@ -35,7 +35,7 @@ function Blogs() {
         <div class="container">
           <Sectionheader title={"Blogs"} />
           <div class="section-title">
-            <section>
+            <div>
               <div class="row">
                 <p>Startup Development Using Lean Startup Methodology</p>
                 <br />
@@ -88,10 +88,10 @@ function Blogs() {
                   </p>
                 </div>
               </div>
-            </section>
+            </div>
           </div>
           <div class="section-title">
-            <section>
+            <div>
               <p>
                 Startup development using Lean Startup method has the following
                 stages:
@@ -166,10 +166,10 @@ function Blogs() {
                   />
                 </div>
               </div>
-            </section>
+            </div>
           </div>
           <div class="section-title">
-            <section>
+            <div>
               <div class="how-we-work container mx-auto md:lg:mt-40 lg:mt-40 xl:mt-40 2xl:mt-40 mt-20">
                 <p class="text-center text-heading text-brandblue-dark px-20 mb-20 hide-desktop-items-block">
                   How we work:
@@ -181,7 +181,7 @@ function Blogs() {
                   alt=""
                 />
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </section>

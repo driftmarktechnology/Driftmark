@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer-top py-4">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6 footer-contact mb-5">
+            <div className="footer-sections col-lg-3 col-md-6 footer-contact mb-5">
               <div>
                 <img
                   src="assets/img/footer-image.png"
@@ -45,7 +45,7 @@ function Footer() {
               </p>
             </div>
 
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="footer-sections col-lg-3 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
                 <li>
@@ -75,7 +75,7 @@ function Footer() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="footer-sections col-lg-3 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
                 <li>
@@ -96,7 +96,7 @@ function Footer() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="footer-sections col-lg-3 col-md-6 footer-links">
               <h4>Our Social Networks</h4>
               <p>
                 Follow us, like our content, and join our community on these

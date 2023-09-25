@@ -11,7 +11,7 @@ function Services() {
             subtitle={"Elevate Your Visual Storytelling: Where Art Meets Design"}
           />
         <div class="section-title">
-          <section>
+          <div className="contents mt-4 mb-5">
             <h3>Logo Design</h3>
 
             <div class="row">
@@ -41,8 +41,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Visual Design</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -66,8 +66,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Marketing with Graphic Design</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -96,8 +96,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Power of Infographics</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -126,7 +126,7 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ function Technologies() {
             subtitle={"Fueling Progress with Cutting-Edge Technologies"}
           />
           <div className="section-title">
-            <section>
+            <div className="contents mt-4 mb-5">
               <h3>Backend Architecture</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -58,8 +58,8 @@ function Technologies() {
                   </p>
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Frontend Architecture</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -81,8 +81,8 @@ function Technologies() {
                   />
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Frameworks Architecture</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -102,8 +102,8 @@ function Technologies() {
                   </p>
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Data Storage Solutions</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -123,8 +123,8 @@ function Technologies() {
                   />
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Quality Checks</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -144,8 +144,8 @@ function Technologies() {
                   </p>
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>RPA (Robotic Process Automation)</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -165,8 +165,8 @@ function Technologies() {
                   />
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Hybrid Technologies</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -186,8 +186,8 @@ function Technologies() {
                   </p>
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Cloud Support</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -209,8 +209,8 @@ function Technologies() {
                   />
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Data Insights</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -231,8 +231,8 @@ function Technologies() {
                   </p>
                 </div>
               </div>
-            </section>
-            <section>
+            </div>
+            <div className="contents mt-4 mb-5">
               <h3>Digital Commerce Platforms</h3>
               <div class="row">
                 <div class="col-lg-6">
@@ -253,7 +253,7 @@ function Technologies() {
                   />
                 </div>
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </section>

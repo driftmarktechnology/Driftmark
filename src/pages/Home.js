@@ -53,7 +53,7 @@ function Home() {
 
   return (
     <div className="home-page">
-      <section id="hero" className="d-flex align-items-center">
+      <section id="hero" className="d-flex mb-4 align-items-center">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -70,7 +70,7 @@ function Home() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-6 order-1 order-lg-2 hero-img text-end">
+            <div className="col-lg-6 order-1 order-lg-2 hero-img text-end text-center">
               <img
                 src="assets/img/banner.gif"
                 className="img-fluid animated text-end"
@@ -82,7 +82,7 @@ function Home() {
       </section>
 
       <main id="main">
-        <section id="featured-services" className="featured-services">
+        <section id="featured-services" className="featured-services mb-4">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-6">
@@ -141,7 +141,7 @@ function Home() {
                 />
               </div>
               <div className="col-lg-6 pe-2 pt-4 pt-lg-0 content">
-                <h3 className="typed">About Driftmark Technology</h3>
+                <h3>About Driftmark Technology</h3>
                 <p className="fst-italic">
                   Our team of full-stack developers and agile professionals
                   specialize in rapidly delivering web, mobile, and software
@@ -156,7 +156,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="solution">
+        <section className="solution mb-4">
           <div class="container">
             <Sectionheader title={"Solutions"} />
             <div class="section-title">
@@ -334,14 +334,14 @@ function Home() {
           </div>
         </section>
 
-        <section id="testimonials" className="testimonials section-bg">
+        <section id="testimonials" className="testimonials mb-4 section-bg">
           <div className="container">
             <div className="section-title">
               <span>Testimonials</span>
               <h2>Testimonials</h2>
             </div>
 
-            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showIndicators={false}>
+            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}>
               <div>
                 <div className="testimonial-item">
                   <p>
@@ -390,7 +390,7 @@ function Home() {
             <div class="row">
               <div class="col-lg-6 text-start">
                 <header class="section-header section-header__light">
-                  <h2 className="text-white">Let us bring your product to life</h2>
+                  <h2>Let us bring your product to life</h2>
                   <p class="text">
                     We work with all types of budgets. We love to work on
                     interesting projects and delivering high quality products
@@ -399,7 +399,7 @@ function Home() {
                   </p>
                   <div className="d-flex ms-1">
                     <Link to="/contact" className="btn-launch-proj scrollto">
-                    LAUNCH A PROJECT
+                      LAUNCH A PROJECT
                     </Link>
                   </div>
                   {/* <div class="btn-holder">
@@ -408,13 +408,20 @@ function Home() {
                 </header>
               </div>
               <div className="col-lg-6">
-                <figure class="img-holder text-end">
+                <div className="d-flex justify-content-center">
                   <img
-                    className="img-fluid"
-                    src="assets/img/rocket-launch.svg"
+                    src="assets/img/rocket-launch.png"
+                    className="img-fluid animated mt-4"
                     alt=""
                   />
-                </figure>
+                </div>
+                {/* <figure class="img-holder text-end">
+                  <img
+                    className="img-fluid"
+                    src="assets/img/rocket-launch.png"
+                    alt=""
+                  />
+                </figure> */}
               </div>
             </div>
           </div>

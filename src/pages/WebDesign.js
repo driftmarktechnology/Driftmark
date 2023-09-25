@@ -16,7 +16,7 @@ function Services() {
           <p>Approaches we employ for website design</p>
         </div> */}
         <div class="section-title">
-          <section>
+          <div className="contents mt-4 mb-5">
             <h3>Identifying Goals and Defining Scope</h3>
 
             <div class="row">
@@ -48,8 +48,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Crafting Sitemaps and Wireframes</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -70,8 +70,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Digital Design</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -102,8 +102,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Developing Your Goals</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -126,8 +126,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Testing. Going Live. Support.</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -149,7 +149,7 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </section>

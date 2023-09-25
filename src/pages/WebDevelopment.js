@@ -11,7 +11,7 @@ function Services() {
             subtitle={"Empowering Your Digital Success"}
           />
         <div class="section-title">
-          <section>
+          <div className="contents mt-4 mb-5">
             <h3>Identifying needs</h3>
 
             <div class="row">
@@ -47,8 +47,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Development</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -73,8 +73,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Designing Your Website</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -103,8 +103,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Testing and Validating</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -130,8 +130,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Launch and Maintainance</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -163,7 +163,7 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </section>

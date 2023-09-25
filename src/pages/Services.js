@@ -153,7 +153,7 @@ function Services() {
                 "We leverage our software experts to build powerful digital solutions that bring about meaningful change through strategic vision"
               }
             />
-            <div class="section-title">
+            <div class="">
               <div class="row">
                 <div class="col-md-2 d-flex align-items-stretch">
                   <div class="services-choose-sub mb-3 pb-3">

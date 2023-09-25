@@ -11,7 +11,7 @@ function Services() {
             subtitle={"Precision in Quality Assurance: Crafting Bespoke Solutions for Your Success"}
           />
         <div class="section-title">
-          <section>
+          <div className="contents mt-4 mb-5">
             <h3>Automation Testing</h3>
 
             <div class="row">
@@ -36,8 +36,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Manual Testing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -62,8 +62,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>API Testing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -85,8 +85,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Mobile Testing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -111,8 +111,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Security Testing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -137,7 +137,7 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </section>

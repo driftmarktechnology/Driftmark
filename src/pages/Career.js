@@ -20,7 +20,7 @@ function Team() {
   function generateUUID() {
     return uuidv4();
   }
-  
+
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
 
@@ -29,6 +29,7 @@ function Team() {
   }, []);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formKey, setFormKey] = useState(0);
 
   const validationSchema = Yup.object().shape({
     position: Yup.string().required("Position is required"),
@@ -71,10 +72,19 @@ function Team() {
       });
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+    // Increment the formKey to reset the form
+    setFormKey(formKey + 1);
+  };
+
   return (
     <section id="team" className="team career section-bg">
       <div className="container">
-        <Sectionheader title={"Career"} subtitle={<p>
+        <Sectionheader
+          title={"Career"}
+          subtitle={
+            <p>
               Driftmark Technologies, an offshore tech enterprise, prides itself
               on crafting robust, enduring software and web solutions. Our
               biggest asset? Our personnel. We believe in the principle that
@@ -90,7 +100,9 @@ function Team() {
               career path? Consider Driftmark Technologies. We're always open to
               discussions with prospective talents eager to be a part of our
               journey.
-            </p>} />
+            </p>
+          }
+        />
         <div className="mt-5">
           <section className="section">
             <div className="container">
@@ -116,7 +128,7 @@ function Team() {
                       className="btn-apply-now scrollto"
                       data-bs-toggle="modal"
                       data-bs-target="#applyModal"
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={openModal}
                     >
                       Apply now
                     </Link>
@@ -135,8 +147,8 @@ function Team() {
             </div>
           </section>
 
-          <section className="apply-now-popup">
-          <div
+          <div className="apply-now-popup">
+            <div
               className={`modal fade ${isModalOpen ? "show" : ""}`}
               id="applyModal"
               tabIndex="-1"
@@ -159,6 +171,7 @@ function Team() {
                   </div>
                   <div className="modal-body">
                     <Formik
+                      key={formKey}
                       initialValues={{ position: "", resume: null }}
                       validationSchema={validationSchema}
                       onSubmit={handleSubmit}
@@ -245,7 +258,7 @@ function Team() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
           <section className="section section-bg">
             <div className="container">

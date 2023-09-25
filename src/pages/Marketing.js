@@ -11,7 +11,7 @@ function Services() {
             subtitle={"Connecting People, Creating Success"}
           />
         <div class="section-title">
-          <section>
+          <div>
             <h3>Social Media Marketing at Its Best</h3>
 
             <div class="row">
@@ -36,8 +36,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>E-Commerce Marketing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -59,8 +59,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Search Engine Optimization(SEO)</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -82,8 +82,8 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Content Writing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -107,8 +107,8 @@ function Services() {
                 />
               </div>
             </div>
-          </section>
-          <section>
+          </div>
+          <div className="contents mt-4 mb-5">
             <h3>Email Marketing</h3>
             <div class="row">
               <div class="col-lg-6">
@@ -132,7 +132,7 @@ function Services() {
                 </p>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </section>

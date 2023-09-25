@@ -5,6 +5,8 @@ import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function Contact() {
   const [submissionStatus, setSubmissionStatus] = useState(null);
@@ -85,8 +87,8 @@ function Contact() {
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>
-                  <a
-                    href="mailto:contact@driftmarktechnology.com"
+                  <Link
+                    to="mailto:contact@driftmarktechnology.com"
                     onClick={(e) => {
                       window.location.href =
                         "mailto:contact@driftmarktechnology.com";
@@ -94,14 +96,16 @@ function Contact() {
                     }}
                   >
                     contact@driftmarktechnology.com
-                  </a>
+                  </Link>
                 </p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p><a href="tel:+91 6381 475 573">+91 6381 475 573</a></p>
+                <p><Link to="tel:+91 6381 475 573">
+                  +91 6381475573
+                  </Link></p>
               </div>
 
               <iframe

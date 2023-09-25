@@ -46,8 +46,8 @@ function Services() {
               <div class="icon">
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4>
-                <a href="">Web and Mobile App Development</a>
+              <h4 className="services-choose-sub">
+                Web and Mobile App Development
               </h4>
               <p>
                 We build custom web and mobile applications that align with your
@@ -63,8 +63,8 @@ function Services() {
               <div class="icon">
                 <i class="bx bx-file"></i>
               </div>
-              <h4>
-                <a href="">App Modernization</a>
+              <h4 className="services-choose-sub">
+                App Modernization
               </h4>
               <p>
                 ConcertIDC can upgrade and modernize your existing applications
@@ -80,8 +80,8 @@ function Services() {
               <div class="icon">
                 <i class="bx bx-tachometer"></i>
               </div>
-              <h4>
-                <a href="">Transformation to Cloud</a>
+              <h4 className="services-choose-sub">
+                Transformation to Cloud
               </h4>
               <p>
                 We will help you efficiently and securely migrate your
@@ -98,8 +98,8 @@ function Services() {
               <div class="icon">
                 <i class="bx bx-world"></i>
               </div>
-              <h4>
-                <a href="">Intelligent Automation</a>
+              <h4 className="services-choose-sub">
+                Intelligent Automation
               </h4>
               <p>
                 Automate complex, repetitive, and mundane tasks using Robotic
@@ -115,8 +115,8 @@ function Services() {
               <div class="icon">
                 <i class="bx bx-slideshow"></i>
               </div>
-              <h4>
-                <a href="">Integration Solutions</a>
+              <h4 className="services-choose-sub">
+                Integration Solutions
               </h4>
               <p>
                 We seamlessly integrate your applications and systems to achieve
@@ -132,8 +132,8 @@ function Services() {
               <div class="icon">
                 <i class="bx bx-arch"></i>
               </div>
-              <h4>
-                <a href="">Staff Augmentation</a>
+              <h4 className="services-choose-sub">
+                Staff Augmentation
               </h4>
               <p>
                 We can help you expand your team to fill gaps in your IT

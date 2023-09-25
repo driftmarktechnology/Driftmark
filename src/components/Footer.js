@@ -25,13 +25,16 @@ function Footer() {
                 India <br />
                 <strong>Phone:</strong>{" "}
                 <span>
-                  <a href="tel:+91 6381 475 573">+91 6381 475 573</a>
+                  <Link to="tel:+91 6381 475 573">
+                  +91 6381475573
+                  </Link>
+                  {/* <a href="tel:+91 6381 475 573">+91 6381 475 573</a> */}
                 </span>
                 <br />
                 <strong>Email:</strong>{" "}
                 <span>
-                  <a
-                    href="mailto:contact@driftmarktechnology.com"
+                  <Link
+                    to="mailto:contact@driftmarktechnology.com"
                     onClick={(e) => {
                       window.location.href =
                         "mailto:contact@driftmarktechnology.com";
@@ -39,7 +42,7 @@ function Footer() {
                     }}
                   >
                     contact@driftmarktechnology.com
-                  </a>
+                  </Link>
                 </span>{" "}
                 <br />
               </p>
@@ -117,7 +120,7 @@ function Footer() {
                 >
                   <i className="bx bxl-instagram"></i>
                 </Link>
-                <Link to="#" className="google-plus" target="_blank">
+                <Link to="https://join.skype.com/invite/qAd5EW6le9Hd" className="google-plus" target="_blank">
                   <i className="bx bxl-skype"></i>
                 </Link>
                 <Link

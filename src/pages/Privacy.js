@@ -32,8 +32,8 @@ function Privacy() {
                 and development agency, seated in Kadirimangalam, Tirupathur,
                 Tamil Nadu 635653, India Driftmark Technology is a privately
                 held company: E-mail:{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -41,7 +41,7 @@ function Privacy() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>{" "}
+                </Link>{" "}
               </p>
               <h3>3. Relevant legislation</h3>
               <p>
@@ -123,8 +123,8 @@ function Privacy() {
                 third parties. If you have already given us your email but do
                 not wish to receive any emails or newsletters in the future, you
                 can contact us via{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -132,7 +132,7 @@ function Privacy() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>{" "}
+                </Link>{" "}
                 email and ask for your personal data removal.
               </p>
               <h3>7. How long we keep your data</h3>

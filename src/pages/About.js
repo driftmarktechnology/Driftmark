@@ -27,10 +27,10 @@ function About() {
     };
   }, []);
 
-  const fadeInVariants = {
-    hidden: { opacity: 0, y: 20 }, // Initial state (invisible)
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Animation state (visible)
-  };
+  // const fadeInVariants = {
+  //   hidden: { opacity: 0, y: 20 }, // Initial state (invisible)
+  //   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }, // Animation state (visible)
+  // };
 
   useEffect(() => {
     if (isVisible) {

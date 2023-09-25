@@ -1,5 +1,7 @@
 import React from "react";
 import Sectionheader from "../components/Sectionheader"
+import { Link } from "react-router-dom";
+
 
 
 function Terms() {
@@ -27,8 +29,8 @@ function Terms() {
                 bound of them. If you do not agree with (or cannot comply with)
                 Agreements, then you may not use the Service, but please let us
                 know by emailing at{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -36,7 +38,7 @@ function Terms() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>{" "}
+                </Link>{" "}
                 so we can try to find a solution. These Terms apply to all
                 visitors, users and others who wish to access or use Service.
               </p>
@@ -47,8 +49,8 @@ function Terms() {
                 send. However, you may opt out of receiving any, or all, of
                 these communications from us by following the unsubscribe link
                 or by emailing at{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -56,7 +58,7 @@ function Terms() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>
+                </Link>
                 .
               </p>
               <h3>3. Purchases</h3>
@@ -219,8 +221,8 @@ function Terms() {
                 owner, or authorized on behalf of one, and you believe that the
                 copyrighted work has been copied in a way that constitutes
                 copyright infringement, please submit your claim via email to{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -228,7 +230,7 @@ function Terms() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>
+                </Link>
                 , with the subject line: “Copyright Infringement” and include in
                 your claim a detailed description of the alleged Infringement as
                 detailed below, under “DMCA Notice and Procedure for Copyright
@@ -259,8 +261,8 @@ function Terms() {
                 information in your notice is accurate and that you are the
                 copyright owner or authorized to act on the copyright owner’s
                 behalf. You can contact our Copyright Agent via email at{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -268,13 +270,13 @@ function Terms() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>
+                </Link>
               </p>
               <h3>13. Error Reporting and Feedback</h3>
               <p>
                 You may provide us either directly at{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -282,7 +284,7 @@ function Terms() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>{" "}
+                </Link>{" "}
                 or via third party sites and tools with information and feedback
                 concerning errors, suggestions for improvements, ideas,
                 problems, complaints, and other matters related to our Service
@@ -444,8 +446,8 @@ function Terms() {
               <p>
                 Please send your feedback, comments, requests for technical
                 support by email:{" "}
-                <a
-                  href="mailto:contact@driftmarktechnology.com"
+                <Link
+                  to="mailto:contact@driftmarktechnology.com"
                   onClick={(e) => {
                     window.location.href =
                       "mailto:contact@driftmarktechnology.com";
@@ -453,7 +455,7 @@ function Terms() {
                   }}
                 >
                   contact@driftmarktechnology.com
-                </a>
+                </Link>
               </p>
             </div>
           </div>

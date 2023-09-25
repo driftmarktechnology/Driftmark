@@ -281,9 +281,9 @@ function Team() {
                     </p>
                     <p className="text">
                       Send your resume and a little bit about yourself to{" "}
-                      <a href="mailto:hr@driftmarktechnology.com">
+                      <Link to="mailto:hr@driftmarktechnology.com">
                         hr@driftmarktechnology.com
-                      </a>
+                      </Link>
                     </p>
                   </header>
                 </div>

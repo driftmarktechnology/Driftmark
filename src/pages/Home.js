@@ -341,7 +341,7 @@ function Home() {
               <h2>Testimonials</h2>
             </div>
 
-            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false}>
+            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showIndicators={false}>
               <div>
                 <div className="testimonial-item">
                   <p>

@@ -84,7 +84,7 @@ function Header() {
 
       <div
         className={`offcanvas offcanvas-start ${showOffCanvas ? "show" : ""}`}
-        style={{ width: "60vw" }}
+        style={{ width: "75vw" }}
         tabIndex="-1"
         id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel"

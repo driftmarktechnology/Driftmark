@@ -135,7 +135,6 @@ function Contact() {
                         : ""
                     }`}
                     id="name"
-                    required
                     {...formik.getFieldProps("name")}
                   />
                   {formik.touched.name && formik.errors.name ? (
@@ -155,7 +154,6 @@ function Contact() {
                     }`}
                     name="email"
                     id="email"
-                    required
                     {...formik.getFieldProps("email")}
                   />
                   {formik.touched.email && formik.errors.email ? (
@@ -176,7 +174,6 @@ function Contact() {
                   }`}
                   name="subject"
                   id="subject"
-                  required
                   {...formik.getFieldProps("subject")}
                 />
                 {formik.touched.subject && formik.errors.subject ? (
@@ -195,7 +192,7 @@ function Contact() {
                   }`}
                   name="message"
                   rows="10"
-                  required
+                  
                   {...formik.getFieldProps("message")}
                 ></textarea>
                 {formik.touched.message && formik.errors.message ? (

@@ -104,6 +104,15 @@ h6 {
   }
 }
 
+.offcanvas-body .list-group-item.active {
+  background-color: #39c1eb;
+  color: white; /* Change text color to make it visible */
+}
+
+.offcanvas-body{
+  padding: 0;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/

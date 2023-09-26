@@ -156,7 +156,7 @@ function Team() {
 
                 <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
                   <div class="member">
-                    <img src="assets/img/team/hr3.jpeg" alt="" />
+                    <img src="assets/img/team/hr1.jpg" alt="" />
                     <h4>Kowsalya</h4>
                     <h6>HR</h6>
                     <p>
@@ -197,7 +197,7 @@ function Team() {
                 <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
                   <div class="member">
                     <img src="assets/img/team/profile.jpg" alt="" />
-                    <h4>Suriya</h4>
+                    <h4>Suriya S</h4>
                     <h6>Frontend Developer</h6>
                     <p>
                       Suriya is our skilled Frontend Developer, responsible for

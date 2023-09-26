@@ -244,9 +244,8 @@ function Team() {
                               Close
                             </button>
                             <button
-                              type="button"
+                              type="submit"
                               className="btn btn-primary"
-                              data-bs-dismiss="modal"
                             >
                               Submit
                             </button>

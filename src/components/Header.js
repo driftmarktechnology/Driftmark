@@ -23,7 +23,7 @@ function Header() {
             <Link to="/">
               <img
                 src="assets/img/logo.png"
-                alt="Driftmark Technology Logo"
+                alt="Driftmark Technology"
                 className="fas fa-2x"
               />
             </Link>
@@ -84,12 +84,14 @@ function Header() {
 
       <div
         className={`offcanvas offcanvas-start ${showOffCanvas ? "show" : ""}`}
+        style={{ width: "60vw" }}
         tabIndex="-1"
         id="offcanvasExample"
         aria-labelledby="offcanvasExampleLabel"
       >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+        <span><img src="assets/img/logo.png" style={{ width: "40px", height: "auto" }} alt="" className="img-fluid animated"/></span>
+        <h5 className="offcanvas-title" id="offcanvasExampleLabel">
             Driftmark
           </h5>
           <button
@@ -101,46 +103,55 @@ function Header() {
           ></button>
         </div>
         <div className="offcanvas-body">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+          <ul className="list-group">
+            <li className={`list-group-item ${isActive("/")}`}>
               <Link
-                className={`nav-link scrollto ${isActive("/technologies")}`}
+                className="nav-link scrollto"
+                to="/"
+                onClick={closeOffCanvas}
+              >
+                Home
+              </Link>
+            </li>
+            <li className={`list-group-item ${isActive("/technologies")}`}>
+              <Link
+                className="nav-link scrollto"
                 to="/technologies"
                 onClick={closeOffCanvas}
               >
                 Technologies
               </Link>
             </li>
-            <li className="nav-item">
+            <li className={`list-group-item ${isActive("/services")}`}>
               <Link
-                className={`nav-link scrollto ${isActive("/services")}`}
+                className="nav-link scrollto"
                 to="/services"
                 onClick={closeOffCanvas}
               >
                 Services
               </Link>
             </li>
-            <li className="nav-item">
+            <li className={`list-group-item ${isActive("/team")}`}>
               <Link
-                className={`nav-link scrollto ${isActive("/team")}`}
+                className="nav-link scrollto"
                 to="/team"
                 onClick={closeOffCanvas}
               >
                 Team
               </Link>
             </li>
-            <li className="nav-item">
+            <li className={`list-group-item ${isActive("/career")}`}>
               <Link
-                className={`nav-link scrollto ${isActive("/career")}`}
+                className="nav-link scrollto"
                 to="/career"
                 onClick={closeOffCanvas}
               >
                 Career
               </Link>
             </li>
-            <li className="nav-item">
+            <li className={`list-group-item ${isActive("/contact")}`}>
               <Link
-                className={`nav-link scrollto ${isActive("/contact")}`}
+                className="nav-link scrollto"
                 to="/contact"
                 onClick={closeOffCanvas}
               >

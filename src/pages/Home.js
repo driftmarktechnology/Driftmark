@@ -30,6 +30,7 @@ import {
   faHdd,
 } from "@fortawesome/free-solid-svg-icons";
 
+
 function Home() {
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
@@ -392,7 +393,7 @@ function Home() {
             <div class="row">
               <div class="col-lg-6 text-start">
                 <header class="section-header section-header__light">
-                  <h2>Let us bring your product to life</h2>
+                  <h2><span className="theme-color-word">Let us bring your product to life</span></h2>
                   <p class="text">
                     We work with all types of budgets. We love to work on
                     interesting projects and delivering high quality products
@@ -431,13 +432,23 @@ function Home() {
 
         <section>
           <div className="container">
-            <div className="section-title">
-              <span>FAQ</span>
-              <h2>FAQ</h2>
+          <Sectionheader title={"FAQ"} />
+          <div className="row">
+              <div className="col-lg-4">
+                <img
+                  src="assets/img/faq.png"
+                  className="img-fluid "
+                  alt=""
+                />
+              </div>
+              <div className="col-lg-8 pe-2 pt-4 pt-lg-0 content">
+                <Accordion />
+              </div>
             </div>
-            <Accordion />
           </div>
         </section>
+
+  
       </main>
     </div>
   );

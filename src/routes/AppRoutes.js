@@ -26,9 +26,13 @@ function AppRoutes() {
         fallback={
           <div
             style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
+              // position: "absolute",
+              // left: "50%",
+              // top: "50%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
             }}
           >
             <Hourglass

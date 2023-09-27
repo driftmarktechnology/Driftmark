@@ -26,9 +26,9 @@ function Team() {
 
     identifyUser(uniqueUserId);
     trackEvent("Career Page Visited");
-  /* eslint-disable */
-}, []);
-/* eslint-enable */
+    /* eslint-disable */
+  }, []);
+  /* eslint-enable */
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formKey, setFormKey] = useState(0);
@@ -38,15 +38,17 @@ function Team() {
     resume: Yup.mixed()
       .required("Resume is required")
       .test(
-        "fileType",
-        "Invalid file type. Only PDF and DOC files are allowed",
+        "type",
+        "Only the following formats are accepted: .jpeg, .jpg, .bmp, .pdf and .doc",
         (value) => {
-          if (!value) return true; // Allow empty value
-          return [
-            "application/pdf",
-            "application/msword",
-            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-          ].includes(value.type);
+          return (
+            value &&
+            (value[0].type === "image/jpeg" ||
+              value[0].type === "image/bmp" ||
+              value[0].type === "image/png" ||
+              value[0].type === "application/pdf" ||
+              value[0].type === "application/msword")
+          );
         }
       ),
   });
@@ -138,7 +140,7 @@ function Team() {
                 </div>
                 <div className="col-lg-6">
                   <img
-                    className="img-fluid text-center"
+                    className="img-fluid d-block mx-auto w-100"
                     width={400}
                     height={400}
                     src="/assets/img/superhero.png"
@@ -245,10 +247,7 @@ function Team() {
                             >
                               Close
                             </button>
-                            <button
-                              type="submit"
-                              className="btn btn-primary"
-                            >
+                            <button type="submit" className="btn btn-primary">
                               Submit
                             </button>
                           </div>

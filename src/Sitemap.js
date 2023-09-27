@@ -44,7 +44,7 @@ function Sitemap() {
                 <Link to="#">Web Development</Link>
               </li>
               <li>
-                <Link to="#">Product Management</Link>
+                <Link to="#">Testing & QA</Link>
               </li>
               <li>
                 <Link to="#">Marketing</Link>

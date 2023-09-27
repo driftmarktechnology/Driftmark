@@ -30,7 +30,9 @@ function App() {
 
     identifyUser(uniqueUserId);
     trackEvent("App Loaded");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
 
   return (

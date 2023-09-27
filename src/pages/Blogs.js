@@ -27,7 +27,9 @@ function Blogs() {
 
     identifyUser(uniqueUserId);
     trackEvent("Blogs Page Visited");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
   return (
     <>

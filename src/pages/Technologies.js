@@ -25,7 +25,9 @@ function Technologies() {
 
     identifyUser(uniqueUserId);
     trackEvent("Technologies Page Visited");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
 
   return (

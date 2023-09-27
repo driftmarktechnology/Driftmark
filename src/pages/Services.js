@@ -31,7 +31,9 @@ function Services() {
 
     identifyUser(uniqueUserId);
     trackEvent("Services Page Visited");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
   return (
     <section id="services" class="services section-bg">

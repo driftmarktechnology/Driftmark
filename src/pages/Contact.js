@@ -63,7 +63,9 @@ function Contact() {
 
     identifyUser(uniqueUserId);
     trackEvent("Contact Page Visited");
-  }, []);
+ /* eslint-disable */
+}, []);
+/* eslint-enable */
 
   return (
     <section id="contact" class="contact">

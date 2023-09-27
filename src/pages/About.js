@@ -58,7 +58,9 @@ function About() {
 
     identifyUser(uniqueUserId);
     trackEvent("About Us Page Visited");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
   return (
     <section id="contact" className="contact">

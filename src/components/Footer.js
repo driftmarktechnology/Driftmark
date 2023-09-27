@@ -25,9 +25,7 @@ function Footer() {
                 India <br />
                 <strong>Phone:</strong>{" "}
                 <span>
-                  <Link to="tel:+91 6381 475 573">
-                  +91 6381475573
-                  </Link>
+                  <Link to="tel:+91 6381 475 573">+91 6381475573</Link>
                   {/* <a href="tel:+91 6381 475 573">+91 6381 475 573</a> */}
                 </span>
                 <br />
@@ -120,8 +118,19 @@ function Footer() {
                 >
                   <i className="bx bxl-instagram"></i>
                 </Link>
-                <Link to="https://join.skype.com/invite/qAd5EW6le9Hd" className="google-plus" target="_blank">
+                <Link
+                  to="https://join.skype.com/invite/qAd5EW6le9Hd"
+                  className="google-plus"
+                  target="_blank"
+                >
                   <i className="bx bxl-skype"></i>
+                </Link>
+                <Link
+                  to="https://wa.me/+916381475573"
+                  className="whatsapp"
+                  target="_blank"
+                >
+                  <i className="bx bxl-whatsapp"></i>
                 </Link>
                 <Link
                   to="https://www.linkedin.com/company/driftmark-technology/"

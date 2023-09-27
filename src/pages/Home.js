@@ -49,7 +49,9 @@ function Home() {
 
     identifyUser(uniqueUserId);
     trackEvent("Team Page Visited");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
   return (
     <div className="home-page">

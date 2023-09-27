@@ -26,7 +26,9 @@ function Team() {
 
     identifyUser(uniqueUserId);
     trackEvent("Career Page Visited");
-  }, []);
+  /* eslint-disable */
+}, []);
+/* eslint-enable */
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formKey, setFormKey] = useState(0);

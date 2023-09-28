@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import Confetti from "react-confetti";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";

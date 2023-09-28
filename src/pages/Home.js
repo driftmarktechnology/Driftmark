@@ -436,13 +436,14 @@ function Home() {
         <section>
           <div className="">
           <Sectionheader title={"FAQ"} />
-          <div className="faq d-flex flex-column flex-lg-row align-items-center">
+          <div className="container">
+          <div className="row">
               <div className="col-lg-4 mb-4 mb-lg-0">
                 <img
                   src="assets/img/faq1.png"
                   className="img-fluid "
                   alt=""
-                  style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+                
                 />
               </div>
               <div className="col-lg-8 pe-2 pt-4 pt-lg-0 content">
@@ -450,6 +451,8 @@ function Home() {
               </div>
             </div>
           </div>
+          </div>
+          
         </section>
 
   

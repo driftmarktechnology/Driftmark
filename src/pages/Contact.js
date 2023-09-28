@@ -68,7 +68,7 @@ function Contact() {
 /* eslint-enable */
 
   return (
-    <section id="contact" class="contact">
+    <section id="contact" class="mt-5 contact">
       <div class="container">
         <Sectionheader
           title={"Contact"}

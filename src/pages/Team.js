@@ -34,7 +34,7 @@ function Team() {
   return (
     <>
       <Confetti width={width} height={height} />
-      <section id="team" class="team section-bg">
+      <section id="team" class="team mt-5 section-bg">
         <div class="container">
           <Sectionheader
             title={"Team"}

@@ -83,7 +83,7 @@ function Team() {
   };
 
   return (
-    <section id="team" className="team career section-bg">
+    <section id="team" className="team mt-5 career section-bg">
       <div className="container">
         <Sectionheader
           title={"Career"}

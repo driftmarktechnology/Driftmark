@@ -4,7 +4,7 @@ import Sectionheader from "../components/Sectionheader"
 
 function Services() {
   return (
-    <section id="services" class="services section-bg">
+    <section id="services" class="services mt-5 section-bg">
       <div class="container">
       <Sectionheader
             title={"Graphic Design"}
@@ -12,7 +12,7 @@ function Services() {
           />
         <div class="section-title">
           <div className="contents mt-4 mb-5">
-            <h3>Logo Design</h3>
+            <h3><p className="theme-color-word">Logo</p> Design</h3>
 
             <div class="row">
               <div class="col-lg-6">
@@ -43,7 +43,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Visual Design</h3>
+            <h3>Visual <p className="theme-color-word">Design</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -68,7 +68,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Marketing with Graphic Design</h3>
+            <h3><p className="theme-color-word">Marketing</p> with Graphic Design</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img
@@ -98,7 +98,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Power of Infographics</h3>
+            <h3>Power of <p className="theme-color-word">Infographics</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>

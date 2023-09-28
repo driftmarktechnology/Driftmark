@@ -32,7 +32,7 @@ function Technologies() {
 
   return (
     <>
-      <section id="technologies-section" className="contact">
+      <section id="technologies-section" className="contact mt-5">
         <div className="container">
           <Sectionheader
             title={"Technologies"}
@@ -40,7 +40,7 @@ function Technologies() {
           />
           <div className="section-title">
             <div className="contents mt-4 mb-5">
-              <h3>Backend Architecture</h3>
+              <h3><p className="theme-color-word">Backend</p> Architecture</h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -62,7 +62,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Frontend Architecture</h3>
+              <h3>Frontend <p className="theme-color-word">Architecture</p></h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -85,7 +85,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Frameworks Architecture</h3>
+              <h3><p className="theme-color-word">Frameworks</p> Architecture</h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -106,7 +106,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Data Storage Solutions</h3>
+              <h3>Data Storage <p className="theme-color-word">Solution</p></h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -127,7 +127,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Quality Checks</h3>
+              <h3><p className="theme-color-word">Quality</p> Checks</h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -148,7 +148,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>RPA (Robotic Process Automation)</h3>
+              <h3>Robatic Progress Automation<p className="theme-color-word">(RPA)</p></h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -169,7 +169,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Hybrid Technologies</h3>
+              <h3><p className="theme-color-word">Hybrid</p> Technologies</h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -190,7 +190,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Cloud Support</h3>
+              <h3>Cloud <p className="theme-color-word">Support</p></h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -213,7 +213,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Data Insights</h3>
+              <h3><p className="theme-color-word">Data</p> Insights</h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />
@@ -235,7 +235,7 @@ function Technologies() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Digital Commerce Platforms</h3>
+              <h3>Digital <p className="theme-color-word">Commerce</p> Platforms</h3>
               <div class="row">
                 <div class="col-lg-6">
                   <br />

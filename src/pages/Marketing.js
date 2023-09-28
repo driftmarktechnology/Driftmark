@@ -4,7 +4,7 @@ import Sectionheader from "../components/Sectionheader"
 
 function Services() {
   return (
-    <section id="services" class="services section-bg">
+    <section id="services" class="services mt-5 section-bg">
       <div class="container">
       <Sectionheader
             title={"Marketing"}
@@ -12,7 +12,7 @@ function Services() {
           />
         <div class="section-title">
           <div>
-            <h3>Social Media Marketing at Its Best</h3>
+            <h3><p className="theme-color-word">Social Media Marketing</p> at Its Best</h3>
 
             <div class="row">
               <div class="col-lg-6">
@@ -38,7 +38,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>E-Commerce Marketing</h3>
+            <h3>E-Commerce<p className="theme-color-word"> Marketing</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -61,7 +61,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Search Engine Optimization(SEO)</h3>
+            <h3><p className="theme-color-word">Search Engine</p> Optimization(SEO)</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img
@@ -84,7 +84,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Content Writing</h3>
+            <h3>Content<p className="theme-color-word"> Writing</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -109,7 +109,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Email Marketing</h3>
+            <h3><p className="theme-color-word">Email</p> Marketing</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img

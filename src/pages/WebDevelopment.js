@@ -4,7 +4,7 @@ import Sectionheader from "../components/Sectionheader"
 
 function Services() {
   return (
-    <section id="services" class="services section-bg">
+    <section id="services" class="services mt-5 section-bg">
       <div class="container">
       <Sectionheader
             title={"Web Development"}
@@ -12,7 +12,7 @@ function Services() {
           />
         <div class="section-title">
           <div className="contents mt-4 mb-5">
-            <h3>Identifying needs</h3>
+            <h3>Identifying <p className="theme-color-word">Goals</p></h3>
 
             <div class="row">
               <div class="col-lg-6">
@@ -49,7 +49,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Development</h3>
+            <h3><p className="theme-color-word">Development</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -75,7 +75,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Designing Your Website</h3>
+            <h3><p className="theme-color-word">Designing</p> Your Website</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img
@@ -105,7 +105,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Testing and Validating</h3>
+            <h3>Testing <p className="theme-color-word">and</p> Validating</h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -132,7 +132,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Launch and Maintainance</h3>
+            <h3><p className="theme-color-word">Launch</p> and Maintainance</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img

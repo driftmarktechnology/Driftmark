@@ -63,7 +63,7 @@ function About() {
 /* eslint-enable */
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact mt-5">
       <div className="container">
         <motion.div
           initial={{ opacity: 0 }} // Initial state (invisible)
@@ -78,7 +78,7 @@ function About() {
           />
           <div className="section-title">
             <div className="contents mt-4 mb-5">
-              <h3>Who We Are</h3>
+            <h3>Who <p className="theme-color-word">We</p> Are</h3>
               <div className="row">
                 <div className="col-lg-6">
                   <img
@@ -114,7 +114,7 @@ function About() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>What We Offer</h3>
+              <h3>What <p className="theme-color-word">We</p> Offer</h3>
               <div className="row">
                 <div className="col-lg-6">
                   <br />
@@ -146,7 +146,7 @@ function About() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Our Mission</h3>
+              <h3>Our <p className="theme-color-word">Mission</p></h3>
               <div className="row">
                 <div className="col-lg-6">
                   <img
@@ -179,7 +179,7 @@ function About() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Our Vision</h3>
+              <h3>Our <p className="theme-color-word">Vision</p></h3>
               <div className="row">
                 <div className="col-lg-6">
                   <br />

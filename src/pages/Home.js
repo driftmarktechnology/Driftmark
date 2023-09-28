@@ -56,12 +56,12 @@ function Home() {
 
   return (
     <div className="home-page">
-      <section id="hero" className="d-flex mb-4 align-items-center">
+      <section id="hero" className="d-flex mb-4 mt-5 align-items-center">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
               <h1 className="mb-4 ms-1 mt-lg-5">
-                Shift your business into the digital realm
+                Shift your <p className="theme-color-word">business</p> into the <p className="theme-color-word">digital</p> realm
               </h1>
               <h6 className="mb-4 ms-1">
                 We help businesses adapt for the digital age, ensuring safe tech
@@ -146,7 +146,7 @@ function Home() {
                 />
               </div>
               <div className="col-lg-6 pe-2 pt-4 pt-lg-0 content">
-                <h3>About Driftmark Technology</h3>
+                <h3>About <p className="theme-color-word">Driftmark Technology</p></h3>
                 <p className="fst-italic">
                   Our team of full-stack developers and agile professionals
                   specialize in rapidly delivering web, mobile, and software
@@ -395,7 +395,7 @@ function Home() {
             <div class="row">
               <div class="col-lg-6 text-start">
                 <header class="section-header section-header__light">
-                  <h2><span className="theme-color-word">Let us bring your product to life</span></h2>
+                  <h2><span style={{color:"#fff"}}>Let us bring your product to life</span></h2>
                   <p class="text">
                     We work with all types of budgets. We love to work on
                     interesting projects and delivering high quality products

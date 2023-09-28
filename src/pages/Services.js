@@ -36,7 +36,7 @@ function Services() {
 /* eslint-enable */
 
   return (
-    <section id="services" class="services section-bg">
+    <section id="services" class="services mt-5 section-bg">
       <div class="container">
         <Sectionheader
           title={"Services"}
@@ -204,7 +204,7 @@ function Services() {
         <section>
           <article class="services-cta section section-bg">
             <div class="section-header text-center">
-              <h2 class="section-title">Let us help you launch your project</h2>
+              <h2 class="section-title">Let us help you <p className="theme-color-word">launch</p> your project</h2>
             </div>
             <figure class="img-holder text-center">
               <img src="assets/img/rocket-pulse.svg" alt="" />

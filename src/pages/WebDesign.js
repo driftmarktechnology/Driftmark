@@ -4,7 +4,7 @@ import Sectionheader from "../components/Sectionheader"
 
 function Services() {
   return (
-    <section id="services" class="services section-bg">
+    <section id="services" class="services mt-5 section-bg">
       <div class="container">
       <Sectionheader
             title={"Web Design"}
@@ -17,7 +17,7 @@ function Services() {
         </div> */}
         <div class="section-title">
           <div className="contents mt-4 mb-5">
-            <h3>Identifying Goals and Defining Scope</h3>
+            <h3><p className="theme-color-word">Identifying Goals</p> and Defining Scope</h3>
 
             <div class="row">
               <div class="col-lg-6">
@@ -50,7 +50,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Crafting Sitemaps and Wireframes</h3>
+            <h3>Crafting <p className="theme-color-word">Sitemaps</p> and <p className="theme-color-word">Wireframes</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -72,7 +72,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Digital Design</h3>
+            <h3><p className="theme-color-word">Digital</p> Design</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img
@@ -104,7 +104,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Developing Your Goals</h3>
+            <h3>Developing Your <p className="theme-color-word">Goals</p></h3>
             <div class="row">
               <div class="col-lg-6">
                 <p>
@@ -128,7 +128,7 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Testing. Going Live. Support.</h3>
+            <h3>Testing. <p className="theme-color-word">Going Live.</p> Support.</h3>
             <div class="row">
               <div class="col-lg-6">
                 <img

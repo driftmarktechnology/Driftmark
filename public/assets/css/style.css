@@ -34,8 +34,9 @@ h6 {
   font-family: "Raleway", sans-serif;
 } */
 
-.container .theme-color-word{
-  color: #fff;
+.theme-color-word{
+  color: #39c1eb;
+  display: inline;
 }
 
 /*--------------------------------------------------------------

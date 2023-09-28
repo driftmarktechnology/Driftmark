@@ -78,6 +78,7 @@ function Home() {
                 src="assets/img/banner.gif"
                 className="img-fluid animated text-end"
                 alt=""
+                style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
               />
             </div>
           </div>
@@ -141,6 +142,7 @@ function Home() {
                   src="assets/img/about_new.jpeg"
                   className="img-fluid"
                   alt=""
+                  style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
                 />
               </div>
               <div className="col-lg-6 pe-2 pt-4 pt-lg-0 content">
@@ -416,6 +418,7 @@ function Home() {
                     src="assets/img/rocket-launch.png"
                     className="img-fluid animated mt-4"
                     alt=""
+                    style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
                   />
                 </div>
                 {/* <figure class="img-holder text-end">
@@ -431,14 +434,15 @@ function Home() {
         </section>
 
         <section>
-          <div className="container">
+          <div className="">
           <Sectionheader title={"FAQ"} />
-          <div className="row">
-              <div className="col-lg-4">
+          <div className="faq d-flex flex-column flex-lg-row align-items-center">
+              <div className="col-lg-4 mb-4 mb-lg-0">
                 <img
-                  src="assets/img/faq.png"
+                  src="assets/img/faq1.png"
                   className="img-fluid "
                   alt=""
+                  style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
                 />
               </div>
               <div className="col-lg-8 pe-2 pt-4 pt-lg-0 content">

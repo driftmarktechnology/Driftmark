@@ -108,9 +108,9 @@ function Team() {
 
                 <RenderTeamMember
                   name="Suriya S"
-                  role="Frontend Developer"
-                  description="Suriya is our skilled Frontend Developer, responsible for bringing our web projects to life with creativity and precision. With a passion for crafting user-friendly and visually appealing interfaces, Suriya is at the forefront of turning design concepts into interactive and responsive web applications."
-                  imageSrc="assets/img/team/profile.jpg"
+                  role="Associate Software Engineer"
+                  description="Suriya, our Associate Software Engineer, brings a strong technical foundation and a passion for excellence to our team. They excel in problem-solving, collaborate seamlessly with colleagues, and contribute significantly to our software development projects."
+                  imageSrc="assets/img/team/suriya1.jpg"
                 />
 
                 <RenderTeamMember

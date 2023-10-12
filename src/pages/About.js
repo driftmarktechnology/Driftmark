@@ -83,7 +83,7 @@ function About() {
                 <div className="col-lg-6">
                   <img
                     src="assets/img/about/who-we-are2.png"
-                    className="img-fluid animated"
+                    className="img-fluid responsive-image animated"
                     alt=""
                   />
                 </div>
@@ -139,7 +139,7 @@ function About() {
                 <div className="col-lg-6">
                   <img
                     src="assets/img/about/what-we-offer.jpeg"
-                    className="img-fluid animated"
+                    className="img-fluid responsive-image animated"
                     alt=""
                   />
                 </div>
@@ -151,7 +151,7 @@ function About() {
                 <div className="col-lg-6">
                   <img
                     src="assets/img/about/mission.jpeg"
-                    className="img-fluid animated"
+                    className="img-fluid responsive-image animated"
                     alt=""
                   />
                 </div>
@@ -203,7 +203,7 @@ function About() {
                 <div className="col-lg-6">
                   <img
                     src="assets/img/about/vision.jpeg"
-                    className="img-fluid animated"
+                    className="img-fluid responsive-image animated"
                     alt=""
                   />
                 </div>

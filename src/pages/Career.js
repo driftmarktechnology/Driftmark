@@ -32,25 +32,23 @@ function Team() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formKey, setFormKey] = useState(0);
-
+  
   const validationSchema = Yup.object().shape({
     position: Yup.string().required("Position is required"),
     resume: Yup.mixed()
       .required("Resume is required")
-      .test(
-        "type",
-        "Only the following formats are accepted: .jpeg, .jpg, .bmp, .pdf and .doc",
-        (value) => {
-          return (
-            value &&
-            (value[0].type === "image/jpeg" ||
-              value[0].type === "image/bmp" ||
-              value[0].type === "image/png" ||
-              value[0].type === "application/pdf" ||
-              value[0].type === "application/msword")
-          );
-        }
-      ),
+      .test("type", "Only .pdf and .doc formats are accepted", (value) => {
+        if (!value || !Array.isArray(value) || value.length === 0) return true;
+        const fileName = value[0].name;
+        const allowedExtensions = [".pdf", ".doc", ".docx"];
+        const fileExtension = fileName.split(".").pop().toLowerCase();
+        return allowedExtensions.includes("." + fileExtension);
+        // (
+        //   value &&
+        //   (value[0].type === "application/pdf" ||
+        //     value[0].type === "application/msword")
+        // );
+      }),
   });
 
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
@@ -60,7 +58,7 @@ function Team() {
     formData.append("resume", values.resume);
 
     axios
-      .post("/api/submit", formData) // Replace with your API endpoint
+      .post("http://localhost:3001/career-form", formData) // Replace with your API endpoint
       .then((response) => {
         // Handle successful submission
         console.log("Form submitted successfully:", response.data);
@@ -140,7 +138,7 @@ function Team() {
                 </div>
                 <div className="col-lg-6">
                   <img
-                    className="img-fluid d-block mx-auto w-100"
+                    className="img-fluid responsive-image d-block mx-auto w-100"
                     width={400}
                     height={400}
                     src="/assets/img/superhero.png"

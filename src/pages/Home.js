@@ -76,7 +76,7 @@ function Home() {
             <div className="col-lg-6 order-1 order-lg-2 hero-img text-end text-center">
               <img
                 src="assets/img/banner.gif"
-                className="img-fluid animated text-end"
+                className="img-fluid responsive-image animated text-end"
                 alt=""
                 style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
               />
@@ -140,7 +140,7 @@ function Home() {
               <div className="col-lg-6">
                 <img
                   src="assets/img/about_new.jpeg"
-                  className="img-fluid"
+                  className="img-fluid responsive-image"
                   alt=""
                   style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
                 />
@@ -416,14 +416,14 @@ function Home() {
                 <div className="d-flex justify-content-center">
                   <img
                     src="assets/img/rocket-launch.png"
-                    className="img-fluid animated mt-4"
+                    className="img-fluid responsive-image animated mt-4"
                     alt=""
                     style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
                   />
                 </div>
                 {/* <figure class="img-holder text-end">
                   <img
-                    className="img-fluid"
+                    className="img-fluid responsive-image"
                     src="assets/img/rocket-launch.png"
                     alt=""
                   />
@@ -441,7 +441,7 @@ function Home() {
               <div className="col-lg-4 mb-4 mb-lg-0">
                 <img
                   src="assets/img/faq1.png"
-                  className="img-fluid "
+                  className="img-fluid responsive-image "
                   alt=""
                 
                 />

@@ -6,6 +6,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { ToastContainer, Zoom, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Contact() {
@@ -17,30 +19,89 @@ function Contact() {
     message: "",
   };
 
-  const validationSchema = Yup.object().shape({
-    name: Yup.string().required("Name is required"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
-    subject: Yup.string().required("Subject is required"),
-    message: Yup.string().required("Message is required"),
-  });
+  // const validationSchema = Yup.object().shape({
+  //   name: Yup.string().required("Name is required"),
+  //   email: Yup.string().email("Invalid email").required("Email is required"),
+  //   subject: Yup.string().required("Subject is required"),
+  //   message: Yup.string().required("Message is required"),
+  // });
 
   const formik = useFormik({
     initialValues,
-    validationSchema,
+    // validationSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
-        const response = await axios.post("/your-api-endpoint", values);
-        setSubmissionStatus({
-          type: "success",
-          message: "Message sent successfully!",
-          data: response.data,
+        if (!values.name) {
+          toast.error("Please Enter Your Name..!", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            bodyClassName: "toastify",
+            transition: Zoom,
+          });
+          return;
+        }
+
+        if (!values.email) {
+          toast.error("Please Enter Valid Email Id", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            bodyClassName: "toastify",
+            transition: Zoom,
+          });
+          return;
+        }
+
+        if (!values.subject) {
+          toast.error("Please Enter Subject", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            bodyClassName: "toastify",
+            transition: Zoom,
+          });
+          return;
+        }
+
+        if (!values.message) {
+          toast.error("Please Enter Message", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            bodyClassName: "toastify",
+            transition: Zoom,
+          });
+          return;
+        }
+
+        const response = await axios.post("http://localhost:3001/send", values);
+        toast.success("Message sent successfully!", {
+          position: "top-right", // You can customize the toast position
+          autoClose: 3000, // Close the toast after 3 seconds (adjust as needed)
+          hideProgressBar: true,
+          transition: Zoom,
         });
+        console.log("Message sent successfully!", response.data);
         resetForm();
       } catch (error) {
-        setSubmissionStatus({
-          type: "error",
-          message: "Failed to send message. Please try again later.",
-        });
+        if(error.response && error.response.data && error.response.data.error){
+          error.response.data.error.forEach((errMsg)=>{
+            toast.error(errMsg.message, {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: true,
+              transition: Zoom,
+            });
+          })
+        } else{
+          toast.error("Failed to send the message. Please try again later.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            transition: Zoom,
+          });
+        }
       }
     },
   });
@@ -66,6 +127,14 @@ function Contact() {
  /* eslint-disable */
 }, []);
 /* eslint-enable */
+
+// const [message, setMessage] = useState();
+// const handleSubmit = () => {
+//   axios
+//   .post('http://localhost:3000/send', {message:message})
+//   .then(result => console.log("Recieved message"))
+//   .catch((err) => console.log(err))
+// };
 
   return (
     <section id="contact" class="mt-5 contact">
@@ -124,6 +193,7 @@ function Contact() {
             <form
               onSubmit={formik.handleSubmit}
               className="php-email-form"
+              id="contactFormid"
             >
               <div className="row">
                 <div className="form-group col-md-6">
@@ -148,7 +218,7 @@ function Contact() {
                 <div className="form-group col-md-6 mt-3 mt-md-0">
                   <label htmlFor="email">Your Email</label>
                   <input
-                    type="email"
+                    // type="email"
                     className={`form-control ${
                       formik.touched.email && formik.errors.email
                         ? "is-invalid"
@@ -194,7 +264,6 @@ function Contact() {
                   }`}
                   name="message"
                   rows="10"
-                  
                   {...formik.getFieldProps("message")}
                 ></textarea>
                 {formik.touched.message && formik.errors.message ? (
@@ -215,6 +284,7 @@ function Contact() {
                   </div>
                 )}
               </div>
+              <div id="error-message" class="error-message"></div>
               <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>
@@ -278,6 +348,7 @@ function Contact() {
           </div> */}
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 }

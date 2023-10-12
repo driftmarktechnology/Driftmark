@@ -207,7 +207,7 @@ function Services() {
               <h2 class="section-title">Let us help you <p className="theme-color-word">launch</p> your project</h2>
             </div>
             <figure class="img-holder text-center">
-              <img src="assets/img/rocket-pulse.svg" alt="" />
+              <img src="assets/img/rocket-pulse.svg" className="img-fluid" alt="" />
               <figcaption>
               <br/>
                 <Link to="/contact" className="services-btn-launch-proj scrollto">

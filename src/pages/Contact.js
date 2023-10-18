@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Contact() {
-  const [submissionStatus, setSubmissionStatus] = useState(null);
   const initialValues = {
     name: "",
     email: "",
@@ -19,16 +18,16 @@ function Contact() {
     message: "",
   };
 
-  // const validationSchema = Yup.object().shape({
-  //   name: Yup.string().required("Name is required"),
-  //   email: Yup.string().email("Invalid email").required("Email is required"),
-  //   subject: Yup.string().required("Subject is required"),
-  //   message: Yup.string().required("Message is required"),
-  // });
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    subject: Yup.string().required("Subject is required"),
+    message: Yup.string().required("Message is required"),
+  });
 
   const formik = useFormik({
     initialValues,
-    // validationSchema,
+    validationSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
         if (!values.name) {
@@ -77,8 +76,8 @@ function Contact() {
 
         const response = await axios.post("http://localhost:3001/send", values);
         toast.success("Message sent successfully!", {
-          position: "top-right", // You can customize the toast position
-          autoClose: 3000, // Close the toast after 3 seconds (adjust as needed)
+          position: "top-right",
+          autoClose: 3000,
           hideProgressBar: true,
           transition: Zoom,
         });
@@ -218,7 +217,7 @@ function Contact() {
                 <div className="form-group col-md-6 mt-3 mt-md-0">
                   <label htmlFor="email">Your Email</label>
                   <input
-                    // type="email"
+                    type="email"
                     className={`form-control ${
                       formik.touched.email && formik.errors.email
                         ? "is-invalid"
@@ -273,16 +272,6 @@ function Contact() {
                 ) : null}
               </div>
               <div className="my-3">
-                {submissionStatus && submissionStatus.type === "error" && (
-                  <div className="alert alert-danger">
-                    {submissionStatus.message}
-                  </div>
-                )}
-                {submissionStatus && submissionStatus.type === "success" && (
-                  <div className="alert alert-success">
-                    {submissionStatus.message}
-                  </div>
-                )}
               </div>
               <div id="error-message" class="error-message"></div>
               <div className="text-center">
@@ -290,62 +279,6 @@ function Contact() {
               </div>
             </form>
           </div>
-
-          {/* <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    id="name"
-                    required
-                  />
-                </div>
-                <div class="form-group col-md-6 mt-3 mt-md-0">
-                  <label for="name">Your Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Subject</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="subject"
-                  id="subject"
-                  required
-                />
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Message</label>
-                <textarea
-                  class="form-control"
-                  name="message"
-                  rows="10"
-                  required
-                ></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </div> */}
         </div>
       </div>
       <ToastContainer />

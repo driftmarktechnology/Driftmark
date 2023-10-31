@@ -3,6 +3,8 @@ import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
 import { motion, useAnimation } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,9 +60,9 @@ function About() {
 
     identifyUser(uniqueUserId);
     trackEvent("About Us Page Visited");
-  /* eslint-disable */
-}, []);
-/* eslint-enable */
+    /* eslint-disable */
+  }, []);
+  /* eslint-enable */
 
   return (
     <section id="contact" className="contact mt-5">
@@ -76,15 +78,18 @@ function About() {
               "We bridge the gap between your great idea and your resources"
             }
           />
-          <div className="section-title">
+          <div>
             <div className="contents mt-4 mb-5">
-            <h3>Who <p className="theme-color-word">We</p> Are</h3>
+              <h3 className="section-title">
+                Who <p className="theme-color-word">We</p> Are
+              </h3>
               <div className="row">
                 <div className="col-lg-6">
-                  <img
-                    src="assets/img/about/who-we-are2.png"
-                    className="img-fluid responsive-image animated"
+                  <LazyLoadImage
+                    src={"assets/img/about/who-we-are2.png"}
                     alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image animated"
                   />
                 </div>
                 <div className="col-lg-6">
@@ -114,7 +119,9 @@ function About() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>What <p className="theme-color-word">We</p> Offer</h3>
+              <h3 className="section-title">
+                What <p className="theme-color-word">We</p> Offer
+              </h3>
               <div className="row">
                 <div className="col-lg-6">
                   <br />
@@ -137,22 +144,26 @@ function About() {
                   </p>
                 </div>
                 <div className="col-lg-6">
-                  <img
-                    src="assets/img/about/what-we-offer.jpeg"
-                    className="img-fluid responsive-image animated"
+                  <LazyLoadImage
+                    src={"assets/img/about/what-we-offer.jpeg"}
                     alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image animated"
                   />
                 </div>
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Our <p className="theme-color-word">Mission</p></h3>
+              <h3 className="section-title">
+                Our <p className="theme-color-word">Mission</p>
+              </h3>
               <div className="row">
                 <div className="col-lg-6">
-                  <img
-                    src="assets/img/about/mission.jpeg"
-                    className="img-fluid responsive-image animated"
+                  <LazyLoadImage
+                    src={"assets/img/about/mission.jpeg"}
                     alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image animated"
                   />
                 </div>
                 <div className="col-lg-6">
@@ -179,7 +190,9 @@ function About() {
               </div>
             </div>
             <div className="contents mt-4 mb-5">
-              <h3>Our <p className="theme-color-word">Vision</p></h3>
+              <h3 className="section-title">
+                Our <p className="theme-color-word">Vision</p>
+              </h3>
               <div className="row">
                 <div className="col-lg-6">
                   <br />
@@ -201,10 +214,11 @@ function About() {
                   </p>
                 </div>
                 <div className="col-lg-6">
-                  <img
-                    src="assets/img/about/vision.jpeg"
-                    className="img-fluid responsive-image animated"
+                  <LazyLoadImage
+                    src={"assets/img/about/vision.jpeg"}
                     alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image animated"
                   />
                 </div>
               </div>

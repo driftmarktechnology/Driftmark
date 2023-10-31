@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,9 +13,10 @@ function Footer() {
           <div className="row">
             <div className="footer-sections col-lg-3 col-md-6 footer-contact mb-5">
               <div>
-                <img
-                  src="assets/img/footer-image.png"
+                <LazyLoadImage
+                  src={"assets/img/footer-image.png"}
                   alt=""
+                  effect="blur"
                   className="img-fluid"
                   style={{ width: "90%" }}
                 />

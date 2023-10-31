@@ -1,33 +1,33 @@
 import React from "react";
-import Sectionheader from "../components/Sectionheader"
+import Sectionheader from "../components/Sectionheader";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-
-function Services() {
+function WebDesign() {
   return (
-    <section id="services" class="services mt-5 section-bg">
-      <div class="container">
-      <Sectionheader
-            title={"Web Design"}
-            subtitle={"Approaches we employ for website design"}
-          />
-        {/* <div class="section-title">
-          <span>Web Design</span>
-          <h2>Web Design</h2>
-          <p>Approaches we employ for website design</p>
-        </div> */}
-        <div class="section-title">
+    <section id="services" className="services mt-5 section-bg">
+      <div className="container">
+        <Sectionheader
+          title={"Web Design"}
+          subtitle={"Approaches we employ for website design"}
+        />
+        <div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Identifying Goals</p> and Defining Scope</h3>
+            <h3 className="section-title">
+              <p className="theme-color-word">Identifying Goals</p> and Defining
+              Scope
+            </h3>
 
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/web-design/web-design-goal.png"
-                  class="img-fluid animated"
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/web-design/web-design-goal.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -50,11 +50,15 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Crafting <p className="theme-color-word">Sitemaps</p> and <p className="theme-color-word">Wireframes</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Crafting <p className="theme-color-word">Sitemaps</p> and{" "}
+              <p className="theme-color-word">Wireframes</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
-                <br/><br/>
+                  <br />
+                  <br />
                   Following this, our team of website developers initiates the
                   creation of sitemap and wireframe structures tailored to your
                   web design needs. As a premier website design firm, we
@@ -62,28 +66,32 @@ function Services() {
                   with your requirements and expectations.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/web-design/web-design-sitemap.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/web-design/web-design-sitemap.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Digital</p> Design</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/web-design/web-design-digital-design.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              <p className="theme-color-word">Digital</p> Design
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/web-design/web-design-digital-design.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
-                <br/>
+                  <br />
                   Driftmark Technology adheres to a comprehensive design process
                   aimed at delivering tailored, high-quality websites aligned
                   with your precise business requirements. Our process initiates
@@ -104,11 +112,15 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Developing Your <p className="theme-color-word">Goals</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Developing Your <p className="theme-color-word">Goals</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
-                <br/><br/><br/>
+                  <br />
+                  <br />
+                  <br />
                   While developing, we encompass a range of vital components,
                   including coding, the integration of UI (User Interface) and
                   UX (User Experience) elements, and the creation of engaging
@@ -118,28 +130,34 @@ function Services() {
                   services.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/web-design/web-design-developing-goals.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/web-design/web-design-developing-goals.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Testing. <p className="theme-color-word">Going Live.</p> Support.</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/web-design/web-design-testing-support.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              Testing. <p className="theme-color-word">Going Live.</p> Support.
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/web-design/web-design-testing-support.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
-                <br/><br/><br/>
+                  <br />
+                  <br />
+                  <br />
                   Upon meticulous integration and completion of all requisite
                   elements, our team conducts rigorous testing to assess your
                   website's user experience. After you express satisfaction with
@@ -156,4 +174,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default WebDesign;

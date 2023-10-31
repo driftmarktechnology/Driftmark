@@ -1,6 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Header() {
   const location = useLocation();
@@ -21,9 +23,10 @@ function Header() {
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
             <Link to="/">
-              <img
-                src="assets/img/logo.png"
+              <LazyLoadImage
+                src={"assets/img/logo.png"}
                 alt="Driftmark Technology"
+                effect="blur"
                 className="fas fa-2x"
               />
             </Link>
@@ -90,8 +93,15 @@ function Header() {
         aria-labelledby="offcanvasExampleLabel"
       >
         <div className="offcanvas-header">
-        <span><img src="assets/img/logo.png" style={{ width: "40px", height: "auto" }} alt="" className="img-fluid animated"/></span>
-        <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+          <span>
+            <img
+              src="assets/img/logo.png"
+              style={{ width: "40px", height: "auto" }}
+              alt=""
+              className="img-fluid animated"
+            />
+          </span>
+          <h5 className="offcanvas-title" id="offcanvasExampleLabel">
             Driftmark
           </h5>
           <button

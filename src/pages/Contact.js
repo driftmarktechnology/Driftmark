@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { ToastContainer, Zoom, toast } from 'react-toastify';
+import { Zoom, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -30,58 +30,13 @@ function Contact() {
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
-        if (!values.name) {
-          toast.error("Please Enter Your Name..!", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: true,
-            bodyClassName: "toastify",
-            transition: Zoom,
-          });
-          return;
-        }
-
-        if (!values.email) {
-          toast.error("Please Enter Valid Email Id", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: true,
-            bodyClassName: "toastify",
-            transition: Zoom,
-          });
-          return;
-        }
-
-        if (!values.subject) {
-          toast.error("Please Enter Subject", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: true,
-            bodyClassName: "toastify",
-            transition: Zoom,
-          });
-          return;
-        }
-
-        if (!values.message) {
-          toast.error("Please Enter Message", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: true,
-            bodyClassName: "toastify",
-            transition: Zoom,
-          });
-          return;
-        }
-
-        const response = await axios.post("http://localhost:3001/send", values);
+        await axios.post("http://localhost:3001/send", values);
         toast.success("Message sent successfully!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: true,
           transition: Zoom,
         });
-        console.log("Message sent successfully!", response.data);
         resetForm();
       } catch (error) {
         if(error.response && error.response.data && error.response.data.error){
@@ -127,34 +82,26 @@ function Contact() {
 }, []);
 /* eslint-enable */
 
-// const [message, setMessage] = useState();
-// const handleSubmit = () => {
-//   axios
-//   .post('http://localhost:3000/send', {message:message})
-//   .then(result => console.log("Recieved message"))
-//   .catch((err) => console.log(err))
-// };
-
   return (
-    <section id="contact" class="mt-5 contact">
-      <div class="container">
+    <section id="contact" className="mt-5 contact">
+      <div className="container">
         <Sectionheader
           title={"Contact"}
           subtitle={
             "Your trusted Solutions Partner for the digital transformation of you and your company."
           }
         />
-        <div class="row">
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
+        <div className="row">
+          <div className="col-lg-5 d-flex align-items-stretch">
+            <div className="info">
+              <div className="address">
+                <i className="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
                 <p>Kadirimangalam, Tirupathur, Tamil Nadu 635653</p>
               </div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
+              <div className="email">
+                <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>
                   <Link
@@ -170,8 +117,8 @@ function Contact() {
                 </p>
               </div>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
+              <div className="phone">
+                <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p><Link to="tel:+91 6381 475 573">
                   +91 6381475573
@@ -273,7 +220,7 @@ function Contact() {
               </div>
               <div className="my-3">
               </div>
-              <div id="error-message" class="error-message"></div>
+              <div id="error-message" className="error-message"></div>
               <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>
@@ -281,7 +228,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </section>
   );
 }

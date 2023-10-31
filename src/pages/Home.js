@@ -29,7 +29,8 @@ import {
   faCloudDownloadAlt,
   faHdd,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Home() {
   function getUniqueUserId() {
@@ -50,9 +51,9 @@ function Home() {
 
     identifyUser(uniqueUserId);
     trackEvent("Team Page Visited");
-  /* eslint-disable */
-}, []);
-/* eslint-enable */
+    /* eslint-disable */
+  }, []);
+  /* eslint-enable */
 
   return (
     <div className="home-page">
@@ -61,7 +62,8 @@ function Home() {
           <div className="row">
             <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
               <h1 className="mb-4 ms-1 mt-lg-5">
-                Shift your <p className="theme-color-word">business</p> into the <p className="theme-color-word">digital</p> realm
+                Shift your <p className="theme-color-word">business</p> into the{" "}
+                <p className="theme-color-word">digital</p> realm
               </h1>
               <h6 className="mb-4 ms-1">
                 We help businesses adapt for the digital age, ensuring safe tech
@@ -74,11 +76,11 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-6 order-1 order-lg-2 hero-img text-end text-center">
-              <img
-                src="assets/img/banner.gif"
-                className="img-fluid responsive-image animated text-end"
+              <LazyLoadImage
+                src={"assets/img/banner.gif"}
                 alt=""
-                style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+                effect="blur"
+                style={{ width: "100%", maxWidth: "500px", height: "auto" }}
               />
             </div>
           </div>
@@ -138,15 +140,17 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-lg-6">
-                <img
-                  src="assets/img/about_new.jpeg"
-                  className="img-fluid responsive-image"
+                <LazyLoadImage
+                  src={"assets/img/about_new.jpeg"}
                   alt=""
-                  style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+                  effect="blur"
+                  style={{ width: "100%", maxWidth: "500px", height: "auto" }}
                 />
               </div>
               <div className="col-lg-6 pe-2 pt-4 pt-lg-0 content">
-                <h3>About <p className="theme-color-word">Driftmark Technology</p></h3>
+                <h3>
+                  About <p className="theme-color-word">Driftmark Technology</p>
+                </h3>
                 <p className="fst-italic">
                   Our team of full-stack developers and agile professionals
                   specialize in rapidly delivering web, mobile, and software
@@ -162,36 +166,36 @@ function Home() {
         </section>
 
         <section className="solution mb-4">
-          <div class="container">
+          <div className="container">
             <Sectionheader title={"Solutions"} />
-            <div class="section-title">
-              <div class="row">
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+            <div className="section-title">
+              <div className="row">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faCogs} />
                     </h1>
                     <h6>Enterprise Resource Planning (ERP)</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faUsers} />
                     </h1>
                     <h6>Customer Relationship Management (CRM)</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faFileAlt} />
                     </h1>
                     <h6>Content Management System (CMS)</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faShoppingCart} />
                     </h1>
@@ -199,33 +203,33 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+              <div className="row">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faUserTie} />
                     </h1>
                     <h6>Human Resources Management System (HRMS)</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faMobile} />
                     </h1>
                     <h6>Mobile Applications</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faCloud} />
                     </h1>
                     <h6>Cloud Solutions</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faChartBar} />
                     </h1>
@@ -233,33 +237,33 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+              <div className="row">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faShieldAlt} />
                     </h1>
                     <h6>Cybersecurity Solutions</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faMoneyBill} />
                     </h1>
                     <h6>Financial Software</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faCubes} />
                     </h1>
                     <h6>Supply Chain Management Software</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faClinicMedical} />
                     </h1>
@@ -267,33 +271,33 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+              <div className="row">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faGraduationCap} />
                     </h1>
                     <h6>Education & E-Learning Platforms</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faGamepad} />
                     </h1>
                     <h6>Gaming Software</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faBrain} />
                     </h1>
                     <h6>Artificial Intelligence & Machine Learning</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faLink} />
                     </h1>
@@ -301,33 +305,33 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+              <div className="row">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faMicrochip} />
                     </h1>
                     <h6>IoT Solutions</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faServer} />
                     </h1>
                     <h6>Software as a Service (SaaS)</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faCloudDownloadAlt} />
                     </h1>
                     <h6>Platform as a Service (PaaS)</h6>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 d-flex align-items-stretch">
-                  <div class="solution-input mb-3 pb-3">
+                <div className="col-lg-3 col-md-3 d-flex align-items-stretch">
+                  <div className="solution-input mb-3 pb-3">
                     <h1 className="solution-icon">
                       <FontAwesomeIcon icon={faHdd} />
                     </h1>
@@ -346,7 +350,13 @@ function Home() {
               <h2>Testimonials</h2>
             </div>
 
-            <Carousel autoPlay={true} infiniteLoop={true} showStatus={false} showIndicators={false}>
+            <Carousel
+              autoPlay={true}
+              infiniteLoop={true}
+              showStatus={false}
+              showIndicators={false}
+              showThumbs={false}
+            >
               <div>
                 <div className="testimonial-item">
                   <p>
@@ -390,13 +400,17 @@ function Home() {
             </Carousel>
           </div>
         </section>
-        <section class="cta section section-bg gradient--dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 text-start">
-                <header class="section-header section-header__light">
-                  <h2><span style={{color:"#fff"}}>Let us bring your product to life</span></h2>
-                  <p class="text">
+        <section className="cta section section-bg gradient--dark">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 text-start">
+                <header className="section-header section-header__light">
+                  <h2>
+                    <span style={{ color: "#fff" }}>
+                      Let us bring your product to life
+                    </span>
+                  </h2>
+                  <p className="text">
                     We work with all types of budgets. We love to work on
                     interesting projects and delivering high quality products
                     for both startups and enterprise clients. Let’s talk and see
@@ -407,27 +421,17 @@ function Home() {
                       LAUNCH A PROJECT
                     </Link>
                   </div>
-                  {/* <div class="btn-holder">
-                    <span>LAUNCH A PROJECT</span>
-                  </div> */}
                 </header>
               </div>
               <div className="col-lg-6">
                 <div className="d-flex justify-content-center">
-                  <img
-                    src="assets/img/rocket-launch.png"
-                    className="img-fluid responsive-image animated mt-4"
+                  <LazyLoadImage
+                    src={"assets/img/rocket-launch.png"}
                     alt=""
-                    style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
+                    effect="blur"
+                    style={{ width: "100%", maxWidth: "500px", height: "auto" }}
                   />
                 </div>
-                {/* <figure class="img-holder text-end">
-                  <img
-                    className="img-fluid responsive-image"
-                    src="assets/img/rocket-launch.png"
-                    alt=""
-                  />
-                </figure> */}
               </div>
             </div>
           </div>
@@ -435,27 +439,24 @@ function Home() {
 
         <section>
           <div className="">
-          <Sectionheader title={"FAQ"} />
-          <div className="container">
-          <div className="row">
-              <div className="col-lg-4 mb-4 mb-lg-0">
-                <img
-                  src="assets/img/faq1.png"
-                  className="img-fluid responsive-image "
-                  alt=""
-                
-                />
-              </div>
-              <div className="col-lg-8 pe-2 pt-4 pt-lg-0 content">
-                <Accordion />
+            <Sectionheader title={"FAQ"} />
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-4 mb-4 mb-lg-0">
+                  <LazyLoadImage
+                    src={"assets/img/faq1.png"}
+                    alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image"
+                  />
+                </div>
+                <div className="col-lg-8 pe-2 pt-4 pt-lg-0 content">
+                  <Accordion />
+                </div>
               </div>
             </div>
           </div>
-          </div>
-          
         </section>
-
-  
       </main>
     </div>
   );

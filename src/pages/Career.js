@@ -7,10 +7,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { resumeStorage } from "../components/firebase";
 import { ref, uploadBytes } from "firebase/storage";
-import { ToastContainer, toast, Zoom } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast, Zoom } from "react-toastify";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-function Team() {
+function Career() {
   const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
@@ -78,10 +79,6 @@ function Team() {
         const resumeRef = ref(resumeStorage, `resumes/${uniqueFileName}`);
         await uploadBytes(resumeRef, resume);
 
-        // // Save the position and resume details to Firestore
-        // const valRef = collection(positionStorage, `positionData`);
-        // await addDoc(valRef, { position, resume: downloadUrl });
-
         toast.success("Applied Successfully", {
           position: "top-right",
           autoClose: 3000,
@@ -101,18 +98,39 @@ function Team() {
           autoClose: 3000,
           hideProgressBar: true,
           bodyClassName: "toastify",
-          transition: Zoom, // Auto close the message after 3 seconds
+          transition: Zoom,
         });
         setIsLoading(false);
       }
     } catch (error) {
-      toast.error("Error in submission", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        bodyClassName: "toastify",
-        transition: Zoom, // Auto close the message after 3 seconds
-      });
+      if (error.code === "storage/canceled") {
+        toast.warning(
+          "The operation was canceled due to an internal issue. Please try again later.",
+          {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            bodyClassName: "toastify",
+            transition: Zoom,
+          }
+        );
+      } else if (error.code === "storage/unknown") {
+        toast.error("An unknown error occurred. Please try again later.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          bodyClassName: "toastify",
+          transition: Zoom,
+        });
+      } else {
+        toast.error("Error in submission", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          bodyClassName: "toastify",
+          transition: Zoom,
+        });
+      }
       setIsLoading(false);
     }
   };
@@ -173,12 +191,11 @@ function Team() {
                   </header>
                 </div>
                 <div className="col-lg-6">
-                  <img
-                    className="img-fluid responsive-image d-block mx-auto w-100"
-                    width={400}
-                    height={400}
-                    src="/assets/img/superhero.png"
+                  <LazyLoadImage
+                    src={"/assets/img/superhero.png"}
                     alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image d-block mx-auto w-100"
                   />
                 </div>
               </div>
@@ -262,7 +279,7 @@ function Team() {
                           <option value="Back-end Developer">
                             Back-end Developer
                           </option>
-                          <option value="UI/UX Designer">Web Designer</option>
+                          <option value="UI-UX Designer">Web Designer</option>
                           <option value="Graphic Designer">
                             Graphic Designer
                           </option>
@@ -363,9 +380,8 @@ function Team() {
           </section>
         </div>
       </div>
-      <ToastContainer />
     </section>
   );
 }
 
-export default Team;
+export default Career;

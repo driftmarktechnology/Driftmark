@@ -38,7 +38,7 @@ function App() {
   return (
     <Router>
       <div>
-        <div class="elfsight-app-8ad0234d-a9c2-4a8e-ba72-1b9f88770736"></div>
+        <div className="elfsight-app-8ad0234d-a9c2-4a8e-ba72-1b9f88770736"></div>
         <Helmet>
           <title>Driftmark</title>
           <meta

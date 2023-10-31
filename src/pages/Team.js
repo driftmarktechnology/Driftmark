@@ -34,8 +34,8 @@ function Team() {
   return (
     <>
       <Confetti width={width} height={height} />
-      <section id="team" class="team mt-5 section-bg">
-        <div class="container">
+      <section id="team" className="team mt-5 section-bg">
+        <div className="container">
           <Sectionheader
             title={"Team"}
             subtitle={"Transforming Business Concepts into Reality"}
@@ -59,11 +59,11 @@ function Team() {
             </p>
           </div>
 
-          <div class="container">
-            <div class="section-title">
+          <div className="container">
+            <div className="section-title">
               <span>Meet Our Experts for You</span>
               <h2>Meet Our Experts for You</h2>
-              <div class="row">
+              <div className="row">
                 <RenderTeamMember
                   name="Kesavan Sujitha"
                   role="Director"

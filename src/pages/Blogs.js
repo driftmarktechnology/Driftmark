@@ -1,12 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Sectionheader from "../components/Sectionheader";
-import { v4 as uuidv4 } from 'uuid';
-import { trackEvent, identifyUser } from '../utils/mixpanelUtil';
-
-
+import { v4 as uuidv4 } from "uuid";
+import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Blogs() {
-
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
     if (!userId) {
@@ -19,40 +18,39 @@ function Blogs() {
   function generateUUID() {
     return uuidv4();
   }
-  
-  
 
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
 
     identifyUser(uniqueUserId);
     trackEvent("Blogs Page Visited");
-  /* eslint-disable */
-}, []);
-/* eslint-enable */
+    /* eslint-disable */
+  }, []);
+  /* eslint-enable */
 
   return (
     <>
-      <section id="contact" class="contact mt-5">
-        <div class="container">
+      <section id="contact" className="contact mt-5">
+        <div className="container">
           <Sectionheader title={"Blogs"} />
-          <div class="section-title">
+          <div>
             <div>
-              <div class="row">
-                <p><b>Startup Development Using Lean Startup Methodology</b></p>
+              <div className="row">
+                <p className="section-title">
+                  <b>Startup Development Using Lean Startup Methodology</b>
+                </p>
                 <br />
                 <br />
-                <div class="col-lg-6">
+                <div className="col-lg-6">
                   <br />
-                  <img
-                    src="/assets/img/blogs.jpeg"
-                    class="img-fluid animated"
+                  <LazyLoadImage
+                    src={"assets/img/blogs.jpeg"}
                     alt=""
-                    width="80%"
-                    height="80%"
+                    effect="blur"
+                    style={{ width: "100%", maxWidth: "500px", height: "auto" }}
                   />
                 </div>
-                <div class="col-lg-6">
+                <div className="col-lg-6">
                   <p>
                     While the term "startup" has grown in popularity recently,
                     many are still unclear about its exact definition. There are
@@ -92,17 +90,19 @@ function Blogs() {
               </div>
             </div>
           </div>
-          <div class="section-title">
+          <div>
             <div>
-              <p>
-                <b>Startup development using Lean Startup method has the following
-                stages:</b>
+              <p className="section-title">
+                <b>
+                  Startup development using Lean Startup method has the
+                  following stages:
+                </b>
               </p>
               <br />
               <br />
 
-              <div class="row">
-                <div class="col-lg-6">
+              <div className="row">
+                <div className="col-lg-6">
                   <p>
                     Using our company as an illustration, here's a breakdown of
                     the stages in app/startup development. When a client
@@ -156,31 +156,32 @@ function Blogs() {
                     startup developmental practices.
                   </p>
                 </div>
-                <div class="col-lg-6">
+                <div className="col-lg-6">
                   <br />
                   <br />
-                  <img
-                    src="/assets/img/release2.png"
-                    class="img-fluid animated"
+                  <LazyLoadImage
+                    src={"/assets/img/release2.png"}
                     alt=""
-                    width="90%"
-                    height="90%"
+                    effect="blur"
+                    style={{ width: "100%", maxWidth: "500px", height: "auto" }}
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div class="section-title">
+          <div>
             <div>
-              <div class="how-we-work container mx-auto md:lg:mt-40 lg:mt-40 xl:mt-40 2xl:mt-40 mt-20">
-                <p class="text-center text-heading text-brandblue-dark px-20 mb-20 hide-desktop-items-block">
+              <div className="how-we-work container mx-auto md:lg:mt-40 lg:mt-40 xl:mt-40 2xl:mt-40 mt-20">
+                <p className="section-title text-center text-heading text-brandblue-dark px-20 mb-20 hide-desktop-items-block">
                   <b>How we work:</b>
                 </p>
-                <br/>
-                <img
-                  className="img-fluid"
-                  src="assets/img/how-we-work.png"
+                <br />
+                <LazyLoadImage
+                  src={"assets/img/how-we-work.png"}
                   alt=""
+                  effect="blur"
+                  // style={{ width: "100%", maxWidth: "500px", height: "auto" }}
+                  className="img-fluid"
                 />
               </div>
             </div>

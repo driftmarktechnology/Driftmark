@@ -1,28 +1,33 @@
 import React from "react";
-import Sectionheader from "../components/Sectionheader"
+import Sectionheader from "../components/Sectionheader";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-
-function Services() {
+function Marketing() {
   return (
-    <section id="services" class="services mt-5 section-bg">
-      <div class="container">
-      <Sectionheader
-            title={"Marketing"}
-            subtitle={"Connecting People, Creating Success"}
-          />
-        <div class="section-title">
+    <section id="services" className="services mt-5 section-bg">
+      <div className="container">
+        <Sectionheader
+          title={"Marketing"}
+          subtitle={"Connecting People, Creating Success"}
+        />
+        <div>
           <div>
-            <h3><p className="theme-color-word">Social Media Marketing</p> at Its Best</h3>
+            <h3 className="section-title">
+              <p className="theme-color-word">Social Media Marketing</p> at Its
+              Best
+            </h3>
 
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/marketing/marketing-social-media.png"
-                  class="img-fluid animated"
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/marketing/marketing-social-media.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -38,9 +43,11 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>E-Commerce<p className="theme-color-word"> Marketing</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              E-Commerce<p className="theme-color-word"> Marketing</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -51,26 +58,31 @@ function Services() {
                   sales, and optimizing the overall shopping experience.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/marketing/marketing-ecommerce.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/marketing/marketing-ecommerce.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Search Engine</p> Optimization(SEO)</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/marketing/marketing-seo.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              <p className="theme-color-word">Search Engine</p>{" "}
+              Optimization(SEO)
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/marketing/marketing-seo.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   Search Engine Optimization (SEO) is a set of strategies,
@@ -84,9 +96,11 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Content<p className="theme-color-word"> Writing</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Content<p className="theme-color-word"> Writing</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -99,26 +113,30 @@ function Services() {
                   conveying a message or information.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/marketing/marketing-content-writing.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/marketing/marketing-content-writing.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Email</p> Marketing</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/marketing/marketing-email.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              <p className="theme-color-word">Email</p> Marketing
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/marketing/marketing-email.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -139,4 +157,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Marketing;

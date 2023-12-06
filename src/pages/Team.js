@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import Confetti from "react-confetti";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
@@ -60,7 +60,7 @@ function Team() {
           </div>
 
           <div className="container">
-            <div className="section-title">
+            <div>
               <span>Meet Our Experts for You</span>
               <h2>Meet Our Experts for You</h2>
               <div className="row">
@@ -79,66 +79,66 @@ function Team() {
                 />
 
                 <RenderTeamMember
-                  name="Sathish"
-                  role="Project Manager"
-                  description="Sathish is our accomplished Project Manager, responsible for orchestrating successful project deliveries. With a wealth of experience, Sathish leads our teams with precision, ensuring projects are completed on time and within scope. His dedication to quality and effective communication plays a vital role in our project successes."
+                  name="Bala Sakthi"
+                  role="Full Stack Developer"
+                  description="With a knack for seamless integration across front-end and back-end technologies, Bala excels in crafting dynamic web solutions. Proficient in multiple programming languages, Bala delivers user-centric experiences with an eye for detail."
                   imageSrc="assets/img/team/profile.jpg"
                 />
 
                 <RenderTeamMember
-                  name="Srija"
-                  role="Dev Ops"
-                  description="Srija is our proficient DevOps specialist, driving efficiency and reliability in our development processes. With a deep understanding of DevOps tools and practices, Srija streamlines our workflows, automates tasks, and ensures seamless collaboration between development and operations teams. Her expertise ensures that our software deployments are smooth, secure, and optimized for performance."
+                  name="Ranjith Kumar"
+                  role="Full Stack Developer"
+                  description="A versatile Full Stack Developer, Ranjith expertly navigates both client-side and server-side frameworks, transforming design concepts into functional web applications. Ranjith's meticulous approach ensures robust and scalable solutions."
                   imageSrc="assets/img/team/profile.jpg"
                 />
 
                 <RenderTeamMember
-                  name="Sentamizh"
-                  role="QA"
-                  description="Sentamizh is our meticulous QA expert, dedicated to ensuring the quality and reliability of our digital solutions. With a keen eye for detail, Sentamizh rigorously tests and evaluates our projects to guarantee they meet the highest standards. Their commitment to quality assurance plays a critical role in delivering error-free and top-notch software products to our clients."
-                  imageSrc="assets/img/team/profile.jpg"
-                />
-
-                <RenderTeamMember
-                  name="Yaathirai"
-                  role="Team Lead"
-                  description="Yaathirai is our dedicated Team Lead, guiding our talented team towards project success. With exceptional leadership skills and technical prowess, Yaathirai ensures that our projects are executed seamlessly. Their commitment to excellence and effective communication fosters a collaborative environment that consistently delivers high-quality solutions."
-                  imageSrc="assets/img/team/profile.jpg"
-                />
-
-                <RenderTeamMember
-                  name="Suriya S"
-                  role="Associate Software Engineer"
-                  description="Suriya, our Associate Software Engineer, brings a strong technical foundation and a passion for excellence to our team. They excel in problem-solving, collaborate seamlessly with colleagues, and contribute significantly to our software development projects."
+                  name="Suriya"
+                  role="Full Stack Developer"
+                  description="Suriya brings a holistic approach to Full Stack Development, adeptly managing databases, server configurations, and responsive front-end designs. Their skill set includes a comprehensive understanding of modern tech stacks and a focus on efficient coding practices."
                   imageSrc="assets/img/team/suriya1.jpg"
                 />
 
                 <RenderTeamMember
-                  name="Sree Balaji"
-                  role="Backend Developer"
-                  description="Sree Balaji is our proficient Backend Developer, leading the way in developing robust server-side solutions. With a deep understanding of backend technologies, Sree Balaji is instrumental in creating the backbone of our web applications. Their expertise ensures that our projects run smoothly, efficiently, and securely, providing a strong foundation for our clients' digital success."
+                  name="Tamilselvan Padmanabhan"
+                  role="Full Stack Developer"
+                  description="Tamil, a seasoned Full Stack Developer, excels in building adaptable and user-friendly interfaces while seamlessly integrating complex backend functionalities. Their expertise spans various frameworks, enabling innovative and efficient solutions."
                   imageSrc="assets/img/team/profile.jpg"
                 />
 
                 <RenderTeamMember
-                  name="Avilash"
-                  role="Wordpress Developer"
-                  description="Avilash is our dedicated WordPress Developer, specializing in crafting exceptional websites on the WordPress platform. With a strong command of WordPress's capabilities, Avilash transforms design concepts into polished, user-friendly websites. Their attention to detail and commitment to excellence ensure that every WordPress project delivers a seamless and engaging digital experience."
+                  name="Sindhuja"
+                  role="Front End Developer"
+                  description="Sindhuja, an adept Front-End Developer, specializes in crafting visually stunning and intuitive user interfaces. Her skill set includes leveraging modern design principles and implementing front-end technologies to create engaging and user-centric web experiences. Sindhuja's attention to detail ensures the delivery of captivating and seamless designs."
                   imageSrc="assets/img/team/profile.jpg"
                 />
 
                 <RenderTeamMember
-                  name="Preethi"
-                  role="UI/UX Designer"
-                  description="Preethi is our talented UI/UX Designer, with a passion for crafting user-centric digital experiences. With a keen eye for aesthetics and usability, Preethi transforms ideas into visually appealing and highly intuitive interfaces. Their creative expertise ensures that our projects not only look stunning but also provide an exceptional user journey."
+                  name="Gokul Shankar"
+                  role="Back End Developer"
+                  description="Gokul Shankar is our proficient Backend Developer, leading the way in developing robust server-side solutions. With a deep understanding of backend technologies, Gokul Shankar is instrumental in creating the backbone of our web applications. Their expertise ensures that our projects run smoothly, efficiently, and securely, providing a strong foundation for our clients' digital success."
                   imageSrc="assets/img/team/profile.jpg"
                 />
 
                 <RenderTeamMember
-                  name="Kowsalya"
+                  name="Monika"
+                  role="QA(Quality Assurance)"
+                  description="Monika is our meticulous QA expert, dedicated to ensuring the quality and reliability of our digital solutions. With a keen eye for detail, Monika rigorously tests and evaluates our projects to guarantee they meet the highest standards. Their commitment to quality assurance plays a critical role in delivering error-free and top-notch software products to our clients."
+                  imageSrc="assets/img/team/profile.jpg"
+                />
+
+                <RenderTeamMember
+                  name="Priyadharshini"
+                  role="Web Designer"
+                  description="Priyadharshini, a skilled Web Designer, excels in curating visually compelling and user-centric web interfaces. Her designs reflect a harmonious blend of aesthetics and functionality, delivering engaging and intuitive digital experiences that captivate users. Priyadharshini's expertise ensures seamless navigation and visually striking designs across web platforms."
+                  imageSrc="assets/img/team/profile.jpg"
+                />
+
+                <RenderTeamMember
+                  name="Gaythri"
                   role="HR"
-                  description="Kowsalya is our HR Representative, dedicated to fostering a positive and inclusive workplace environment. With a passion for people and strong communication skills, Kowsalya plays a crucial role in our company's success. Kowsalya is responsible for recruitment, employee relations, and ensuring that our team members have the support they need to thrive. His commitment to employee satisfaction and well-being makes our workplace a great place to grow."
-                  imageSrc="assets/img/team/hr1.jpg"
+                  description="Gaythri is our HR Representative, dedicated to fostering a positive and inclusive workplace environment. With a passion for people and strong communication skills, Gaythri plays a crucial role in our company's success. Kowsalya is responsible for recruitment, employee relations, and ensuring that our team members have the support they need to thrive. His commitment to employee satisfaction and well-being makes our workplace a great place to grow."
+                  imageSrc="assets/img/team/profile.jpg"
                 />
               </div>
             </div>

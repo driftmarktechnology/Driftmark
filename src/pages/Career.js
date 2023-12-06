@@ -13,6 +13,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Career() {
   const [isLoading, setIsLoading] = useState(false);
+  const fileInputRef = useRef(null);
 
   const initialValues = {
     name: "",
@@ -42,8 +43,6 @@ function Career() {
     },
   });
 
-  // ref to access the file input element
-  const fileInputRef = useRef(null);
 
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function Sitemap() {
   return (
-    <section id="team" class="team section-bg">
-      <div class="container">
-        <div class="section-title">
+    <section id="team" className="team section-bg">
+      <div className="container">
+        <div className="section-title">
           <span>Sitemap</span>
           <h2>Sitemap</h2>
         </div>

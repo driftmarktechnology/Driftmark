@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 function Terms() {
   return (
     <>
-      <section id="terms" class="team section-bg mt-5">
+      <section id="terms" className="team section-bg mt-5">
       <Sectionheader
             title={"Terms of Use"}
           />
-        <div class="container">
+        <div className="container">
           <div>
             <div>
               <h3>1. Introduction</h3>

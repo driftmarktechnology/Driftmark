@@ -11,6 +11,8 @@ import {
   faClock,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Services() {
   function getUniqueUserId() {
@@ -31,22 +33,22 @@ function Services() {
 
     identifyUser(uniqueUserId);
     trackEvent("Services Page Visited");
-  /* eslint-disable */
-}, []);
-/* eslint-enable */
+    /* eslint-disable */
+  }, []);
+  /* eslint-enable */
 
   return (
-    <section id="services" class="services mt-5 section-bg">
-      <div class="container">
+    <section id="services" className="services mt-5 section-bg">
+      <div className="container">
         <Sectionheader
           title={"Services"}
           subtitle={"Turning Ideas into Digital Reality"}
         />
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+        <div className="row">
+          <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bxl-dribbble"></i>
               </div>
               <h4 className="services-choose-sub">
                 Web and Mobile App Development
@@ -60,14 +62,12 @@ function Services() {
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-file"></i>
+          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-file"></i>
               </div>
-              <h4 className="services-choose-sub">
-                App Modernization
-              </h4>
+              <h4 className="services-choose-sub">App Modernization</h4>
               <p>
                 ConcertIDC can upgrade and modernize your existing applications
                 to enhance performance, security, and usability. We leverage the
@@ -77,14 +77,12 @@ function Services() {
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-tachometer"></i>
+          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-tachometer"></i>
               </div>
-              <h4 className="services-choose-sub">
-                Transformation to Cloud
-              </h4>
+              <h4 className="services-choose-sub">Transformation to Cloud</h4>
               <p>
                 We will help you efficiently and securely migrate your
                 applications or data centers to the cloud to optimize existing
@@ -95,14 +93,12 @@ function Services() {
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-world"></i>
+          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-world"></i>
               </div>
-              <h4 className="services-choose-sub">
-                Intelligent Automation
-              </h4>
+              <h4 className="services-choose-sub">Intelligent Automation</h4>
               <p>
                 Automate complex, repetitive, and mundane tasks using Robotic
                 Process Automation (RPA) and AI tools. We'll help you liberate
@@ -112,14 +108,12 @@ function Services() {
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-slideshow"></i>
+          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-slideshow"></i>
               </div>
-              <h4 className="services-choose-sub">
-                Integration Solutions
-              </h4>
+              <h4 className="services-choose-sub">Integration Solutions</h4>
               <p>
                 We seamlessly integrate your applications and systems to achieve
                 an effortless workflow. Our processes enhance efficiency, reduce
@@ -129,14 +123,12 @@ function Services() {
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon">
-                <i class="bx bx-arch"></i>
+          <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div className="icon-box">
+              <div className="icon">
+                <i className="bx bx-arch"></i>
               </div>
-              <h4 className="services-choose-sub">
-                Staff Augmentation
-              </h4>
+              <h4 className="services-choose-sub">Staff Augmentation</h4>
               <p>
                 We can help you expand your team to fill gaps in your IT
                 workforce. We provide tech talent globally and enable you with
@@ -148,49 +140,49 @@ function Services() {
           </div>
         </div>
         <section className="services-choose">
-          <div class="container">
+          <div className="container">
             <Sectionheader
               title={"Why Driftmark"}
               subtitle={
                 "We leverage our software experts to build powerful digital solutions that bring about meaningful change through strategic vision"
               }
             />
-            <div class="">
-              <div class="row">
-                <div class="col-md-2 d-flex align-items-stretch">
-                  <div class="services-choose-sub mb-3 pb-3">
+            <div className="">
+              <div className="row">
+                <div className="col-md-2 d-flex align-items-stretch">
+                  <div className="services-choose-sub mb-3 pb-3">
                     <h3 className="services-choose-icon">
                       <FontAwesomeIcon icon={faGlobe} />
                     </h3>
                     <h6>Comprehensive approach</h6>
                   </div>
                 </div>
-                <div class="col-md-2 d-flex align-items-stretch">
-                  <div class="services-choose-sub mb-3 pb-3">
+                <div className="col-md-2 d-flex align-items-stretch">
+                  <div className="services-choose-sub mb-3 pb-3">
                     <h3 className="services-choose-icon">
                       <FontAwesomeIcon icon={faUsers} />
                     </h3>
                     <h6>Client Priority</h6>
                   </div>
                 </div>
-                <div class="col-md-2 d-flex align-items-stretch">
-                  <div class="services-choose-sub mb-3 pb-3">
+                <div className="col-md-2 d-flex align-items-stretch">
+                  <div className="services-choose-sub mb-3 pb-3">
                     <h3 className="services-choose-icon">
                       <FontAwesomeIcon icon={faGraduationCap} />
                     </h3>
                     <h6>Field Mastery</h6>
                   </div>
                 </div>
-                <div class="col-md-2 d-flex align-items-stretch">
-                  <div class="services-choose-sub mb-3 pb-3">
+                <div className="col-md-2 d-flex align-items-stretch">
+                  <div className="services-choose-sub mb-3 pb-3">
                     <h3 className="services-choose-icon">
                       <FontAwesomeIcon icon={faClock} />
                     </h3>
                     <h6>Time Optimization</h6>
                   </div>
                 </div>
-                <div class="col-md-2 d-flex align-items-stretch">
-                  <div class="services-choose-sub mb-3 pb-3">
+                <div className="col-md-2 d-flex align-items-stretch">
+                  <div className="services-choose-sub mb-3 pb-3">
                     <h3 className="services-choose-icon">
                       <FontAwesomeIcon icon={faStar} />
                     </h3>
@@ -202,15 +194,26 @@ function Services() {
           </div>
         </section>
         <section>
-          <article class="services-cta section section-bg">
-            <div class="section-header text-center">
-              <h2 class="section-title">Let us help you <p className="theme-color-word">launch</p> your project</h2>
+          <article className="services-cta section section-bg">
+            <div className="section-header text-center">
+              <h2 className="section-title">
+                Let us help you <p className="theme-color-word">launch</p> your
+                project
+              </h2>
             </div>
-            <figure class="img-holder text-center">
-              <img src="assets/img/rocket-pulse.svg" alt="" />
+            <figure className="img-holder text-center">
+              <LazyLoadImage
+                src={"assets/img/rocket-pulse.svg"}
+                alt=""
+                effect="blur"
+                style={{ width: "100%", maxWidth: "500px", height: "auto" }}
+              />
               <figcaption>
-              <br/>
-                <Link to="/contact" className="services-btn-launch-proj scrollto">
+                <br />
+                <Link
+                  to="/contact"
+                  className="services-btn-launch-proj scrollto"
+                >
                   LAUNCH A PROJECT
                 </Link>
               </figcaption>

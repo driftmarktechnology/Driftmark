@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
@@ -6,10 +6,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Zoom, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Contact() {
-  const [submissionStatus, setSubmissionStatus] = useState(null);
   const initialValues = {
     name: "",
     email: "",
@@ -29,18 +30,32 @@ function Contact() {
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
-        const response = await axios.post("/your-api-endpoint", values);
-        setSubmissionStatus({
-          type: "success",
-          message: "Message sent successfully!",
-          data: response.data,
+        await axios.post("http://localhost:3001/send", values);
+        toast.success("Message sent successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          transition: Zoom,
         });
         resetForm();
       } catch (error) {
-        setSubmissionStatus({
-          type: "error",
-          message: "Failed to send message. Please try again later.",
-        });
+        if(error.response && error.response.data && error.response.data.error){
+          error.response.data.error.forEach((errMsg)=>{
+            toast.error(errMsg.message, {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: true,
+              transition: Zoom,
+            });
+          })
+        } else{
+          toast.error("Failed to send the message. Please try again later.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            transition: Zoom,
+          });
+        }
       }
     },
   });
@@ -68,25 +83,25 @@ function Contact() {
 /* eslint-enable */
 
   return (
-    <section id="contact" class="mt-5 contact">
-      <div class="container">
+    <section id="contact" className="mt-5 contact">
+      <div className="container">
         <Sectionheader
           title={"Contact"}
           subtitle={
             "Your trusted Solutions Partner for the digital transformation of you and your company."
           }
         />
-        <div class="row">
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
+        <div className="row">
+          <div className="col-lg-5 d-flex align-items-stretch">
+            <div className="info">
+              <div className="address">
+                <i className="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
                 <p>Kadirimangalam, Tirupathur, Tamil Nadu 635653</p>
               </div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
+              <div className="email">
+                <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>
                   <Link
@@ -102,8 +117,8 @@ function Contact() {
                 </p>
               </div>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
+              <div className="phone">
+                <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p><Link to="tel:+91 6381 475 573">
                   +91 6381475573
@@ -124,6 +139,7 @@ function Contact() {
             <form
               onSubmit={formik.handleSubmit}
               className="php-email-form"
+              id="contactFormid"
             >
               <div className="row">
                 <div className="form-group col-md-6">
@@ -194,7 +210,6 @@ function Contact() {
                   }`}
                   name="message"
                   rows="10"
-                  
                   {...formik.getFieldProps("message")}
                 ></textarea>
                 {formik.touched.message && formik.errors.message ? (
@@ -204,78 +219,13 @@ function Contact() {
                 ) : null}
               </div>
               <div className="my-3">
-                {submissionStatus && submissionStatus.type === "error" && (
-                  <div className="alert alert-danger">
-                    {submissionStatus.message}
-                  </div>
-                )}
-                {submissionStatus && submissionStatus.type === "success" && (
-                  <div className="alert alert-success">
-                    {submissionStatus.message}
-                  </div>
-                )}
               </div>
+              <div id="error-message" className="error-message"></div>
               <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>
             </form>
           </div>
-
-          {/* <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    class="form-control"
-                    id="name"
-                    required
-                  />
-                </div>
-                <div class="form-group col-md-6 mt-3 mt-md-0">
-                  <label for="name">Your Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Subject</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="subject"
-                  id="subject"
-                  required
-                />
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Message</label>
-                <textarea
-                  class="form-control"
-                  name="message"
-                  rows="10"
-                  required
-                ></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
-              <div class="text-center">
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </div> */}
         </div>
       </div>
     </section>

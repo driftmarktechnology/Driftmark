@@ -1,28 +1,34 @@
 import React from "react";
-import Sectionheader from "../components/Sectionheader"
+import Sectionheader from "../components/Sectionheader";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-
-function Services() {
+function TestingAndQA() {
   return (
-    <section id="services" class="services mt-5 section-bg">
-      <div class="container">
-      <Sectionheader
-            title={"Testing & QA"}
-            subtitle={"Precision in Quality Assurance: Crafting Bespoke Solutions for Your Success"}
-          />
-        <div class="section-title">
+    <section id="services" className="services mt-5 section-bg">
+      <div className="container">
+        <Sectionheader
+          title={"Testing & QA"}
+          subtitle={
+            "Precision in Quality Assurance: Crafting Bespoke Solutions for Your Success"
+          }
+        />
+        <div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Automation</p> Testing</h3>
+            <h3 className="section-title">
+              <p className="theme-color-word">Automation</p> Testing
+            </h3>
 
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/testing/testing-1.png"
-                  class="img-fluid animated"
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/testing/testing-1.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -38,9 +44,11 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Manual <p className="theme-color-word">Testing</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Manual <p className="theme-color-word">Testing</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -54,26 +62,30 @@ function Services() {
                   simulating user interactions with the software.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/testing/testing-2.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/testing/testing-2.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">API</p> Testing</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/testing/testing-3.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              <p className="theme-color-word">API</p> Testing
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/testing/testing-3.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   API testing, or Application Programming Interface testing, is
@@ -87,9 +99,11 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Mobile <p className="theme-color-word">Testing</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Mobile <p className="theme-color-word">Testing</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -103,26 +117,30 @@ function Services() {
                   standards.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/testing/testing-4.jpg"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/testing/testing-4.jpg"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Security </p>Testing</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/testing/testing-5.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              <p className="theme-color-word">Security </p>Testing
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
                   alt=""
+                  src="/assets/img/testing/testing-5.png"
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -144,4 +162,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default TestingAndQA;

@@ -7,7 +7,7 @@ function Privacy() {
   return (
     <>
       <section className="mt-5">
-        <div class="container">
+        <div className="container">
         <Sectionheader
             title={"Privacy Policy"}
           />

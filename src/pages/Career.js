@@ -1,13 +1,49 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Sectionheader from "../components/Sectionheader";
 import { v4 as uuidv4 } from "uuid";
 import { trackEvent, identifyUser } from "../utils/mixpanelUtil";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import { resumeStorage } from "../components/firebase";
+import { ref, uploadBytes } from "firebase/storage";
+import { toast, Zoom } from "react-toastify";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-function Team() {
+function Career() {
+  const [isLoading, setIsLoading] = useState(false);
+  const fileInputRef = useRef(null);
+
+  const initialValues = {
+    name: "",
+    position: "",
+    resume: null,
+  };
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Name is required"),
+    position: Yup.string().required("Position is required"),
+    resume: Yup.mixed()
+      .required("Resume is required")
+      .test("type", "Only .pdf, .doc, .docx formats are accepted", (value) => {
+        if (!value) return true;
+        const fileName = value.name;
+        const allowedExtensions = [".pdf", ".doc", ".docx"];
+        const fileExtension = fileName.split(".").pop().toLowerCase();
+        return allowedExtensions.includes("." + fileExtension);
+      }),
+  });
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: async (values) => {
+      handleSubmit(values);
+    },
+  });
+
+
   function getUniqueUserId() {
     let userId = localStorage.getItem("userId");
     if (!userId) {
@@ -23,63 +59,79 @@ function Team() {
 
   useEffect(() => {
     const uniqueUserId = getUniqueUserId();
-
     identifyUser(uniqueUserId);
     trackEvent("Career Page Visited");
     /* eslint-disable */
   }, []);
   /* eslint-enable */
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formKey, setFormKey] = useState(0);
+  const handleSubmit = async (values) => {
+    const { name, position, resume } = values;
 
-  const validationSchema = Yup.object().shape({
-    position: Yup.string().required("Position is required"),
-    resume: Yup.mixed()
-      .required("Resume is required")
-      .test(
-        "type",
-        "Only the following formats are accepted: .jpeg, .jpg, .bmp, .pdf and .doc",
-        (value) => {
-          return (
-            value &&
-            (value[0].type === "image/jpeg" ||
-              value[0].type === "image/bmp" ||
-              value[0].type === "image/png" ||
-              value[0].type === "application/pdf" ||
-              value[0].type === "application/msword")
-          );
+    try {
+      if (name && position && resume) {
+        setIsLoading(true);
+
+        const uniqueFileName = `${name}_${position}`;
+
+        // Upload the resume to Firebase Storage
+        const resumeRef = ref(resumeStorage, `resumes/${uniqueFileName}`);
+        await uploadBytes(resumeRef, resume);
+
+        toast.success("Applied Successfully", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          bodyClassName: "toastify",
+          transition: Zoom,
+        });
+        setIsLoading(false);
+        formik.resetForm();
+        // Reset the file input field
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
         }
-      ),
-  });
-
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    // Create a FormData object to send the file
-    const formData = new FormData();
-    formData.append("position", values.position);
-    formData.append("resume", values.resume);
-
-    axios
-      .post("/api/submit", formData) // Replace with your API endpoint
-      .then((response) => {
-        // Handle successful submission
-        console.log("Form submitted successfully:", response.data);
-        resetForm();
-      })
-      .catch((error) => {
-        // Handle submission error
-        console.error("Error submitting form:", error);
-      })
-      .finally(() => {
-        setSubmitting(false);
-        setIsModalOpen(false);
-      });
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
-    // Increment the formKey to reset the form
-    setFormKey(formKey + 1);
+      } else {
+        toast.error("Please fill in all required fields", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          bodyClassName: "toastify",
+          transition: Zoom,
+        });
+        setIsLoading(false);
+      }
+    } catch (error) {
+      if (error.code === "storage/canceled") {
+        toast.warning(
+          "The operation was canceled due to an internal issue. Please try again later.",
+          {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: true,
+            bodyClassName: "toastify",
+            transition: Zoom,
+          }
+        );
+      } else if (error.code === "storage/unknown") {
+        toast.error("An unknown error occurred. Please try again later.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          bodyClassName: "toastify",
+          transition: Zoom,
+        });
+      } else {
+        toast.error("Error in submission", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          bodyClassName: "toastify",
+          transition: Zoom,
+        });
+      }
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -122,7 +174,7 @@ function Team() {
                       You're OK with processes and organization.
                       <br />
                       <strong>
-                        Tech stack: HTML, CSS,React, Javascript, Node, PHP,
+                        Tech stack: HTML, CSS, React, Javascript, Node, PHP,
                         Wordpress, Java
                       </strong>
                       <br />
@@ -132,19 +184,17 @@ function Team() {
                       className="btn-apply-now scrollto"
                       data-bs-toggle="modal"
                       data-bs-target="#applyModal"
-                      onClick={openModal}
                     >
                       Apply now
                     </Link>
                   </header>
                 </div>
                 <div className="col-lg-6">
-                  <img
-                    className="img-fluid d-block mx-auto w-100"
-                    width={400}
-                    height={400}
-                    src="/assets/img/superhero.png"
+                  <LazyLoadImage
+                    src={"/assets/img/superhero.png"}
                     alt=""
+                    effect="blur"
+                    className="img-fluid responsive-image d-block mx-auto w-100"
                   />
                 </div>
               </div>
@@ -153,12 +203,10 @@ function Team() {
 
           <div className="apply-now-popup">
             <div
-              className={`modal fade ${isModalOpen ? "show" : ""}`}
+              className={`modal fade`}
               id="applyModal"
               tabIndex="-1"
               aria-labelledby="applyModalLabel"
-              aria-hidden={!isModalOpen}
-              style={{ display: isModalOpen ? "block" : "none" }}
             >
               <div className="modal-dialog">
                 <div className="modal-content">
@@ -171,89 +219,128 @@ function Team() {
                       className="btn-close"
                       data-bs-dismiss="modal"
                       aria-label="Close"
+                      onClick={() => {
+                        formik.resetForm();
+                        if (fileInputRef.current) {
+                          fileInputRef.current.value = "";
+                        }
+                      }}
                     ></button>
                   </div>
                   <div className="modal-body">
-                    <Formik
-                      key={formKey}
-                      initialValues={{ position: "", resume: null }}
-                      validationSchema={validationSchema}
-                      onSubmit={handleSubmit}
-                    >
-                      {(
-                        { isSubmitting, errors, touched } // Add errors and touched here
-                      ) => (
-                        <Form>
-                          <div className="mb-3">
-                            <label htmlFor="position" className="form-label">
-                              Position You Apply For
-                            </label>
-                            <Field
-                              as="select"
-                              id="position"
-                              name="position"
-                              className={`form-select ${
-                                errors.position && touched.position
-                                  ? "is-invalid"
-                                  : ""
-                              }`}
-                            >
-                              <option value="">Select a Position</option>
-                              <option value="Front-end Developer">
-                                Front-end Developer
-                              </option>
-                              <option value="Back-end Developer">
-                                Back-end Developer
-                              </option>
-                              <option value="UI/UX Designer">
-                                Web Designer
-                              </option>
-                              <option value="Graphic Designer">
-                                Graphic Designer
-                              </option>
-                              <option value="Accountant">Accountant</option>
-                            </Field>
-                            <ErrorMessage
-                              name="position"
-                              component="div"
-                              className="invalid-feedback"
-                            />
+                    <form onSubmit={formik.handleSubmit}>
+                      <div className="mb-3">
+                        <label htmlFor="name" className="form-label">
+                          Name
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Enter your name"
+                          className={`form-control ${
+                            formik.errors.name && formik.touched.name
+                              ? "is-invalid"
+                              : ""
+                          }`}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.name}
+                        />
+                        {formik.errors.name && formik.touched.name && (
+                          <div className="invalid-feedback">
+                            {formik.errors.name}
                           </div>
-                          <div className="mb-3">
-                            <label htmlFor="resume" className="form-label">
-                              Resume File Upload
-                            </label>
-                            <Field
-                              type="file"
-                              id="resume"
-                              name="resume"
-                              className={`form-control ${
-                                errors.resume && touched.resume
-                                  ? "is-invalid"
-                                  : ""
-                              }`}
-                            />
-                            <ErrorMessage
-                              name="resume"
-                              component="div"
-                              className="invalid-feedback"
-                            />
+                        )}
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="position" className="form-label">
+                          Position You Apply For
+                        </label>
+                        <select
+                          id="position"
+                          name="position"
+                          className={`form-select ${
+                            formik.errors.position && formik.touched.position
+                              ? "is-invalid"
+                              : ""
+                          }`}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          value={formik.values.position}
+                        >
+                          <option value="" disabled>
+                            Select a Position
+                          </option>
+                          <option value="Front-end Developer">
+                            Front-end Developer
+                          </option>
+                          <option value="Back-end Developer">
+                            Back-end Developer
+                          </option>
+                          <option value="UI-UX Designer">Web Designer</option>
+                          <option value="Graphic Designer">
+                            Graphic Designer
+                          </option>
+                          <option value="Accountant">Accountant</option>
+                        </select>
+                        {formik.errors.position && formik.touched.position && (
+                          <div className="invalid-feedback">
+                            {formik.errors.position}
                           </div>
-                          <div className="modal-footer">
-                            <button
-                              type="button"
-                              className="btn btn-secondary"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                            <button type="submit" className="btn btn-primary">
-                              Submit
-                            </button>
+                        )}
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="resume" className="form-label">
+                          Resume File Upload
+                        </label>
+                        <input
+                          ref={fileInputRef}
+                          type="file"
+                          id="resume"
+                          name="resume"
+                          className={`form-control ${
+                            formik.errors.resume && formik.touched.resume
+                              ? "is-invalid"
+                              : ""
+                          }`}
+                          onChange={(e) => {
+                            formik.setFieldValue(
+                              "resume",
+                              e.currentTarget.files[0]
+                            );
+                          }}
+                          onBlur={formik.handleBlur}
+                        />
+                        {formik.errors.resume && formik.touched.resume && (
+                          <div className="invalid-feedback">
+                            {formik.errors.resume}
                           </div>
-                        </Form>
-                      )}
-                    </Formik>
+                        )}
+                      </div>
+                      <div className="modal-footer">
+                        <button
+                          type="button"
+                          className="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                          onClick={() => {
+                            formik.resetForm();
+                            if (fileInputRef.current) {
+                              fileInputRef.current.value = "";
+                            }
+                          }}
+                        >
+                          Close
+                        </button>
+                        <button
+                          type="submit"
+                          className="btn btn-primary"
+                          disabled={isLoading}
+                        >
+                          {isLoading ? "Submitting..." : "Submit"}
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -281,7 +368,7 @@ function Team() {
                     </p>
                     <p className="text">
                       Send your resume and a little bit about yourself to{" "}
-                      <Link to="mailto:hr@driftmarktechnology.com">
+                      <Link to="hr@driftmarktechnology.com">
                         hr@driftmarktechnology.com
                       </Link>
                     </p>
@@ -296,4 +383,4 @@ function Team() {
   );
 }
 
-export default Team;
+export default Career;

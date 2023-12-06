@@ -1,28 +1,32 @@
 import React from "react";
-import Sectionheader from "../components/Sectionheader"
+import Sectionheader from "../components/Sectionheader";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-
-function Services() {
+function GraphicDesign() {
   return (
-    <section id="services" class="services mt-5 section-bg">
-      <div class="container">
-      <Sectionheader
-            title={"Graphic Design"}
-            subtitle={"Elevate Your Visual Storytelling: Where Art Meets Design"}
-          />
-        <div class="section-title">
+    <section id="services" className="services mt-5 section-bg">
+      <div className="container">
+        <Sectionheader
+          title={"Graphic Design"}
+          subtitle={"Elevate Your Visual Storytelling: Where Art Meets Design"}
+        />
+        <div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Logo</p> Design</h3>
+            <h3 className="section-title">
+              <p className="theme-color-word">Logo</p> Design
+            </h3>
 
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/graphic-design/graphic-1.png"
-                  class="img-fluid animated"
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/graphic-design/graphic-1.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -43,9 +47,11 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Visual <p className="theme-color-word">Design</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Visual <p className="theme-color-word">Design</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -58,26 +64,30 @@ function Services() {
                   audience.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/graphic-design/graphic-2.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/graphic-design/graphic-2.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3><p className="theme-color-word">Marketing</p> with Graphic Design</h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/graphic-design/graphic-3.png"
-                  class="img-fluid animated"
+            <h3 className="section-title">
+              <p className="theme-color-word">Marketing</p> with Graphic Design
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/graphic-design/graphic-3.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
-              <div class="col-lg-6">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   It's highly advisable to engage the services of a top-notch
@@ -98,9 +108,11 @@ function Services() {
             </div>
           </div>
           <div className="contents mt-4 mb-5">
-            <h3>Power of <p className="theme-color-word">Infographics</p></h3>
-            <div class="row">
-              <div class="col-lg-6">
+            <h3 className="section-title">
+              Power of <p className="theme-color-word">Infographics</p>
+            </h3>
+            <div className="row">
+              <div className="col-lg-6">
                 <p>
                   <br />
                   <br />
@@ -118,11 +130,12 @@ function Services() {
                   equipped to enhance your message and make a lasting impact.
                 </p>
               </div>
-              <div class="col-lg-6">
-                <img
-                  src="assets/img/graphic-design/graphic-4.png"
-                  class="img-fluid animated"
+              <div className="col-lg-6">
+                <LazyLoadImage
+                  src={"assets/img/graphic-design/graphic-4.png"}
                   alt=""
+                  effect="blur"
+                  className="img-fluid animated"
                 />
               </div>
             </div>
@@ -133,4 +146,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default GraphicDesign;

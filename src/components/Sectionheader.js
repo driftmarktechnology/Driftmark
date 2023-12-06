@@ -1,6 +1,6 @@
 function Sectionheader({title, subtitle}){
     return(
-        <div class="section-title">
+        <div className="section-title">
           <span>{title}</span>
           <h2>{title}</h2>
           <p>{subtitle}</p>
